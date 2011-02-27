@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_views_default_views().
  */
-function aiaraladea_azala_views_default_views() {
+function aiaraldea_azala_views_default_views() {
   $views = array();
 
   // Exported view: albisteak_azala

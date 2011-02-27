@@ -1,0 +1,65 @@
+<?php
+// $Id$
+
+function aiaraldea_azala_install() {
+  $vocabulary = _get_vocabulary_by_module("features_albiste_kokapena");
+
+  $term1c = array(
+    'vid' => $vocabulary->vid,
+    'name' => '1. gunea',
+  );
+
+  $term2c = array(
+    'vid' => $vocabulary->vid,
+    'name' => '2. gunea',
+  );
+
+  $term3c = array(
+    'vid' => $vocabulary->vid,
+    'name' => '3. gunea',
+  );
+
+  $term4c = array(
+    'vid' => $vocabulary->vid,
+    'name' => 'historiako 1.gunea',
+  );
+
+  $tree = taxonomy_get_tree($vocabulary->vid);
+  foreach ($tree as $term_object) {
+    if ($term_object->name === $term1c['name']) {
+      $term1 = $term_object;
+    } else if ($term_object->name === $term2c['name']) {
+      $term2 = $term_object;
+    } else if ($term_object->name === $term3c['name']) {
+      $term3 = $term_object;
+    } else if ($term_object->name === $term4c['name']) {
+      $term4 = $term_object;
+    }
+  }
+  if (!isset($term1)) {
+    taxonomy_save_term($term1c);
+  }
+  if (!isset($term2)) {
+    taxonomy_save_term($term2c);
+  }
+  if (!isset($term3)) {
+    taxonomy_save_term($term3c);
+  }
+  if (!isset($term4)) {
+    taxonomy_save_term($term4c);
+  }
+}
+
+function aiaraldea_azala_uninstall() {
+  // TODO delete the terms on uninstall
+}
+
+function _get_vocabulary_by_module($vocabulary_module) {
+  $vocabs = taxonomy_get_vocabularies();
+  foreach ($vocabs as $vocab_object) {
+    if ($vocab_object->module == $vocabulary_module) {
+      return $vocab_object;
+    }
+  }
+  return NULL;
+}

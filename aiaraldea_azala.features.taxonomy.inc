@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_taxonomy_default_vocabularies().
  */
-function aiaraladea_azala_taxonomy_default_vocabularies() {
+function aiaraldea_azala_taxonomy_default_vocabularies() {
   return array(
     'albiste_kokapena' => array(
       'name' => 'Albistearen kokapena',

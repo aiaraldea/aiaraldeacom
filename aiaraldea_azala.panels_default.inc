@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_default_panels_mini().
  */
-function aiaraladea_azala_default_panels_mini() {
+function aiaraldea_azala_default_panels_mini() {
   $export = array();
   $mini = new stdClass;
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */

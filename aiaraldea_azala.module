@@ -1,0 +1,3 @@
+<?php
+
+include_once('aiaraldea_azala.features.inc');
