@@ -452,6 +452,21 @@ function aiaraldea_azala_views_default_views() {
       'field' => 'status',
       'relationship' => 'none',
     ),
+    'name' => array(
+      'operator' => '=',
+      'value' => '3. gunea',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'case' => 1,
+      'id' => 'name',
+      'table' => 'term_data',
+      'field' => 'name',
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -892,29 +907,23 @@ function aiaraldea_azala_views_default_views() {
       'field' => 'status',
       'relationship' => 'none',
     ),
-    'tid' => array(
-      'operator' => 'or',
-      'value' => array(
-        '0' => '1671',
-      ),
+    'name' => array(
+      'operator' => '=',
+      'value' => '1. gunea',
       'group' => '0',
       'exposed' => FALSE,
       'expose' => array(
         'operator' => FALSE,
         'label' => '',
       ),
-      'type' => 'textfield',
-      'limit' => TRUE,
-      'vid' => '5',
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
+      'case' => 1,
+      'id' => 'name',
+      'table' => 'term_data',
+      'field' => 'name',
+      'relationship' => 'none',
       'override' => array(
         'button' => 'Use default',
       ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
     ),
   ));
   $handler->override_option('items_per_page', 1);
@@ -1311,32 +1320,27 @@ function aiaraldea_azala_views_default_views() {
       'field' => 'status',
       'relationship' => 'none',
     ),
-    'tid' => array(
-      'operator' => 'or',
-      'value' => array(
-        '0' => '1672',
-      ),
+    'name' => array(
+      'operator' => '=',
+      'value' => '2. gunea',
       'group' => '0',
       'exposed' => FALSE,
       'expose' => array(
         'operator' => FALSE,
         'label' => '',
       ),
-      'type' => 'textfield',
-      'limit' => TRUE,
-      'vid' => '5',
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
+      'case' => 1,
+      'id' => 'name',
+      'table' => 'term_data',
+      'field' => 'name',
+      'relationship' => 'none',
       'override' => array(
         'button' => 'Use default',
       ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
     ),
   ));
   $handler->override_option('css_class', 'view-display-albisteak-2gunea');
+  $handler->override_option('items_per_page', 2);
   $handler->override_option('use_pager', '0');
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
@@ -1542,62 +1546,6 @@ function aiaraldea_azala_views_default_views() {
       'override' => array(
         'button' => 'Override',
       ),
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'albiste' => 'albiste',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'tid' => array(
-      'operator' => 'or',
-      'value' => array(
-        '0' => '1673',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'textfield',
-      'limit' => TRUE,
-      'vid' => '5',
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
     ),
   ));
   $handler->override_option('items_per_page', 3);
