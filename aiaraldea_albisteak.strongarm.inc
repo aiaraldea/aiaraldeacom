@@ -104,6 +104,13 @@ function aiaraldea_albisteak_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_albiste_pattern';
+  $strongarm->value = 'albisteak/[title-raw]';
+
+  $export['pathauto_node_albiste_pattern'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'scheduler_albiste';
   $strongarm->value = 1;
 
