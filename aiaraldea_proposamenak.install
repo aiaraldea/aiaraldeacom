@@ -4,7 +4,7 @@
 function aiaraldea_proposamenak_install() {
   $vocabulary = _get_vocabulary_by_module("features_aiaraldea_proposamenak_mota");
 var_dump('vocabulary:');
-var_dump($vocabulary):
+var_dump($vocabulary);
   if ($vocabulary === null) {
     $vocabulary = array(
       'name' => t('Proposamen mota'),
