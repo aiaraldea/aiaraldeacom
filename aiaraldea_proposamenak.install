@@ -3,6 +3,23 @@
 
 function aiaraldea_proposamenak_install() {
   $vocabulary = _get_vocabulary_by_module("features_aiaraldea_proposamenak_mota");
+var_dump('vocabulary:');
+var_dump($vocabulary):
+  if ($vocabulary === null) {
+    $vocabulary = array(
+      'name' => t('Proposamen mota'),
+      'multiple' => 0,
+      'required' => 1,
+      'hierarchy' => 0,
+      'relations' => 1,
+      'tags' => '0',
+      'module' => 'features_aiaraldea_proposamenak_mota',
+      'weight' => -7,
+      'nodes' => array('proposamena' => 1),
+    );
+
+    taxonomy_save_vocabulary($vocabulary);
+  }
 
   $term1c = array(
     'vid' => $vocabulary->vid,
