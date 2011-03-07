@@ -3,8 +3,6 @@
 
 function aiaraldea_proposamenak_install() {
   $vocabulary = _get_vocabulary_by_module("features_aiaraldea_proposamenak_mota");
-var_dump('vocabulary:');
-var_dump($vocabulary);
   if ($vocabulary === null) {
     $vocabulary = array(
       'name' => t('Proposamen mota'),
@@ -19,6 +17,10 @@ var_dump($vocabulary);
     );
 
     taxonomy_save_vocabulary($vocabulary);
+  } else {
+    if (!array_key_exists('proposemena' , $vocabulary->nodes)) {
+      db_query("INSERT INTO {vocabulary_node_types} (vid, type) VALUES (%d, '%s')", $vocabulary->vid, 'proposamena');
+    }
   }
 
   $term1c = array(
