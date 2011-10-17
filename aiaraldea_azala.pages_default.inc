@@ -311,6 +311,26 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->position = 3;
     $display->content['new-10'] = $pane;
     $display->panels['3'][3] = 'new-10';
+    $pane = new stdClass;
+    $pane->pid = 'new-11';
+    $pane->panel = 'bottom';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'orri_nagusia_azken_postalak';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-11'] = $pane;
+    $display->panels['bottom'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

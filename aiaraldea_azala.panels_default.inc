@@ -290,7 +290,7 @@ function aiaraldea_azala_default_panels_mini() {
       'link_to_view' => 0,
       'args' => '',
       'url' => '',
-      'display' => 'block_2',
+      'display' => 'block_3',
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -322,7 +322,7 @@ function aiaraldea_azala_default_panels_mini() {
       'link_to_view' => 0,
       'args' => '',
       'url' => '',
-      'display' => 'block_3',
+      'display' => 'block_4',
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -354,7 +354,7 @@ function aiaraldea_azala_default_panels_mini() {
       'link_to_view' => 0,
       'args' => '',
       'url' => '',
-      'display' => 'block_4',
+      'display' => 'block_2',
       'override_title' => 0,
       'override_title_text' => '',
     );

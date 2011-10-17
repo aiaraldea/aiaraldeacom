@@ -1743,6 +1743,23 @@ function aiaraldea_azala_views_default_views() {
       ),
       'relationship' => 'nid',
     ),
+    'status' => array(
+      'operator' => '=',
+      'value' => '0',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'status',
+      'table' => 'comments',
+      'field' => 'status',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
@@ -2328,7 +2345,7 @@ function aiaraldea_azala_views_default_views() {
     ),
   ));
   $handler->override_option('css_class', 'view-display-azken-bideoak');
-  $handler->override_option('items_per_page', 2);
+  $handler->override_option('items_per_page', 3);
   $handler->override_option('offset', 1);
   $handler->override_option('use_pager', '0');
   $handler->override_option('use_more', 1);
@@ -2462,7 +2479,7 @@ function aiaraldea_azala_views_default_views() {
         'target' => '',
         'help' => '',
         'trim' => 1,
-        'max_length' => '40',
+        'max_length' => '80',
         'word_boundary' => 1,
         'ellipsis' => 1,
         'html' => 0,
@@ -2478,7 +2495,7 @@ function aiaraldea_azala_views_default_views() {
       'field' => 'title',
       'relationship' => 'none',
       'override' => array(
-        'button' => 'Use default',
+        'button' => 'Erabili lehenetsia',
       ),
     ),
     'field_bideo_embed' => array(
@@ -3018,7 +3035,7 @@ function aiaraldea_azala_views_default_views() {
     ),
   ));
   $handler->override_option('css_class', 'latest-ones');
-  $handler->override_option('items_per_page', 2);
+  $handler->override_option('items_per_page', 3);
   $handler->override_option('offset', 1);
   $handler->override_option('pane_title', '');
   $handler->override_option('pane_description', '');
