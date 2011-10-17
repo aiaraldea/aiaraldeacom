@@ -1586,6 +1586,7 @@ function albiste_sailak_views_default_views() {
     ),
   ));
   $handler->override_option('items_per_page', 3);
+  $handler->override_option('use_pager', '0');
   $handler->override_option('row_options', array(
     'inline' => array(
       'value' => 'value',
