@@ -17,7 +17,7 @@ function aiaraldea_banner_default_fe_nodequeue_queue() {
   $export = array();
 
   $fe_nodequeue_queue = new stdClass;
-  $fe_nodequeue_queue->title = 'banner queue 1';
+  $fe_nodequeue_queue->title = 'Azaleko bannerrak';
   $fe_nodequeue_queue->subqueue_title = '';
   $fe_nodequeue_queue->size = '0';
   $fe_nodequeue_queue->link = '';
@@ -29,6 +29,7 @@ function aiaraldea_banner_default_fe_nodequeue_queue() {
   $fe_nodequeue_queue->reference = '0';
   $fe_nodequeue_queue->reverse = '0';
   $fe_nodequeue_queue->i18n = '1';
+  $fe_nodequeue_queue->name = 'queue1';
   $fe_nodequeue_queue->types = array(
     0 => 'aiaraldea_banner',
   );
