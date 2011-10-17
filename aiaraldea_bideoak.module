@@ -1,0 +1,18 @@
+<?php
+
+include_once('aiaraldea_bideoak.features.inc');
+
+function aiaraldea_bideoak_theme($existing) {
+  return array(
+    'views_view__azken_bideoak' => array (
+      'arguments' => array('view' => NULL),
+      'template' => 'views-view--azken-bideoak',
+      'original hook' => 'views_view',
+      'path' => drupal_get_path('module', 'aiaraldea_bideoak'),
+    ),
+  );
+}
+
+function aiaraldea_bideoak_preprocess_views_view__azken_bideoak(&$vars) {
+//  var_dump("hello 2");
+}

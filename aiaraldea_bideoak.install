@@ -1,0 +1,9 @@
+<?php
+function aiaraldea_bideoak_install() {
+  db_query("UPDATE {system} SET weight = 11 WHERE name = 'aiaraldea_bideoak'");
+}
+
+
+function aiaraldea_bideoak_update_6001() {
+  db_query("UPDATE {system} SET weight = 11 WHERE name = 'aiaraldea_bideoak'");
+}
