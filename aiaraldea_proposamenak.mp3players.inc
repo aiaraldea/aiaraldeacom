@@ -5,6 +5,7 @@
  */
 function aiaraldea_proposamenak_mp3player_default_players() {
   $export = array();
+
   $player = new stdClass;
   $player->disabled = FALSE; /* Edit this to true to make a default player disabled initially */
   $player->api_version = 1;
@@ -37,8 +38,8 @@ function aiaraldea_proposamenak_mp3player_default_players() {
   $player->border = 'CCCCCC';
   $player->skip = '666666';
   $player->text = '333333';
-
   $export['proposamenak_azala'] = $player;
+
   $player = new stdClass;
   $player->disabled = FALSE; /* Edit this to true to make a default player disabled initially */
   $player->api_version = 1;
@@ -71,8 +72,8 @@ function aiaraldea_proposamenak_mp3player_default_players() {
   $player->border = 'CCCCCC';
   $player->skip = '666666';
   $player->text = '333333';
-
   $export['proposamenak_detail'] = $player;
+
   $player = new stdClass;
   $player->disabled = FALSE; /* Edit this to true to make a default player disabled initially */
   $player->api_version = 1;
@@ -105,7 +106,7 @@ function aiaraldea_proposamenak_mp3player_default_players() {
   $player->border = 'CCCCCC';
   $player->skip = '666666';
   $player->text = '333333';
-
   $export['proposamenak_list'] = $player;
+
   return $export;
 }

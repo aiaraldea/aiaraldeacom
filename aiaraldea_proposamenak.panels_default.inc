@@ -5,6 +5,7 @@
  */
 function aiaraldea_proposamenak_default_panels_mini() {
   $export = array();
+
   $mini = new stdClass;
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
@@ -83,7 +84,7 @@ function aiaraldea_proposamenak_default_panels_mini() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $mini->display = $display;
-
   $export['proposamenak_front_mp'] = $mini;
+
   return $export;
 }

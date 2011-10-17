@@ -14,7 +14,7 @@ function aiaraldea_proposamenak_content_default_fields() {
       'weight' => '1',
       'parent' => '',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'mp3player_proposamenak_detail',
@@ -141,67 +141,6 @@ function aiaraldea_proposamenak_content_default_fields() {
     ),
   );
 
-  // Exported field: field_kolaboratzaile
-  $fields['proposamena-field_kolaboratzaile'] = array(
-    'field_name' => 'field_kolaboratzaile',
-    'type_name' => 'proposamena',
-    'display_settings' => array(
-      'weight' => '2',
-      'parent' => '',
-      'label' => array(
-        'format' => 'above',
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'sticky' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'text',
-    'required' => '1',
-    'multiple' => '0',
-    'module' => 'text',
-    'active' => '1',
-    'text_processing' => 0,
-    'max_length' => '200',
-    'allowed_values' => '',
-    'allowed_values_php' => '',
-    'widget' => array(
-      'size' => '60',
-      'autocomplete_match' => 'contains',
-      'autocomplete_case' => '1',
-      'i18n_flddata' => 0,
-      'default_value' => array(
-        '0' => array(
-          'value' => '',
-          '_error_element' => 'default_value_widget][field_kolaboratzaile][0][value',
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'Kolaboratzilea',
-      'weight' => '2',
-      'description' => '',
-      'type' => 'autocomplete_widgets_flddata',
-      'module' => 'autocomplete_widgets',
-    ),
-  );
-
   // Exported field: field_proposamena_irudia
   $fields['proposamena-field_proposamena_irudia'] = array(
     'field_name' => 'field_proposamena_irudia',
@@ -210,7 +149,7 @@ function aiaraldea_proposamenak_content_default_fields() {
       'weight' => 0,
       'parent' => '',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'image_plain',
@@ -289,7 +228,6 @@ function aiaraldea_proposamenak_content_default_fields() {
   t('Audio');
   t('Fitxa teknikoa');
   t('Irudia');
-  t('Kolaboratzilea');
 
   return $fields;
 }
