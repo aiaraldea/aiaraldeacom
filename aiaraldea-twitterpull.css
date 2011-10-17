@@ -1,0 +1,32 @@
+div.a-tweets-pulled-listing ul {
+  list-style: none;
+  padding: 10px;
+}
+
+div.a-tweets-pulled-listing div.tweet-authorphoto {
+  margin: 0 5px 0 0;
+  float: left;
+}
+
+div.a-tweets-pulled-listing div.tweet-authorphoto img {
+  max-height: 40px;
+  max-width: 40px;
+}
+
+div.a-tweets-pulled-listing a {
+  color:  #2d3c01;
+}
+
+div.a-tweets-pulled-listing .tweet-author a {
+  font-weight: bold;
+}
+
+div.a-tweets-pulled-listing .tweet-time a {
+  color: silver;
+}
+
+div.a-tweets-pulled-listing  div.tweet-divider {
+  clear: left;
+  border-bottom: 1px solid #efefef;
+  margin: 5px 0 5px 0;
+}

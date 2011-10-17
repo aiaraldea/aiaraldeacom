@@ -1,0 +1,6 @@
+core = "6.x"
+dependencies[] = "twitter_pull"
+name = "twitter block for aiaraldea"
+package = "Aiaraldea"
+project = "aiaraldea_twitterpull"
+version = "6.x-1.0-alpha1"
