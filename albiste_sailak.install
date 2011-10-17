@@ -1,0 +1,94 @@
+<?php
+function albiste_sailak_install() {
+  _create_vocabulary_and_terms();
+  db_query("UPDATE {system} SET weight = 11 WHERE name = 'albiste_sailak'");
+}
+
+function albiste_sailak_update_6003() {
+  _create_vocabulary_and_terms();
+  db_query("UPDATE {system} SET weight = 11 WHERE name = 'albiste_sailak'");
+}
+
+
+function albiste_sailak_uninstall() {
+  $vocabulary = _get_vocabulary_by_module("features_albiste_kokapena");
+  taxonomy_del_vocabulary($vocabulary);
+}
+
+function _create_vocabulary_and_terms() {
+  $vocabulary = _get_vocabulary_by_module("features_albiste_kokapena");
+
+  if (!$vocabulary) {
+    $vocabulary = array(
+        'name' => t('Albistearen kokapena'),
+        'description' => t('Albistea azalean agertzen denean zein tokitan agertu behar den.'),
+        'help' => '',
+        'relations' => '1',
+        'hierarchy' => '1',
+        'multiple' => '0',
+        'required' => '1',
+        'tags' => '0',
+        'module' => 'features_albiste_kokapena',
+        'weight' => '0',
+        'nodes' => array(
+            'albiste' => 'albiste',
+        ),
+    );
+    taxonomy_save_vocabulary($vocabulary);
+  }
+
+  $term1c = array(
+      'vid' => $vocabulary->vid,
+      'name' => '1. gunea',
+  );
+
+  $term2c = array(
+      'vid' => $vocabulary->vid,
+      'name' => '2. gunea',
+  );
+
+  $term3c = array(
+      'vid' => $vocabulary->vid,
+      'name' => '3. gunea',
+  );
+
+  $term4c = array(
+      'vid' => $vocabulary->vid,
+      'name' => 'Elkarrizketa',
+  );
+
+  $tree = taxonomy_get_tree($vocabulary->vid);
+  foreach ($tree as $term_object) {
+    if ($term_object->name === $term1c['name']) {
+      $term1 = $term_object;
+    } else if ($term_object->name === $term2c['name']) {
+      $term2 = $term_object;
+    } else if ($term_object->name === $term3c['name']) {
+      $term3 = $term_object;
+    } else if ($term_object->name === $term4c['name']) {
+      $term4 = $term_object;
+    }
+  }
+  if (!isset($term1)) {
+    taxonomy_save_term($term1c);
+  }
+  if (!isset($term2)) {
+    taxonomy_save_term($term2c);
+  }
+  if (!isset($term3)) {
+    taxonomy_save_term($term3c);
+  }
+  if (!isset($term4)) {
+    taxonomy_save_term($term4c);
+  }
+}
+
+function _get_vocabulary_by_module($vocabulary_module) {
+  $vocabs = taxonomy_get_vocabularies();
+  foreach ($vocabs as $vocab_object) {
+    if ($vocab_object->module == $vocabulary_module) {
+      return $vocab_object;
+    }
+  }
+  return NULL;
+}

@@ -1,0 +1,18 @@
+<?php
+
+include_once('albiste_sailak.features.inc');
+
+function albiste_sailak_theme($existing) {
+  return array(
+    'views_view__albisteak_azala_1_1' => array (
+      'arguments' => array('view' => NULL),
+      'template' => 'views-view--albisteak-azala-1-1',
+      'original hook' => 'views_view',
+      'path' => drupal_get_path('module', 'albiste_sailak'),
+    ),
+  );
+}
+
+function albiste_sailak_preprocess_views_view__albisteak_azala_1_1(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'albiste_sailak') . '/css/azala_albisteak.css');
+}
