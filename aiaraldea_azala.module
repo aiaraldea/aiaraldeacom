@@ -1,3 +1,46 @@
 <?php
 
 include_once('aiaraldea_azala.features.inc');
+
+function aiaraldea_azala_theme($existing) {
+  return array(
+      'views_view__azala_azken_iruzkinak_1_2' => array(
+          'arguments' => array('view' => NULL),
+          'template' => 'views-view--azala-azken-iruzkinak',
+          'original hook' => 'views_view',
+          'path' => drupal_get_path('module', 'aiaraldea_azala'),
+      ),
+      'views_view__proposamenak_azala_1_1' => array(
+          'arguments' => array('view' => NULL),
+          'template' => 'views-view--proposamenak-azala-1-1',
+          'original hook' => 'views_view',
+          'path' => drupal_get_path('module', 'aiaraldea_azala'),
+      ),
+      'views_view__azken_bideoak_1_2' => array(
+          'arguments' => array('view' => NULL),
+          'template' => 'views-view--azken-bideoak-1-2',
+          'original hook' => 'views_view',
+          'path' => drupal_get_path('module', 'aiaraldea_azala'),
+      ),
+      'views_view__flickr_image_sets_main_page_1_2' => array(
+          'arguments' => array('view' => NULL),
+          'template' => 'views-view--flickr-image-sets-main-page-1-2',
+          'original hook' => 'views_view',
+          'path' => drupal_get_path('module', 'aiaraldea_azala'),
+      ),
+  );
+}
+
+function aiaraldea_azala_preprocess_views_view__azala_azken_iruzkinak_1_2(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'aiaraldea_azala') . '/css/azala_azken_iruzkinak.css');
+}
+
+function aiaraldea_azala_preprocess_views_view__proposamenak_azala_1_1(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'aiaraldea_azala') . '/css/azala_proposamenak.css');
+}
+function aiaraldea_azala_preprocess_views_view__azken_bideoak_1_2(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'aiaraldea_azala') . '/css/azala_bideoak.css');
+}
+function aiaraldea_azala_preprocess_views_view__flickr_image_sets_main_page_1_2(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'aiaraldea_azala') . '/css/azala_argazkiak.css');
+}
