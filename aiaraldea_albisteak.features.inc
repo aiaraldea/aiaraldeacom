@@ -50,6 +50,32 @@ function aiaraldea_albisteak_imagecache_default_presets() {
         ),
       ),
     ),
+    'bideoa_albistean' => array(
+      'presetname' => 'bideoa_albistean',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '274',
+            'height' => '100%',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache_canvasactions',
+          'action' => 'canvasactions_file2canvas',
+          'data' => array(
+            'xpos' => 'center',
+            'ypos' => 'center',
+            'alpha' => '80',
+            'path' => 'sites/all/modules/custom/aiaraldea_azala/play_irudia2.png',
+          ),
+        ),
+      ),
+    ),
   );
   return $items;
 }
