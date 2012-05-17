@@ -1,4 +1,5 @@
 <?php
+
 // $Id$
 
 function aiaraldea_azala_install() {
@@ -7,4 +8,31 @@ function aiaraldea_azala_install() {
 
 function aiaraldea_azala_update_6001() {
   db_query("UPDATE {system} SET weight = 11 WHERE name = 'aiaraldea_azala'");
+}
+
+/** Delete deprecated blocks */
+function aiaraldea_azala_update_6002() {
+  db_query("DELETE FROM {blocks} WHERE delta = 2 AND module = '%s'", "block");
+  db_query("DELETE FROM {boxes} WHERE bid = 2");
+}
+
+/** Delete deprecated menu items and create interviews link */
+function aiaraldea_azala_update_6003() {
+  menu_link_delete(7037);
+  menu_link_delete(9161);
+  menu_link_delete(9162);
+}
+
+/** Create interviews link */
+function aiaraldea_azala_update_6004() {
+  $item = array(
+      'menu_name' => 'menu-goiko-menua',
+      'link_path' => 'albisteak/elkarrizketa',
+      'link_title' => "Elkarrizketak",
+      'hidden' => 1,
+      'weight' => -45,
+      'hidden' => 0,
+      'plid' => 0
+  );
+  menu_link_save($item);
 }
