@@ -1,3 +1,15 @@
 <?php
 
 include_once('aiaraldea_albisteak.features.inc');
+
+/**
+ * Implementation of hook_ctools_plugin_directory().
+ */
+function aiaraldea_albisteak_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+  if ($module == 'panels' && $plugin == 'layouts') {
+    return 'plugins/' . $plugin;
+  }
+}
