@@ -7,7 +7,7 @@ function aiaraldea_twitterpull_twitter_pull_blocks() {
       'tweetkey' => '@aiaraldea',
       'subject' => t('Aiaraldea Twitterren'),
       'name'  => 'Twitter for aiaraldea',
-      'number_of_items' => 4,
+      'number_of_items' => 8,
       'theme_key' => 'aiaraldea_twitterpull',
     )
   );
