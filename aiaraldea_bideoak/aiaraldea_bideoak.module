@@ -16,3 +16,97 @@ function aiaraldea_bideoak_theme($existing) {
 function aiaraldea_bideoak_preprocess_views_view__azken_bideoak(&$vars) {
 //  var_dump("hello 2");
 }
+
+/*
+ * implimentation of hook_feedapi_feed
+ */
+function aiaraldea_bideoak_feedapi_feed($op, $feed, $somthing) {
+  $parser = _parser_simplepie_get_parser($feed->url, TRUE, $settings);
+  if ($parser->error) {
+    return FALSE;
+  }
+  // Do we have html_entity_decode? Some feeds return html entities in the links
+  $entity_decode = function_exists('html_entity_decode');
+  // Construct the standard form of the parsed feed
+  $parsed_source = new stdClass();
+  $parsed_source->items = array();
+  $items_num = $parser->get_item_quantity();
+  define("SIMPLE_NAMESPACE_BLIP", "http://blip.tv/dtd/blip/1.0");
+  for ($i = 0; $i < $items_num; $i++) {
+    $item = new stdClass;
+    $item->options = new stdClass;
+    $item->options->bliptv = new stdClass;
+    $simplepie_item = $parser->get_item($i);
+    $enclosure = $simplepie_item->get_enclosure();
+    $data = $simplepie_item->get_item_tags(SIMPLE_NAMESPACE_BLIP, 'thumbnail_src');
+    $item->options->bliptv->link = $enclosure->get_link();
+    $item->options->bliptv->thumbnail_src = $data[0]['data'];
+
+    // Extract tags related to the item
+    $simplepie_tags = $simplepie_item->get_categories();
+    // Remove the blip.tv category
+    array_shift($simplepie_tags);
+    $tags = array();
+    if (count($simplepie_tags) > 0) {
+      foreach ($simplepie_tags as $tag) {
+        if (startsWith($tag->term, 'non:')) {
+          $item->options->bliptv->non = ucwords(substr($tag->term, 4));
+        } else {
+          $tags[] = (string) $tag->term;
+        }
+      }
+    }
+    $item->options->bliptv->tags = $tags;
+    $parsed_source->items[] = $item;
+  }
+  return $parsed_source;
+}
+
+function startsWith($haystack, $needle) {
+  $length = strlen($needle);
+  return (substr($haystack, 0, $length) === $needle);
+}
+
+function aiaraldea_bideoak_feedapi_mapper($op, $node, $feed_element = array(), $field_name = '', $sub_field = '') {
+  if ($op == 'describe') {
+    return t('Maps a string or an array of strings to taxonomy terms only if not previously set. Chose a vocabulary from sub options.');
+  } else if ($op == 'list') {
+    if ($vocabularies = taxonomy_get_vocabularies($node->type)) {
+      foreach ($vocabularies as $v) {
+        $sub_fields[$v->vid] = $v->name;
+      }
+      return array('taxonomy' => $sub_fields);
+    }
+    return FALSE;
+  } else if ($op == 'map' && $field_name == 'taxonomy') {
+    // Todo: some plausibility check of $feed_element
+    // Todo: security check of $feed_element
+    if (is_string($feed_element)) {
+      $feed_element = array($feed_element);
+    }
+    if (is_array($feed_element)) {
+      if (!isset($node->taxonomy) || !is_array($node->taxonomy) || count($node->taxonomy) == 0) {
+        $taxonomy = module_invoke("taxonomy", "nodeapi", $node, 'load');
+        $node->taxonomy = $taxonomy['taxonomy'];
+      }
+      if (!isset($node->taxonomy) || !is_array($node->taxonomy)) {
+        $node->taxonomy = array();
+      }
+      $terms = _aiaraldea_bideoak_get_terms($node, $sub_field);
+      if (count($terms) == 0) {
+        $node->taxonomy = array_merge($node->taxonomy, _feedapi_mapper_create_terms($feed_element, $sub_field));
+      }
+    }
+    return $node;
+  }
+}
+
+function _aiaraldea_bideoak_get_terms($node, $sub_field) {
+  $terms = array();
+  foreach ($node->taxonomy as $term) {
+    if ($term->vid == $sub_field) {
+      $terms[$term->tid] = $term;
+    }
+  }
+  return $terms;
+}
