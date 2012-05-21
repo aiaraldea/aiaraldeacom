@@ -1,0 +1,31 @@
+<?php
+
+function aiaraldea_twitterpull_twitter_pull_blocks() {
+  return array(
+    0 => (object) array(
+      'delta' => 'aiaraldea_twitterpull',
+      'tweetkey' => '@aiaraldea',
+      'subject' => t('Aiaraldea Twitterren'),
+      'name'  => 'Twitter for aiaraldea',
+      'number_of_items' => 4,
+      'theme_key' => 'aiaraldea_twitterpull',
+    )
+  );
+}
+
+function aiaraldea_twitterpull_theme() {
+  return array(
+    'aiaraldea_twitterpull' => array(
+      'arguments' => array('tweets' => NULL, 'twitkey' => NULL, 'title' => NULL),
+      'template' => 'aiaraldea-twitterpull'
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_init().
+ */
+function aiaraldea_twitterpull_init() {
+  $css_path = drupal_get_path('module', 'aiaraldea_twitterpull') . '/aiaraldea-twitterpull.css';
+  drupal_add_css($css_path);
+}
