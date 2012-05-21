@@ -1,0 +1,3 @@
+<?php
+
+include_once('flickr_image_sets.features.inc');
