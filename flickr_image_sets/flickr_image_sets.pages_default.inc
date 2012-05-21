@@ -147,7 +147,13 @@ function flickr_image_sets_default_page_manager_handlers() {
       'override_title' => 1,
       'override_title_text' => 'bilduma ikusienak',
     );
-    $pane->cache = array();
+    $pane->cache = array(
+      'method' => 'simple',
+      'settings' => array(
+        'lifetime' => '1800',
+        'granularity' => 'none',
+      ),
+    );
     $pane->style = array(
       'settings' => NULL,
     );
