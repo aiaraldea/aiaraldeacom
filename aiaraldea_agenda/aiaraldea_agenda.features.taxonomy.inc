@@ -8,7 +8,7 @@ function aiaraldea_agenda_taxonomy_default_vocabularies() {
     'aiaraldea_deialdi_mota' => array(
       'name' => 'Deialdi mota',
       'description' => '',
-      'help' => '',
+      'help' => 'Idatzi deialdiaren mota, adib. Kontzertua, Erakusketa, edo Jaiak. Deialdi motak laburra izan behar du! Ez idatzi deialdiaren deskribapena hemen!',
       'relations' => '1',
       'hierarchy' => '0',
       'multiple' => '0',
@@ -20,22 +20,5 @@ function aiaraldea_agenda_taxonomy_default_vocabularies() {
         'deialdi' => 'deialdi',
       ),
     ),
-//    'aiaraldea_non' => array(
-//      'name' => 'Non',
-//      'description' => 'Herria',
-//      'help' => 'Idatzi zer herrian gertatu edo gertatuko den',
-//      'relations' => '1',
-//      'hierarchy' => '0',
-//      'multiple' => '0',
-//      'required' => '1',
-//      'tags' => '1',
-//      'module' => 'features_aiaraldea_non',
-//      'weight' => '-10',
-//      'nodes' => array(
-//        'albiste' => 'albiste',
-//        'bideo' => 'bideo',
-//        'deialdi' => 'deialdi',
-//      ),
-//    ),
   );
 }
