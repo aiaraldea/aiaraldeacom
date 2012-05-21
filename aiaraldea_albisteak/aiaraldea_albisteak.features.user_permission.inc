@@ -11,6 +11,7 @@ function aiaraldea_albisteak_user_default_permissions() {
     'name' => 'create albiste content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'editor',
     ),
   );
 

@@ -52,6 +52,12 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style' => 'default',
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'middle' => NULL,
+      'right' => NULL,
+    ),
   );
   $display->cache = array();
   $display->title = 'orri_nagusiko_albisteak';
@@ -72,7 +78,9 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -93,7 +101,9 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
@@ -114,7 +124,9 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
@@ -140,7 +152,9 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'context' => 'argument_nid_1',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -148,6 +162,28 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $display->panels['middle'][0] = 'new-4';
     $pane = new stdClass;
     $pane->pid = 'new-5';
+    $pane->panel = 'middle';
+    $pane->type = 'etiketak';
+    $pane->subtype = 'etiketak';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'url_base' => 'albisteak',
+      'context' => 'argument_nid_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-5'] = $pane;
+    $display->panels['middle'][1] = 'new-5';
+    $pane = new stdClass;
+    $pane->pid = 'new-6';
     $pane->panel = 'middle';
     $pane->type = 'node_comments';
     $pane->subtype = 'node_comments';
@@ -162,14 +198,16 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-5'] = $pane;
-    $display->panels['middle'][1] = 'new-5';
+    $pane->position = 2;
+    $display->content['new-6'] = $pane;
+    $display->panels['middle'][2] = 'new-6';
     $pane = new stdClass;
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'middle';
     $pane->type = 'node_comment_form';
     $pane->subtype = 'node_comment_form';
@@ -181,14 +219,16 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-6'] = $pane;
-    $display->panels['middle'][2] = 'new-6';
+    $pane->position = 3;
+    $display->content['new-7'] = $pane;
+    $display->panels['middle'][3] = 'new-7';
     $pane = new stdClass;
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'content_field';
     $pane->subtype = 'field_erlazionatuak';
@@ -202,14 +242,16 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'override_title_text' => '',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['right'][0] = 'new-8';
     $pane = new stdClass;
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'albisteak';
@@ -235,12 +277,14 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'override_title_text' => '%node:term gehiago',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-8'] = $pane;
-    $display->panels['right'][1] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['right'][1] = 'new-9';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-4';
   $handler->conf['display'] = $display;
@@ -261,7 +305,10 @@ function aiaraldea_albisteak_default_page_manager_pages() {
   $page->admin_title = 'Albisteak';
   $page->admin_description = '';
   $page->path = 'albisteak/!term';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array(
     'term' => array(
