@@ -1,0 +1,95 @@
+<?php
+
+include_once('aiaraldea_azala.features.inc');
+
+function aiaraldea_azala_theme($existing) {
+  return array(
+      'views_view__azala_azken_iruzkinak_1_2' => array(
+          'arguments' => array('view' => NULL),
+          'template' => 'views-view--azala-azken-iruzkinak',
+          'original hook' => 'views_view',
+          'path' => drupal_get_path('module', 'aiaraldea_azala'),
+      ),
+      'views_view__proposamenak_azala_1_1' => array(
+          'arguments' => array('view' => NULL),
+          'template' => 'views-view--proposamenak-azala-1-1',
+          'original hook' => 'views_view',
+          'path' => drupal_get_path('module', 'aiaraldea_azala'),
+      ),
+      'views_view__azken_bideoak_1_2' => array(
+          'arguments' => array('view' => NULL),
+          'template' => 'views-view--azken-bideoak-1-2',
+          'original hook' => 'views_view',
+          'path' => drupal_get_path('module', 'aiaraldea_azala'),
+      ),
+      'views_view__flickr_image_sets_main_page_1_2' => array(
+          'arguments' => array('view' => NULL),
+          'template' => 'views-view--flickr-image-sets-main-page-1-2',
+          'original hook' => 'views_view',
+          'path' => drupal_get_path('module', 'aiaraldea_azala'),
+      ),
+  );
+}
+
+function aiaraldea_azala_preprocess_views_view__azala_azken_iruzkinak_1_2(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'aiaraldea_azala') . '/css/azala_azken_iruzkinak.css');
+}
+
+function aiaraldea_azala_preprocess_views_view__proposamenak_azala_1_1(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'aiaraldea_azala') . '/css/azala_proposamenak.css');
+}
+
+function aiaraldea_azala_preprocess_views_view__azken_bideoak_1_2(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'aiaraldea_azala') . '/css/azala_bideoak.css');
+}
+
+function aiaraldea_azala_preprocess_views_view__flickr_image_sets_main_page_1_2(&$vars) {
+  drupal_add_css(drupal_get_path('module', 'aiaraldea_azala') . '/css/azala_argazkiak.css');
+}
+
+/**
+ * Implementation of hook_menu_alter().
+ * http://dominiquedecooman.com/blog/how-remove-drupal-default-node-page-aka-default-front-page-view
+ */
+function aiaraldea_azala_menu_alter(&$callbacks) {
+  unset($callbacks['node']);
+}
+
+function aiaraldea_azala_menu() {
+  $items = array();
+  $items['admin/settings/azala'] = array(
+      'title' => 'Bideo eta Argazkien ordena',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('aiaraldea_azala_settings'),
+      'access arguments' => array('administer front page'),
+  );
+  return $items;
+}
+
+function aiaraldea_azala_perm() {
+  return array('administer front page');
+}
+
+function aiaraldea_azala_settings() {
+  if (user_access('administer front page')) {
+    $conf = $form_state['conf'];
+    $form['aiaraldea_azala']['bideoak_gainean'] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Bideoak gainean.'),
+        '#default_value' => variable_get('aiaraldea_azala_bideoak_gainean', true),
+    );
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Submit'),
+    );
+
+    $form['#submit'][] = 'aiaraldea_azala_submit';
+
+    return $form;
+  }
+}
+
+function aiaraldea_azala_submit($form, &$form_state) {
+  $bideoak_gainean = $form_state['values']['bideoak_gainean'];
+  variable_set('aiaraldea_azala_bideoak_gainean', $bideoak_gainean);
+}

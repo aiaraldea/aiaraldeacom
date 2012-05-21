@@ -1,0 +1,49 @@
+/*// Azaleko bideoen zerrendea 1.1*/
+div.view-azken-bideoak-1-2.view-display-azken-bideoa .views-field-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1em;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 6px;
+}
+div.view-azken-bideoak-1-2.view-display-azken-bideoa .views-field-tid,
+div.view-azken-bideoak-1-2.view-display-azken-bideoa .views-field-created {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: bolder;
+    display: inline;
+    padding-left: 0;
+    background-image: none;
+}
+
+.view-display-azken-bideoak {
+    color: white;
+}
+.view-display-azken-bideoak a {
+    color: white;
+    text-decoration: none;
+}
+.view-display-azken-bideoak .views-field-field-bideo-embed {
+    float: left;
+}
+.view-display-azken-bideoak .views-row {
+    min-height: 100px;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+.view-display-azken-bideoak .views-row.views-row-last {
+    border-bottom: none;
+}
+.view-display-azken-bideoak .views-field-created {
+    padding-top: 6px;
+}
+.view-display-azken-bideoak .views-field-tid,
+.view-display-azken-bideoak .views-field-title,
+.view-display-azken-bideoak .views-field-created {
+    padding-left: 150px;
+}
+.view-display-azken-bideoak .views-field-title {
+    font-size: 1.5em;
+    line-height: 1.0em;
+}
