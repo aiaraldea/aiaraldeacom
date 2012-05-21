@@ -17,9 +17,6 @@ function aiaraldea_proposamenak_ctools_plugin_api() {
   elseif ($module == "panels_mini" && $api == "panels_default") {
     return array("version" => 1);
   }
-  elseif ($module == "quicktabs" && $api == "quicktabs") {
-    return array("version" => 1);
-  }
   elseif ($module == "strongarm" && $api == "strongarm") {
     return array("version" => 1);
   }

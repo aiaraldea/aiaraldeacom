@@ -14,7 +14,7 @@ function aiaraldea_proposamenak_content_default_fields() {
       'weight' => '1',
       'parent' => '',
       'label' => array(
-        'format' => 'hidden',
+        'format' => 'above',
       ),
       'teaser' => array(
         'format' => 'mp3player_proposamenak_detail',
@@ -149,7 +149,7 @@ function aiaraldea_proposamenak_content_default_fields() {
       'weight' => 0,
       'parent' => '',
       'label' => array(
-        'format' => 'hidden',
+        'format' => 'above',
       ),
       'teaser' => array(
         'format' => 'image_plain',
@@ -228,6 +228,7 @@ function aiaraldea_proposamenak_content_default_fields() {
   t('Audio');
   t('Fitxa teknikoa');
   t('Irudia');
+  t('Kolaboratzilea');
 
   return $fields;
 }
