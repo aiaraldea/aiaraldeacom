@@ -2648,6 +2648,7 @@ function aiaraldea_azala_views_default_views() {
     'name' => 'navigation',
   ));
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->override_option('items_per_page', 8);
   $handler->override_option('block_description', 'Recent comments view');
   $handler->override_option('block_caching', -1);
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');

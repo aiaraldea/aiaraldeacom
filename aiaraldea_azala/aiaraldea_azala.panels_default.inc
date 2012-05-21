@@ -477,7 +477,7 @@ function aiaraldea_azala_default_panels_mini() {
     $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'proposamenak_azala_1_1';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_pager_settings' => 0,
