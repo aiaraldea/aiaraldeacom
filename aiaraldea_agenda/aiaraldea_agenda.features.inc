@@ -17,6 +17,30 @@ function aiaraldea_agenda_ctools_plugin_api() {
 }
 
 /**
+ * Implementation of hook_imagecache_default_presets().
+ */
+function aiaraldea_agenda_imagecache_default_presets() {
+  $items = array(
+    'agenda_deitale_irudia' => array(
+      'presetname' => 'agenda_deitale_irudia',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '440',
+            'height' => '100%',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implementation of hook_node_info().
  */
 function aiaraldea_agenda_node_info() {
