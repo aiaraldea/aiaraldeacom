@@ -74,7 +74,7 @@ function aiaraldea_albisteak_imagecache_default_presets() {
             'xpos' => 'center',
             'ypos' => 'center',
             'alpha' => '80',
-            'path' => 'sites/all/modules/custom/aiaraldea_azala/play_irudia2.png',
+            'path' => 'sites/all/modules/custom/aiaraldeacom/aiaraldea_azala/play_irudia2.png',
           ),
         ),
       ),
