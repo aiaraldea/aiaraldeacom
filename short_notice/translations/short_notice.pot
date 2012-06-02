@@ -1,0 +1,41 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  short_notice.features.inc: n/a
+#  short_notice.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-11-10 23:42+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: short_notice.features.inc:19 short_notice.info:0
+msgid "Short Notice"
+msgstr ""
+
+#: short_notice.features.inc:23
+msgid "Izenburua"
+msgstr ""
+
+#: short_notice.features.inc:25
+msgid "Gorputza"
+msgstr ""
+
+#: short_notice.info:0
+msgid "A short notice that will be show"
+msgstr ""
+
+#: short_notice.info:0
+msgid "Features"
+msgstr ""
+
