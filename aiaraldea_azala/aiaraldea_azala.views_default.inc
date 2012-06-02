@@ -3638,6 +3638,52 @@ function aiaraldea_azala_views_default_views() {
   ));
   $handler->override_option('items_per_page', 3);
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->override_option('fields', array(
+    'field_elkaur_image_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 1,
+        'path' => 'elkarrizketak/plaza-irekia',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'image_plain',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_elkaur_image_fid',
+      'table' => 'node_data_field_elkaur_image',
+      'field' => 'field_elkaur_image_fid',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Erabili lehenetsia',
+      ),
+    ),
+  ));
   $handler->override_option('pane_title', '');
   $handler->override_option('pane_description', '');
   $handler->override_option('pane_category', array(
