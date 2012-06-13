@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:media='http://search.yahoo.com/mrss/' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:gd='http://schemas.google.com/g/2005' xmlns:yt='http://gdata.youtube.com/schemas/2007'>
+    <id>http://gdata.youtube.com/feeds/api/videos</id>
+    <updated>2012-06-07T20:54:19.542Z</updated>
+    <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+    <title type='text'>YouTube Videos</title>
+    <logo>http://www.youtube.com/img/pic_youtubelogo_123x63.gif</logo>
+    <link rel='alternate' type='text/html' href='http://www.youtube.com'/>
+    <link rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos'/>
+    <link rel='http://schemas.google.com/g/2005#batch' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/batch'/>
+    <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos?author=aiaraldeatb&amp;start-index=1&amp;max-results=25'/>
+    <author>
+        <name>YouTube</name>
+        <uri>http://www.youtube.com/</uri>
+    </author>
+    <generator version='2.1' uri='http://gdata.youtube.com'>YouTube data API</generator>
+    <openSearch:totalResults>12</openSearch:totalResults>
+    <openSearch:startIndex>1</openSearch:startIndex>
+    <openSearch:itemsPerPage>25</openSearch:itemsPerPage>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/ZDWXl7xKFyw</id>
+        <published>2012-05-22T08:35:16.000Z</published>
+        <updated>2012-05-22T19:42:53.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='News' label='News &amp; Politics'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='TR'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Amurrio'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Greba'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Langileak'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Tubos'/>
+        <title type='text'>Tubos Reunidosen greba eguna 2012/05/23</title>
+        <content type='text'>Beste greba egun bat Amurrioko lantegian. Zuzendaritza ezin izan da enpresan sartu.</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=ZDWXl7xKFyw&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/ZDWXl7xKFyw/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/ZDWXl7xKFyw/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=ZDWXl7xKFyw'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/ZDWXl7xKFyw'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/ZDWXl7xKFyw/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='News &amp; Politics' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>News</media:category>
+            <media:content url='http://www.youtube.com/v/ZDWXl7xKFyw?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='54' yt:format='5'/>
+            <media:content url='rtsp://v7.cache4.c.youtube.com/CiILENy73wIaGQksF0q8l5c1ZBMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='54' yt:format='1'/>
+            <media:content url='rtsp://v7.cache2.c.youtube.com/CiILENy73wIaGQksF0q8l5c1ZBMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='54' yt:format='6'/>
+            <media:description type='plain'>Beste greba egun bat Amurrioko lantegian. Zuzendaritza ezin izan da enpresan sartu.</media:description>
+            <media:keywords>TR, Amurrio, Greba, Langileak, Tubos</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=ZDWXl7xKFyw&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/ZDWXl7xKFyw/0.jpg' height='360' width='480' time='00:00:27'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/ZDWXl7xKFyw/1.jpg' height='90' width='120' time='00:00:13.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/ZDWXl7xKFyw/2.jpg' height='90' width='120' time='00:00:27'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/ZDWXl7xKFyw/3.jpg' height='90' width='120' time='00:00:40.500'/>
+            <media:title type='plain'>Tubos Reunidosen greba eguna 2012/05/23</media:title>
+            <yt:duration seconds='54'/>
+        </media:group>
+        <gd:rating average='5.0' max='5' min='1' numRaters='1' rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='0' viewCount='479'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/8pViJUTo4xw</id>
+        <published>2012-05-05T14:57:30.000Z</published>
+        <updated>2012-05-05T14:57:30.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='People' label='People &amp; Blogs'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Plangintza'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='estrategikorako'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='hitzorduak'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='zuz'/>
+        <title type='text'>20120512-19</title>
+        <content type='text'/>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=8pViJUTo4xw&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/8pViJUTo4xw/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/8pViJUTo4xw/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=8pViJUTo4xw'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/8pViJUTo4xw'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/8pViJUTo4xw/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='People &amp; Blogs' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>People</media:category>
+            <media:content url='http://www.youtube.com/v/8pViJUTo4xw?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='59' yt:format='5'/>
+            <media:content url='rtsp://v3.cache7.c.youtube.com/CiILENy73wIaGQkc4-hEJWKV8hMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='59' yt:format='1'/>
+            <media:content url='rtsp://v2.cache8.c.youtube.com/CiILENy73wIaGQkc4-hEJWKV8hMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='59' yt:format='6'/>
+            <media:description type='plain'/>
+            <media:keywords>Plangintza, estrategikorako, hitzorduak, zuz</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=8pViJUTo4xw&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/8pViJUTo4xw/0.jpg' height='360' width='480' time='00:00:29.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/8pViJUTo4xw/1.jpg' height='90' width='120' time='00:00:14.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/8pViJUTo4xw/2.jpg' height='90' width='120' time='00:00:29.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/8pViJUTo4xw/3.jpg' height='90' width='120' time='00:00:44.250'/>
+            <media:title type='plain'>20120512-19</media:title>
+            <yt:duration seconds='59'/>
+        </media:group>
+        <yt:statistics favoriteCount='0' viewCount='52'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/Dym0x45UEA0</id>
+        <published>2012-04-27T11:42:32.000Z</published>
+        <updated>2012-05-04T12:58:31.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='People' label='People &amp; Blogs'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='txirrindularitza'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Arabako Hiru Egunak'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Ibai Salas'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Caja Rural'/>
+        <title type='text'>Arabako Hiru Egunak 2012. 1º etapa</title>
+        <content type='text'>Laudion bukatu den Arabako Hiru Egunak Txirrindularitza probako lehenengo etapan Caja Rural taldeko Ibai Salas atera da garaile. (2012/04/27)</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=Dym0x45UEA0&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/Dym0x45UEA0/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/Dym0x45UEA0/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=Dym0x45UEA0'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/Dym0x45UEA0'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/Dym0x45UEA0/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='People &amp; Blogs' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>People</media:category>
+            <media:content url='http://www.youtube.com/v/Dym0x45UEA0?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='29' yt:format='5'/>
+            <media:content url='rtsp://v5.cache8.c.youtube.com/CiILENy73wIaGQkNEFSOx7QpDxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='29' yt:format='1'/>
+            <media:content url='rtsp://v3.cache3.c.youtube.com/CiILENy73wIaGQkNEFSOx7QpDxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='29' yt:format='6'/>
+            <media:description type='plain'>Laudion bukatu den Arabako Hiru Egunak Txirrindularitza probako lehenengo etapan Caja Rural taldeko Ibai Salas atera da garaile. (2012/04/27)</media:description>
+            <media:keywords>txirrindularitza, Arabako Hiru Egunak, Ibai Salas, Caja Rural</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=Dym0x45UEA0&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/Dym0x45UEA0/0.jpg' height='360' width='480' time='00:00:14.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/Dym0x45UEA0/1.jpg' height='90' width='120' time='00:00:07.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/Dym0x45UEA0/2.jpg' height='90' width='120' time='00:00:14.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/Dym0x45UEA0/3.jpg' height='90' width='120' time='00:00:21.750'/>
+            <media:title type='plain'>Arabako Hiru Egunak 2012. 1º etapa</media:title>
+            <yt:duration seconds='29'/>
+        </media:group>
+        <yt:statistics favoriteCount='0' viewCount='23'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/v6flvszmn9M</id>
+        <published>2012-05-27T07:57:40.000Z</published>
+        <updated>2012-05-27T07:57:40.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='Entertainment' label='Entertainment'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='mobile'/>
+        <title type='text'>Arabako ideien laborategia</title>
+        <content type='text'>Este v�deo se ha subido desde un tel�fono con Android.</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=v6flvszmn9M&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/v6flvszmn9M/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/v6flvszmn9M/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=v6flvszmn9M'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/v6flvszmn9M'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/v6flvszmn9M/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Entertainment' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>Entertainment</media:category>
+            <media:content url='http://www.youtube.com/v/v6flvszmn9M?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='126' yt:format='5'/>
+            <media:content url='rtsp://v2.cache2.c.youtube.com/CiILENy73wIaGQnTn-bMvuWnvxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='126' yt:format='1'/>
+            <media:content url='rtsp://v8.cache8.c.youtube.com/CiILENy73wIaGQnTn-bMvuWnvxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='126' yt:format='6'/>
+            <media:description type='plain'>Este v�deo se ha subido desde un tel�fono con Android.</media:description>
+            <media:keywords>mobile</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=v6flvszmn9M&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/v6flvszmn9M/0.jpg' height='360' width='480' time='00:01:03'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/v6flvszmn9M/1.jpg' height='90' width='120' time='00:00:31.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/v6flvszmn9M/2.jpg' height='90' width='120' time='00:01:03'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/v6flvszmn9M/3.jpg' height='90' width='120' time='00:01:34.500'/>
+            <media:title type='plain'>Arabako ideien laborategia</media:title>
+            <yt:duration seconds='126'/>
+        </media:group>
+        <yt:statistics favoriteCount='0' viewCount='340'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/fIcMFxNAD_8</id>
+        <published>2012-04-18T12:37:52.000Z</published>
+        <updated>2012-05-04T12:09:21.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='People' label='People &amp; Blogs'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Amurrio'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Tubos Reunidos'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='greba'/>
+        <title type='text'>Amurrioko Tubos Reunidos, greban</title>
+        <content type='text'>Amurrioko Tubos Reunidos enpresan Raxoik aplikatu nai duen lan erreformaren kontra 24 orduko greba egin dute langileek. Bi atxilotu, zauritu bat eta hainbat istilu izan dira. Zaurituari zortzi puntu eman dizkiote ahoan.</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=fIcMFxNAD_8&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/fIcMFxNAD_8/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/fIcMFxNAD_8/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=fIcMFxNAD_8'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/fIcMFxNAD_8'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/fIcMFxNAD_8/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='People &amp; Blogs' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>People</media:category>
+            <media:content url='http://www.youtube.com/v/fIcMFxNAD_8?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='161' yt:format='5'/>
+            <media:content url='rtsp://v8.cache1.c.youtube.com/CiILENy73wIaGQn_D0ATFwyHfBMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='161' yt:format='1'/>
+            <media:content url='rtsp://v8.cache5.c.youtube.com/CiILENy73wIaGQn_D0ATFwyHfBMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='161' yt:format='6'/>
+            <media:description type='plain'>Amurrioko Tubos Reunidos enpresan Raxoik aplikatu nai duen lan erreformaren kontra 24 orduko greba egin dute langileek. Bi atxilotu, zauritu bat eta hainbat istilu izan dira. Zaurituari zortzi puntu eman dizkiote ahoan.</media:description>
+            <media:keywords>Amurrio, Tubos Reunidos, greba</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=fIcMFxNAD_8&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/fIcMFxNAD_8/0.jpg' height='360' width='480' time='00:01:20.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/fIcMFxNAD_8/1.jpg' height='90' width='120' time='00:00:40.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/fIcMFxNAD_8/2.jpg' height='90' width='120' time='00:01:20.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/fIcMFxNAD_8/3.jpg' height='90' width='120' time='00:02:00.750'/>
+            <media:title type='plain'>Amurrioko Tubos Reunidos, greban</media:title>
+            <yt:duration seconds='161'/>
+        </media:group>
+        <gd:rating average='5.0' max='5' min='1' numRaters='7' rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='2' viewCount='2328'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/5NwESVWRYq4</id>
+        <published>2012-05-21T10:55:19.000Z</published>
+        <updated>2012-05-21T10:55:19.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='Entertainment' label='Entertainment'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='mobile'/>
+        <title type='text'>txakolin eguna Amurrion</title>
+        <content type='text'>Este v�deo se ha subido desde un tel�fono con Android.</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=5NwESVWRYq4&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/5NwESVWRYq4/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/5NwESVWRYq4/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=5NwESVWRYq4'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/5NwESVWRYq4'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/5NwESVWRYq4/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Entertainment' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>Entertainment</media:category>
+            <media:content url='http://www.youtube.com/v/5NwESVWRYq4?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='231' yt:format='5'/>
+            <media:content url='rtsp://v7.cache7.c.youtube.com/CiILENy73wIaGQmuYpFVSQTc5BMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='231' yt:format='1'/>
+            <media:content url='rtsp://v2.cache1.c.youtube.com/CiILENy73wIaGQmuYpFVSQTc5BMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='231' yt:format='6'/>
+            <media:description type='plain'>Este v�deo se ha subido desde un tel�fono con Android.</media:description>
+            <media:keywords>mobile</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=5NwESVWRYq4&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5NwESVWRYq4/0.jpg' height='360' width='480' time='00:01:55.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5NwESVWRYq4/1.jpg' height='90' width='120' time='00:00:57.750'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5NwESVWRYq4/2.jpg' height='90' width='120' time='00:01:55.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5NwESVWRYq4/3.jpg' height='90' width='120' time='00:02:53.250'/>
+            <media:title type='plain'>txakolin eguna Amurrion</media:title>
+            <yt:duration seconds='231'/>
+        </media:group>
+        <yt:statistics favoriteCount='0' viewCount='150'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/DMUphdBJCns</id>
+        <published>2012-05-31T11:56:36.000Z</published>
+        <updated>2012-05-31T11:56:36.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='News' label='News &amp; Politics'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Irakaskuntza'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Murrizketak'/>
+        <title type='text'>Irakaskuntzako murrizketen kontrako mobilizazioa Laudion</title>
+        <content type='text'>2012/05/31</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=DMUphdBJCns&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/DMUphdBJCns/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/DMUphdBJCns/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=DMUphdBJCns'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/DMUphdBJCns'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/DMUphdBJCns/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='News &amp; Politics' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>News</media:category>
+            <media:content url='http://www.youtube.com/v/DMUphdBJCns?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='126' yt:format='5'/>
+            <media:content url='rtsp://v6.cache2.c.youtube.com/CiILENy73wIaGQl7CknQhSnFDBMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='126' yt:format='1'/>
+            <media:content url='rtsp://v7.cache6.c.youtube.com/CiILENy73wIaGQl7CknQhSnFDBMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='126' yt:format='6'/>
+            <media:description type='plain'>2012/05/31</media:description>
+            <media:keywords>Irakaskuntza, Murrizketak</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=DMUphdBJCns&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/DMUphdBJCns/0.jpg' height='360' width='480' time='00:01:03'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/DMUphdBJCns/1.jpg' height='90' width='120' time='00:00:31.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/DMUphdBJCns/2.jpg' height='90' width='120' time='00:01:03'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/DMUphdBJCns/3.jpg' height='90' width='120' time='00:01:34.500'/>
+            <media:title type='plain'>Irakaskuntzako murrizketen kontrako mobilizazioa Laudion</media:title>
+            <yt:duration seconds='126'/>
+        </media:group>
+        <yt:statistics favoriteCount='0' viewCount='103'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/5L0sYICj448</id>
+        <published>2012-05-24T11:37:51.000Z</published>
+        <updated>2012-05-25T09:30:43.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='Entertainment' label='Entertainment'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='aiaraldea.com'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Amurrio'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='zinema'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Refor'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='down sindromea'/>
+        <title type='text'>Down sindromea, laburmetrai</title>
+        <content type='text'>Amurrioko Refor txakolindegian "Y ahora que hacemos?" laburmetraia grabatu dute. Jose Cruz Gurrutxaga eta Aitor Arangurenek zuzendu dute lana, eta Arabako down sindromeko elkartekideak dira protagonista.</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=5L0sYICj448&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/5L0sYICj448/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/5L0sYICj448/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=5L0sYICj448'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/5L0sYICj448'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/5L0sYICj448/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='Entertainment' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>Entertainment</media:category>
+            <media:content url='http://www.youtube.com/v/5L0sYICj448?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='100' yt:format='5'/>
+            <media:content url='rtsp://v6.cache1.c.youtube.com/CiILENy73wIaGQmP46OAYCy95BMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='100' yt:format='1'/>
+            <media:content url='rtsp://v6.cache6.c.youtube.com/CiILENy73wIaGQmP46OAYCy95BMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='100' yt:format='6'/>
+            <media:description type='plain'>Amurrioko Refor txakolindegian "Y ahora que hacemos?" laburmetraia grabatu dute. Jose Cruz Gurrutxaga eta Aitor Arangurenek zuzendu dute lana, eta Arabako down sindromeko elkartekideak dira protagonista.</media:description>
+            <media:keywords>aiaraldea.com, Amurrio, zinema, Refor, down sindromea</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=5L0sYICj448&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5L0sYICj448/0.jpg' height='360' width='480' time='00:00:50'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5L0sYICj448/1.jpg' height='90' width='120' time='00:00:25'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5L0sYICj448/2.jpg' height='90' width='120' time='00:00:50'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/5L0sYICj448/3.jpg' height='90' width='120' time='00:01:15'/>
+            <media:title type='plain'>Down sindromea, laburmetrai</media:title>
+            <yt:duration seconds='100'/>
+        </media:group>
+        <gd:rating average='5.0' max='5' min='1' numRaters='1' rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='0' viewCount='145'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/COzr4frIuBo</id>
+        <published>2012-05-02T12:10:12.000Z</published>
+        <updated>2012-05-02T20:43:14.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='People' label='People &amp; Blogs'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='VE'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='13359601652411'/>
+        <title type='text'>Laudioko ikasleak hezkuntzako murrizketen kontra</title>
+        <content type='text'>Laudioko hainbat ikaslek Espainiar gobernuak hezkuntzan egingo dituen murrizketak salatu dituzte.</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=COzr4frIuBo&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/COzr4frIuBo/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/COzr4frIuBo/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=COzr4frIuBo'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/COzr4frIuBo'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/COzr4frIuBo/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='People &amp; Blogs' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>People</media:category>
+            <media:content url='http://www.youtube.com/v/COzr4frIuBo?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='69' yt:format='5'/>
+            <media:content url='rtsp://v6.cache5.c.youtube.com/CiILENy73wIaGQkauMj64evsCBMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='69' yt:format='1'/>
+            <media:content url='rtsp://v4.cache3.c.youtube.com/CiILENy73wIaGQkauMj64evsCBMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='69' yt:format='6'/>
+            <media:description type='plain'>Laudioko hainbat ikaslek Espainiar gobernuak hezkuntzan egingo dituen murrizketak salatu dituzte.</media:description>
+            <media:keywords>VE, 13359601652411</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=COzr4frIuBo&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/COzr4frIuBo/0.jpg' height='360' width='480' time='00:00:34.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/COzr4frIuBo/1.jpg' height='90' width='120' time='00:00:17.250'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/COzr4frIuBo/2.jpg' height='90' width='120' time='00:00:34.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/COzr4frIuBo/3.jpg' height='90' width='120' time='00:00:51.750'/>
+            <media:title type='plain'>Laudioko ikasleak hezkuntzako murrizketen kontra</media:title>
+            <yt:duration seconds='69'/>
+        </media:group>
+        <gd:rating average='5.0' max='5' min='1' numRaters='1' rel='http://schemas.google.com/g/2005#overall'/>
+        <yt:statistics favoriteCount='0' viewCount='240'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/h3SJc3ivPN4</id>
+        <published>2012-05-31T22:42:01.000Z</published>
+        <updated>2012-05-31T22:42:01.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='News' label='News &amp; Politics'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='urduña'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='udala'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='kontzentrazio esparrua'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='aiaraldea'/>
+        <title type='text'>Urduñako udalaren adierazpena</title>
+        <content type='text'>Frankismo garaiko Urduñako kontzentrazio esparruaren inguruan eginiko adierazpena. Udal ordezkaritza duten alderdi guztiek onartua.</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=h3SJc3ivPN4&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/h3SJc3ivPN4/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/h3SJc3ivPN4/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=h3SJc3ivPN4'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/h3SJc3ivPN4'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/h3SJc3ivPN4/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='News &amp; Politics' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>News</media:category>
+            <media:content url='http://www.youtube.com/v/h3SJc3ivPN4?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='132' yt:format='5'/>
+            <media:content url='rtsp://v8.cache1.c.youtube.com/CiILENy73wIaGQnePK94c4l0hxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='132' yt:format='1'/>
+            <media:content url='rtsp://v3.cache8.c.youtube.com/CiILENy73wIaGQnePK94c4l0hxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='132' yt:format='6'/>
+            <media:description type='plain'>Frankismo garaiko Urduñako kontzentrazio esparruaren inguruan eginiko adierazpena. Udal ordezkaritza duten alderdi guztiek onartua.</media:description>
+            <media:keywords>urduña, udala, kontzentrazio esparrua, aiaraldea</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=h3SJc3ivPN4&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/h3SJc3ivPN4/0.jpg' height='360' width='480' time='00:01:06'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/h3SJc3ivPN4/1.jpg' height='90' width='120' time='00:00:33'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/h3SJc3ivPN4/2.jpg' height='90' width='120' time='00:01:06'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/h3SJc3ivPN4/3.jpg' height='90' width='120' time='00:01:39'/>
+            <media:title type='plain'>Urduñako udalaren adierazpena</media:title>
+            <yt:duration seconds='132'/>
+        </media:group>
+        <yt:statistics favoriteCount='0' viewCount='65'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/Jx96lLK8ee0</id>
+        <published>2012-05-22T11:27:27.000Z</published>
+        <updated>2012-05-22T11:27:27.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='News' label='News &amp; Politics'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Lan'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='Gatazaka'/>
+        <title type='text'>Tubos Reunidosen lanuztea</title>
+        <content type='text'>Langileak lantegiaren sarreran jarri dira eta zuzendaria sartu gabe geratu da gaur ere.</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=Jx96lLK8ee0&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/Jx96lLK8ee0/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/Jx96lLK8ee0/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=Jx96lLK8ee0'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/Jx96lLK8ee0'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/Jx96lLK8ee0/comments' countHint='0'/>
+        </gd:comments>
+        <media:group>
+            <media:category label='News &amp; Politics' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>News</media:category>
+            <media:content url='http://www.youtube.com/v/Jx96lLK8ee0?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='20' yt:format='5'/>
+            <media:content url='rtsp://v4.cache3.c.youtube.com/CiILENy73wIaGQntebyylHofJxMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='20' yt:format='1'/>
+            <media:content url='rtsp://v6.cache5.c.youtube.com/CiILENy73wIaGQntebyylHofJxMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='20' yt:format='6'/>
+            <media:description type='plain'>Langileak lantegiaren sarreran jarri dira eta zuzendaria sartu gabe geratu da gaur ere.</media:description>
+            <media:keywords>Lan, Gatazaka</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=Jx96lLK8ee0&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/Jx96lLK8ee0/0.jpg' height='360' width='480' time='00:00:10'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/Jx96lLK8ee0/1.jpg' height='90' width='120' time='00:00:05'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/Jx96lLK8ee0/2.jpg' height='90' width='120' time='00:00:10'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/Jx96lLK8ee0/3.jpg' height='90' width='120' time='00:00:15'/>
+            <media:title type='plain'>Tubos Reunidosen lanuztea</media:title>
+            <yt:duration seconds='20'/>
+        </media:group>
+        <yt:statistics favoriteCount='0' viewCount='237'/>
+    </entry>
+    <entry>
+        <id>http://gdata.youtube.com/feeds/api/videos/bY963lr4F50</id>
+        <published>2012-05-24T11:24:56.000Z</published>
+        <updated>2012-05-24T11:24:56.000Z</updated>
+        <category scheme='http://schemas.google.com/g/2005#kind' term='http://gdata.youtube.com/schemas/2007#video'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/categories.cat' term='Entertainment' label='Entertainment'/>
+        <category scheme='http://gdata.youtube.com/schemas/2007/keywords.cat' term='mobile'/>
+        <title type='text'>Laburmetrai grabaketa Reforren</title>
+        <content type='text'>Este v�deo se ha subido desde un tel�fono con Android.</content>
+        <link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=bY963lr4F50&amp;feature=youtube_gdata'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.responses' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/bY963lr4F50/responses'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#video.related' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/bY963lr4F50/related'/>
+        <link rel='http://gdata.youtube.com/schemas/2007#mobile' type='text/html' href='http://m.youtube.com/details?v=bY963lr4F50'/>
+        <link rel='self' type='application/atom+xml' href='http://gdata.youtube.com/feeds/api/videos/bY963lr4F50'/>
+        <author>
+            <name>aiaraldeatb</name>
+            <uri>http://gdata.youtube.com/feeds/api/users/aiaraldeatb</uri>
+        </author>
+        <gd:comments>
+            <gd:feedLink rel='http://gdata.youtube.com/schemas/2007#comments' href='http://gdata.youtube.com/feeds/api/videos/bY963lr4F50/comments' countHint='0'/>
+        </gd:comments>
+        <yt:hd/>
+        <media:group>
+            <media:category label='Entertainment' scheme='http://gdata.youtube.com/schemas/2007/categories.cat'>Entertainment</media:category>
+            <media:content url='http://www.youtube.com/v/bY963lr4F50?version=3&amp;f=videos&amp;app=youtube_gdata' type='application/x-shockwave-flash' medium='video' isDefault='true' expression='full' duration='6' yt:format='5'/>
+            <media:content url='rtsp://v4.cache2.c.youtube.com/CiILENy73wIaGQmdF_ha3nqPbRMYDSANFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='6' yt:format='1'/>
+            <media:content url='rtsp://v8.cache6.c.youtube.com/CiILENy73wIaGQmdF_ha3nqPbRMYESARFEgGUgZ2aWRlb3MM/0/0/0/video.3gp' type='video/3gpp' medium='video' expression='full' duration='6' yt:format='6'/>
+            <media:description type='plain'>Este v�deo se ha subido desde un tel�fono con Android.</media:description>
+            <media:keywords>mobile</media:keywords>
+            <media:player url='http://www.youtube.com/watch?v=bY963lr4F50&amp;feature=youtube_gdata_player'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/bY963lr4F50/0.jpg' height='360' width='480' time='00:00:03'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/bY963lr4F50/1.jpg' height='90' width='120' time='00:00:01.500'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/bY963lr4F50/2.jpg' height='90' width='120' time='00:00:03'/>
+            <media:thumbnail url='http://i.ytimg.com/vi/bY963lr4F50/3.jpg' height='90' width='120' time='00:00:04.500'/>
+            <media:title type='plain'>Laburmetrai grabaketa Reforren</media:title>
+            <yt:duration seconds='6'/>
+        </media:group>
+        <yt:statistics favoriteCount='0' viewCount='7'/>
+    </entry>
+</feed>

@@ -61,6 +61,8 @@ function aiaraldea_bideoak_content_default_fields() {
       'thumbnail_link_title' => 'See video',
       'providers' => array(
         'bliptv' => 'bliptv',
+        'vimeo' => 'vimeo',
+        'youtube' => 'youtube',
       ),
       'default_value' => array(
         '0' => array(

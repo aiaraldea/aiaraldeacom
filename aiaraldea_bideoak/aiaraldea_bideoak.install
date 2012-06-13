@@ -1,9 +1,60 @@
 <?php
-function aiaraldea_bideoak_install() {
-  db_query("UPDATE {system} SET weight = 11 WHERE name = 'aiaraldea_bideoak'");
-}
 
+function aiaraldea_bideoak_install() {
+    db_query("UPDATE {system} SET weight = 11 WHERE name = 'aiaraldea_bideoak'");
+    _aiaraldea_bideoak_create_nodes();
+}
 
 function aiaraldea_bideoak_update_6001() {
-  db_query("UPDATE {system} SET weight = 11 WHERE name = 'aiaraldea_bideoak'");
+    db_query("UPDATE {system} SET weight = 11 WHERE name = 'aiaraldea_bideoak'");
 }
+
+/**
+ * Add the "bliptv" term to any video node without origin. 
+ */
+function aiaraldea_bideoak_update_6002() {
+    $blip_terms = taxonomy_get_term_by_name('bliptv');
+    $term = array_shift($blip_terms);
+    $vid = $term->vid;
+    $nodes = _select_nodes_by_content_type_not_in_vocabulary($vid, 'bideo');
+    while ($node = db_fetch_object($nodes)) {
+        $node = node_load($node->nid);
+        $node->taxonomy[] = $term;
+        taxonomy_node_save($node, $node->taxonomy);
+    }
+    return array();
+}
+
+/**
+ * Add feed nodes.
+ */
+function aiaraldea_bideoak_update_6003() {
+    _aiaraldea_bideoak_create_nodes();
+    return array();
+}
+
+function _aiaraldea_bideoak_create_nodes() {
+    cache_clear_all();
+    $node1 = new stdClass();
+    $node1->type = 'youtube_feed';
+    $node1->title = 'aiaraldea tb youtube';
+    $node1->feeds['FeedsHTTPFetcher']['source'] = 'http://gdata.youtube.com/feeds/api/videos?author=aiaraldeatb';
+    node_save($node1);
+
+    $node2 = new stdClass();
+    $node2->type = 'vimeo_feed';
+    $node2->title = 'Vimeo feed';
+    node_save($node2);
+}
+
+function _select_nodes_by_content_type_not_in_vocabulary($vocab_id, $content_type) {
+    $result = db_query(
+            "SELECT * FROM {node} WHERE nid NOT IN (
+		SELECT nid FROM {term_node} AS tn
+		LEFT JOIN {term_data} AS td ON tn.tid = td.tid
+		WHERE td.vid = %d)
+		AND type = '%s'", $vocab_id, $content_type
+    );
+    return $result;
+}
+

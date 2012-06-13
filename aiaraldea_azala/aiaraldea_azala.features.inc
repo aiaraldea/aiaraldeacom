@@ -152,6 +152,21 @@ function aiaraldea_azala_imagecache_default_presets() {
         ),
       ),
     ),
+    'elkarrizketa_image' => array(
+      'presetname' => 'elkarrizketa_image',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '100',
+            'height' => '200',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
   );
   return $items;
 }

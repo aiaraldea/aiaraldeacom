@@ -151,6 +151,27 @@ function aiaraldea_bideoak_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'emfield_emvideo_allow_bliptv';
+  $strongarm->value = 1;
+  $export['emfield_emvideo_allow_bliptv'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'emfield_emvideo_allow_vimeo';
+  $strongarm->value = 1;
+  $export['emfield_emvideo_allow_vimeo'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'emfield_emvideo_allow_youtube';
+  $strongarm->value = 1;
+  $export['emfield_emvideo_allow_youtube'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_bideo';
   $strongarm->value = '0';
   $export['language_content_type_bideo'] = $strongarm;
@@ -180,6 +201,26 @@ function aiaraldea_bideoak_strongarm() {
     0 => 'status',
   );
   $export['node_options_feed'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_vimeo_feed';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_vimeo_feed'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_youtube_feed';
+  $strongarm->value = array(
+    0 => 'status',
+    1 => 'promote',
+  );
+  $export['node_options_youtube_feed'] = $strongarm;
 
   return $export;
 }

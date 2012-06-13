@@ -1,0 +1,23 @@
+<?php
+// $Id: aiaraldea_vimeo.install,v 1.3.2.2 2011/01/31 22:30:37 wojtha Exp $
+
+/**
+ * @file
+ * Handles actions upon enabling and disabling the module.
+ */
+
+/**
+ * Implementation of hook_enable()
+ */
+function aiaraldea_vimeo_enable() {
+  // Clear the cache to display in Feeds as available plugin.
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+}
+
+/**
+ * Implementation of hook_disable()
+ */
+function aiaraldea_vimeo_disable() {
+  // Clear the cache to display in Feeds as available plugin.
+  cache_clear_all('plugins:feeds:plugins', 'cache');
+}

@@ -1,0 +1,87 @@
+<?php
+
+function aiaraldea_bideoak_ct_install() {
+    aiaraldea_bideoak_update_6001();
+    _create_bideo_vocabulary_and_terms();
+}
+
+function aiaraldea_bideoak_ct_update_6001() {
+    db_query("UPDATE {system} SET weight = 11 WHERE name = 'aiaraldea_bideoak'");
+    return array();
+}
+
+/**
+ * Create the taxonomy vocabulary and terms for video origins. 
+ */
+function aiaraldea_bideoak_ct_update_6002() {
+    _create_bideo_vocabulary_and_terms();
+    return array();
+}
+
+function _create_bideo_vocabulary_and_terms() {
+    $vocabulary = _abct_get_vocabulary_by_module("features_bideo_jatorria");
+
+    if (!$vocabulary) {
+        $vocabulary = array(
+            'name' => t('Bideoen jatorria'),
+            'description' => t('Bideoa zein zerbitzutik inportatu den.'),
+            'help' => '',
+            'relations' => '1',
+            'hierarchy' => '1',
+            'multiple' => '0',
+            'required' => '1',
+            'tags' => '1',
+            'module' => 'features_bideo_jatorria',
+            'weight' => '0',
+            'nodes' => array(
+                'bideo' => 'bideo',
+            ),
+        );
+        taxonomy_save_vocabulary($vocabulary);
+    }
+
+    $term1c = array(
+        'vid' => $vocabulary['vid'],
+        'name' => 'vimeo',
+    );
+
+    $term2c = array(
+        'vid' => $vocabulary['vid'],
+        'name' => 'youtube',
+    );
+
+    $term3c = array(
+        'vid' => $vocabulary['vid'],
+        'name' => 'bliptv',
+    );
+
+    $tree = taxonomy_get_tree($vocabulary['vid']);
+    foreach ($tree as $term_object) {
+        if ($term_object->name === $term1c['name']) {
+            $term1 = $term_object;
+        } else if ($term_object->name === $term2c['name']) {
+            $term2 = $term_object;
+        } else if ($term_object->name === $term3c['name']) {
+            $term3 = $term_object;
+        }
+    }
+    if (!isset($term1)) {
+        taxonomy_save_term($term1c);
+    }
+    if (!isset($term2)) {
+        taxonomy_save_term($term2c);
+    }
+    if (!isset($term3)) {
+        taxonomy_save_term($term3c);
+    }
+}
+
+function _abct_get_vocabulary_by_module($vocabulary_module) {
+  $vocabs = taxonomy_get_vocabularies();
+  foreach ($vocabs as $vocab_object) {
+    if ($vocab_object->module == $vocabulary_module) {
+      return $vocab_object;
+    }
+  }
+  return NULL;
+}
