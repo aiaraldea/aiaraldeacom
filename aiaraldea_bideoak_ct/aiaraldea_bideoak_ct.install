@@ -1,7 +1,7 @@
 <?php
 
 function aiaraldea_bideoak_ct_install() {
-    aiaraldea_bideoak_update_6001();
+    aiaraldea_bideoak_ct_update_6001();
     _create_bideo_vocabulary_and_terms();
 }
 
