@@ -12,7 +12,7 @@ function aiaraldea_base_egilea_ctools_content_types() {
         'required context' => new ctools_context_required(t('Node'), 'node'),
         'category' => t('Node'),
         'defaults' => array(
-            'url_base' => 'content',
+            'url_base' => 'content/',
         ),
     );
 }

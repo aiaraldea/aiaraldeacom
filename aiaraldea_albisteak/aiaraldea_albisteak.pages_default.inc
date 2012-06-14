@@ -168,7 +168,7 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'url_base' => 'albisteak',
+      'url_base' => 'albisteak/',
       'context' => 'argument_nid_1',
       'override_title' => 1,
       'override_title_text' => '',
