@@ -38,7 +38,7 @@ function publizitatea_strongarm() {
       'delete' => 'ezabatu',
     ),
     1 => array(
-      'id' => '231630',
+      'id' => '273742',
       'name' => 'Goialdea - eskuina',
       'delete' => 'ezabatu',
     ),
