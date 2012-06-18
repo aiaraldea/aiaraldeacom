@@ -1380,7 +1380,6 @@ function aiaraldea_agenda_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('title', 'egutegia');
-  $handler->override_option('use_ajax', TRUE);
   $handler->override_option('use_pager', '0');
   $handler->override_option('style_plugin', 'calendar_style');
   $handler = $view->new_display('date_nav', 'Date browser', 'date_nav_1');

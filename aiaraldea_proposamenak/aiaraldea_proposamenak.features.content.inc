@@ -228,7 +228,6 @@ function aiaraldea_proposamenak_content_default_fields() {
   t('Audio');
   t('Fitxa teknikoa');
   t('Irudia');
-  t('Kolaboratzilea');
 
   return $fields;
 }
