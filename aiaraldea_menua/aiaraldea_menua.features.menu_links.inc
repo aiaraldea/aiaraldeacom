@@ -60,30 +60,12 @@ function aiaraldea_menua_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-48',
   );
-  // Exported menu link: menu-goiko-menua:node/1615
-  $menu_links['menu-goiko-menua:node/1615'] = array(
+  // Exported menu link: menu-goiko-menua:albisteak/elkarrizketa
+  $menu_links['menu-goiko-menua:albisteak/elkarrizketa'] = array(
     'menu_name' => 'menu-goiko-menua',
-    'link_path' => 'node/1615',
-    'router_path' => 'node/%',
-    'link_title' => 'Udazkeneko Multimedia Eskola',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Udazkeneko Multimedia Eskola 2010',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '1',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-43',
-  );
-  // Exported menu link: menu-goiko-menua:node/33
-  $menu_links['menu-goiko-menua:node/33'] = array(
-    'menu_name' => 'menu-goiko-menua',
-    'link_path' => 'node/33',
-    'router_path' => 'node/%',
-    'link_title' => 'Nor gara',
+    'link_path' => 'albisteak/elkarrizketa',
+    'router_path' => 'albisteak',
+    'link_title' => 'Elkarrizketak',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -94,7 +76,7 @@ function aiaraldea_menua_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-44',
+    'weight' => '-45',
   );
   // Exported menu link: menu-goiko-menua:proposamenak
   $menu_links['menu-goiko-menua:proposamenak'] = array(
@@ -112,6 +94,7 @@ function aiaraldea_menua_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
+  t('Elkarrizketak');
   t('Agenda');
   t('Argazkiak');
   t('Bideoak');
