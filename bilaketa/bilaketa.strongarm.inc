@@ -16,21 +16,6 @@ function bilaketa_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'search_config_disable_category';
-  $strongarm->value = array(
-    2437 => '2437',
-    2438 => '2438',
-    2439 => '2439',
-    2440 => '2440',
-    3682 => '3682',
-    3680 => '3680',
-    3681 => '3681',
-  );
-  $export['search_config_disable_category'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'search_config_disable_category_all';
   $strongarm->value = 0;
   $export['search_config_disable_category_all'] = $strongarm;
