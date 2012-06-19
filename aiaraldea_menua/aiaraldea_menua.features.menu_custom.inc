@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_menu_default_menu_custom().
  */
-function aiaraldea_albisteak_menu_default_menu_custom() {
+function aiaraldea_menua_menu_default_menu_custom() {
   $menus = array();
 
   // Exported menu: menu-goiko-menua
