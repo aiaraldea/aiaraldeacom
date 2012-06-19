@@ -130,7 +130,7 @@ function aiaraldea_menua_default_fe_block_settings() {
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
-    'title' => '',
+    'title' => '<none>',
     'cache' => '-1',
   );
 
@@ -225,7 +225,7 @@ function aiaraldea_menua_default_fe_block_settings() {
     'throttle' => '0',
     'visibility' => '0',
     'pages' => '',
-    'title' => '',
+    'title' => '<none>',
     'cache' => '-1',
   );
 
