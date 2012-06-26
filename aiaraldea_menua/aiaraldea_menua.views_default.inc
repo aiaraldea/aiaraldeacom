@@ -6,704 +6,307 @@
 function aiaraldea_menua_views_default_views() {
   $views = array();
 
-  // Exported view: menuaren_herri_zerrenda
+  // Exported view: menu_herri_zerrenda
   $view = new view;
-  $view->name = 'menuaren_herri_zerrenda';
+  $view->name = 'menu_herri_zerrenda';
   $view->description = '';
   $view->tag = '';
-  $view->base_table = 'node';
-  $view->core = 0;
-  $view->api_version = '2';
+  $view->base_table = 'term_data';
+  $view->human_name = 'Menuaren herrien zerrenda';
+  $view->core = 6;
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-  $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->override_option('fields', array(
-    'name' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_taxonomy' => 1,
-      'exclude' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'relationship' => 'none',
-    ),
-    'name_1' => array(
-      'label' => 'Vocabulary name',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => 1,
-      'id' => 'name_1',
-      'table' => 'vocabulary',
-      'field' => 'name',
-      'relationship' => 'none',
-    ),
-    'nid' => array(
-      'label' => 'Nid Count',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'exclude' => 1,
-      'id' => 'nid',
-      'table' => 'node',
-      'field' => 'nid',
-      'relationship' => 'none',
-    ),
-    'views_sql_groupedfields' => array(
-      'label' => 'Group By Fields',
-      'alter' => array(
-        'alter_text' => FALSE,
-        'text' => '',
-        'make_link' => FALSE,
-        'path' => '',
-        'alt' => '',
-        'link_class' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'trim' => FALSE,
-        'max_length' => '',
-        'word_boundary' => TRUE,
-        'ellipsis' => TRUE,
-        'strip_tags' => FALSE,
-        'html' => FALSE,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => '1',
-      'id' => 'views_sql_groupedfields',
-      'table' => 'views_groupby',
-      'field' => 'views_sql_groupedfields',
-      'relationship' => 'none',
-      'views_groupby_fields_to_group' => array(
-        'name' => 'name',
-        'name_1' => 'name_1',
-      ),
-      'views_groupby_sql_function' => 'count',
-      'views_groupby_fields_to_aggregate' => array(
-        'nid' => 'nid',
-      ),
-      'views_groupby_field_sortby' => 'nid',
-      'views_groupby_sortby_direction' => 'desc',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'albiste' => 'albiste',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'vid' => array(
-      'operator' => 'in',
-      'value' => array(
-        2 => '2',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'vid',
-      'table' => 'term_data',
-      'field' => 'vid',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'time',
-    'results_lifespan' => '3600',
-    'output_lifespan' => '3600',
-  ));
-  $handler->override_option('items_per_page', 100);
-  $handler = $view->new_display('block', 'Blokea deialdiak', 'block_1');
-  $handler->override_option('fields', array(
-    'name' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 1,
-        'path' => 'agenda/[name]',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_taxonomy' => 0,
-      'exclude' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-    'name_1' => array(
-      'label' => 'Vocabulary name',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => 1,
-      'id' => 'name_1',
-      'table' => 'vocabulary',
-      'field' => 'name',
-      'relationship' => 'none',
-    ),
-    'nid' => array(
-      'label' => 'Nid Count',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'exclude' => 1,
-      'id' => 'nid',
-      'table' => 'node',
-      'field' => 'nid',
-      'relationship' => 'none',
-    ),
-    'views_sql_groupedfields' => array(
-      'label' => 'Group By Fields',
-      'alter' => array(
-        'alter_text' => FALSE,
-        'text' => '',
-        'make_link' => FALSE,
-        'path' => '',
-        'alt' => '',
-        'link_class' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'trim' => FALSE,
-        'max_length' => '',
-        'word_boundary' => TRUE,
-        'ellipsis' => TRUE,
-        'strip_tags' => FALSE,
-        'html' => FALSE,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => '1',
-      'id' => 'views_sql_groupedfields',
-      'table' => 'views_groupby',
-      'field' => 'views_sql_groupedfields',
-      'relationship' => 'none',
-      'views_groupby_fields_to_group' => array(
-        'name' => 'name',
-        'name_1' => 'name_1',
-      ),
-      'views_groupby_sql_function' => 'count',
-      'views_groupby_fields_to_aggregate' => array(
-        'nid' => 'nid',
-      ),
-      'views_groupby_field_sortby' => 'nid',
-      'views_groupby_sortby_direction' => 'desc',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'deialdi' => 'deialdi',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-    'vid' => array(
-      'operator' => 'in',
-      'value' => array(
-        2 => '2',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'vid',
-      'table' => 'term_data',
-      'field' => 'vid',
-      'relationship' => 'none',
-    ),
-    'date_filter' => array(
-      'operator' => '>=',
-      'value' => array(
-        'value' => NULL,
-        'min' => NULL,
-        'max' => NULL,
-        'default_date' => 'now',
-        'default_to_date' => '',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'date_fields' => array(
-        'node_data_field_noiz.field_noiz_value' => 'node_data_field_noiz.field_noiz_value',
-      ),
-      'date_method' => 'OR',
-      'granularity' => 'day',
-      'form_type' => 'date_select',
-      'default_date' => 'now',
-      'default_to_date' => '',
-      'year_range' => '-3:+3',
-      'id' => 'date_filter',
-      'table' => 'node',
-      'field' => 'date_filter',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'time',
-    'results_lifespan' => '300',
-    'output_lifespan' => '300',
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
-  $handler = $view->new_display('block', 'Blokea albisteak', 'block_2');
-  $handler->override_option('fields', array(
-    'name' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 1,
-        'path' => 'albisteak/[name]',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_taxonomy' => 0,
-      'exclude' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-    'name_1' => array(
-      'label' => 'Vocabulary name',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => 1,
-      'id' => 'name_1',
-      'table' => 'vocabulary',
-      'field' => 'name',
-      'relationship' => 'none',
-    ),
-    'nid' => array(
-      'label' => 'Nid Count',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'exclude' => 1,
-      'id' => 'nid',
-      'table' => 'node',
-      'field' => 'nid',
-      'relationship' => 'none',
-    ),
-    'views_sql_groupedfields' => array(
-      'label' => 'Group By Fields',
-      'alter' => array(
-        'alter_text' => FALSE,
-        'text' => '',
-        'make_link' => FALSE,
-        'path' => '',
-        'alt' => '',
-        'link_class' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'trim' => FALSE,
-        'max_length' => '',
-        'word_boundary' => TRUE,
-        'ellipsis' => TRUE,
-        'strip_tags' => FALSE,
-        'html' => FALSE,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => '1',
-      'id' => 'views_sql_groupedfields',
-      'table' => 'views_groupby',
-      'field' => 'views_sql_groupedfields',
-      'relationship' => 'none',
-      'views_groupby_fields_to_group' => array(
-        'name' => 'name',
-        'name_1' => 'name_1',
-      ),
-      'views_groupby_sql_function' => 'count',
-      'views_groupby_fields_to_aggregate' => array(
-        'nid' => 'nid',
-      ),
-      'views_groupby_field_sortby' => 'nid',
-      'views_groupby_sortby_direction' => 'desc',
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
-  $handler = $view->new_display('block', 'Blokea bideoak', 'block_3');
-  $handler->override_option('fields', array(
-    'name' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 1,
-        'path' => 'bideoak/[name]',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_taxonomy' => 0,
-      'exclude' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-    'name_1' => array(
-      'label' => 'Vocabulary name',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => 1,
-      'id' => 'name_1',
-      'table' => 'vocabulary',
-      'field' => 'name',
-      'relationship' => 'none',
-    ),
-    'nid' => array(
-      'label' => 'Nid Count',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'exclude' => 1,
-      'id' => 'nid',
-      'table' => 'node',
-      'field' => 'nid',
-      'relationship' => 'none',
-    ),
-    'views_sql_groupedfields' => array(
-      'label' => 'Group By Fields',
-      'alter' => array(
-        'alter_text' => FALSE,
-        'text' => '',
-        'make_link' => FALSE,
-        'path' => '',
-        'alt' => '',
-        'link_class' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'trim' => FALSE,
-        'max_length' => '',
-        'word_boundary' => TRUE,
-        'ellipsis' => TRUE,
-        'strip_tags' => FALSE,
-        'html' => FALSE,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => '1',
-      'id' => 'views_sql_groupedfields',
-      'table' => 'views_groupby',
-      'field' => 'views_sql_groupedfields',
-      'relationship' => 'none',
-      'views_groupby_fields_to_group' => array(
-        'name' => 'name',
-        'name_1' => 'name_1',
-      ),
-      'views_groupby_sql_function' => 'count',
-      'views_groupby_fields_to_aggregate' => array(
-        'nid' => 'nid',
-      ),
-      'views_groupby_field_sortby' => 'nid',
-      'views_groupby_sortby_direction' => 'desc',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'bideo' => 'bideo',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-    'vid' => array(
-      'operator' => 'in',
-      'value' => array(
-        2 => '2',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'vid',
-      'table' => 'term_data',
-      'field' => 'vid',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+
+  /* Display: Lehenespenak */
+  $handler = $view->new_display('default', 'Lehenespenak', 'default');
+  $handler->display->display_options['use_more_text'] = 'gehiago';
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'name' => 'name',
+  );
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['row_options']['default_field_elements'] = 1;
+  /* Erlazioa: Taxonomia: Nodoa */
+  $handler->display->display_options['relationships']['vid']['id'] = 'vid';
+  $handler->display->display_options['relationships']['vid']['table'] = 'term_node';
+  $handler->display->display_options['relationships']['vid']['field'] = 'vid';
+  $handler->display->display_options['relationships']['vid']['required'] = 0;
+  /* Eremua: Taxonomia: Termino */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'albisteak/[name]';
+  $handler->display->display_options['fields']['name']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['name']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['name']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['name']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 0;
+  $handler->display->display_options['fields']['name']['convert_spaces'] = 0;
+  /* Eremua: Nodoa: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'vid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['nid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nid']['hide_alter_empty'] = 1;
+  /* Sort criterion: Nodoa: Nid */
+  $handler->display->display_options['sorts']['nid']['id'] = 'nid';
+  $handler->display->display_options['sorts']['nid']['table'] = 'node';
+  $handler->display->display_options['sorts']['nid']['field'] = 'nid';
+  $handler->display->display_options['sorts']['nid']['relationship'] = 'vid';
+  $handler->display->display_options['sorts']['nid']['group_type'] = 'count';
+  $handler->display->display_options['sorts']['nid']['order'] = 'DESC';
+  /* Iragazkia: Taxonomia: Hiztegia */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    2 => '2',
+  );
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['relationship'] = 'vid';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'albiste' => 'albiste',
+  );
+
+  /* Display: Blokea albisteak */
+  $handler = $view->new_display('block', 'Blokea albisteak', 'b_albisteak');
+
+  /* Display: Blokea deialdiak */
+  $handler = $view->new_display('block', 'Blokea deialdiak', 'b_deialdiak');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Eremua: Taxonomia: Termino */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'agenda/[name]';
+  $handler->display->display_options['fields']['name']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['name']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['name']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['name']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 0;
+  $handler->display->display_options['fields']['name']['convert_spaces'] = 0;
+  /* Eremua: Nodoa: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'vid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['nid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Taxonomia: Hiztegia */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    2 => '2',
+  );
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['relationship'] = 'vid';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'deialdi' => 'deialdi',
+  );
+  /* Iragazkia: Data: Data (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['relationship'] = 'vid';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['allow_null'] = 1;
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'node_data_field_noiz.field_noiz_value' => 'node_data_field_noiz.field_noiz_value',
+  );
+  $handler->display->display_options['filters']['date_filter']['date_method'] = 'OR';
+  $handler->display->display_options['filters']['date_filter']['granularity'] = 'day';
+  $handler->display->display_options['filters']['date_filter']['form_type'] = 'date_select';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
+  $handler->display->display_options['filters']['date_filter']['default_to_date'] = '';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-3:+3';
+
+  /* Display: Blokea bideoak */
+  $handler = $view->new_display('block', 'Blokea bideoak', 'b_bideoak');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Eremua: Taxonomia: Termino */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'bideoak/[name]';
+  $handler->display->display_options['fields']['name']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['name']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['name']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['name']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 0;
+  $handler->display->display_options['fields']['name']['convert_spaces'] = 0;
+  /* Eremua: Nodoa: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'vid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['nid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Taxonomia: Hiztegia */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    2 => '2',
+  );
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['relationship'] = 'vid';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'bideo' => 'bideo',
+  );
+
+  /* Display: Blokea argazkiak */
+  $handler = $view->new_display('block', 'Blokea argazkiak', 'b_argazkiak');
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Taxonomia: Hiztegia */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    2 => '2',
+  );
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['relationship'] = 'vid';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'flickr_image_set' => 'flickr_image_set',
+  );
+  $translatables['menu_herri_zerrenda'] = array(
+    t('Lehenespenak'),
+    t('gehiago'),
+    t('Ezarri'),
+    t('Garbitu'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('nodoa'),
+    t('albisteak/[name]'),
+    t('Nid'),
+    t('Blokea albisteak'),
+    t('Blokea deialdiak'),
+    t('agenda/[name]'),
+    t('Blokea bideoak'),
+    t('bideoak/[name]'),
+    t('Blokea argazkiak'),
+  );
 
   $views[$view->name] = $view;
 

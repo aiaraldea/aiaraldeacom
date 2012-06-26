@@ -207,6 +207,6 @@ function aiaraldea_azala_node_info() {
  */
 function aiaraldea_azala_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

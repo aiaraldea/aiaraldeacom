@@ -409,7 +409,7 @@ return FALSE;',
     $pane->pid = 'new-2';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'albisteak_etiketak-panel_pane_2';
+    $pane->subtype = 'albisteen_etiketak-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -426,7 +426,7 @@ return FALSE;',
     $pane->pid = 'new-3';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'albisteak_etiketak-panel_pane_1';
+    $pane->subtype = 'albisteen_etiketak-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();

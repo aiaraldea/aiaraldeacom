@@ -13,7 +13,7 @@ function aiaraldea_menua_default_fe_block_settings() {
     'module' => 'block',
     'theme' => 'aiaraldeacom',
     'status' => '1',
-    'weight' => '-33',
+    'weight' => '-40',
     'region' => 'header',
     'custom' => '0',
     'throttle' => '0',
@@ -29,7 +29,7 @@ function aiaraldea_menua_default_fe_block_settings() {
     'delta' => 'menu-goiko-menua',
     'theme' => 'aiaraldeacom',
     'status' => '1',
-    'weight' => '-34',
+    'weight' => '-41',
     'region' => 'header',
     'custom' => '0',
     'throttle' => '0',
@@ -44,7 +44,7 @@ function aiaraldea_menua_default_fe_block_settings() {
     'delta' => 'proposamenak_menu',
     'theme' => 'aiaraldeacom',
     'status' => '1',
-    'weight' => '-29',
+    'weight' => '-33',
     'region' => 'header',
     'custom' => '0',
     'throttle' => '0',
@@ -54,12 +54,12 @@ function aiaraldea_menua_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-menuaren_herri_zerrenda-block_1'] = array(
+  $theme['views-menu_herri_zerrenda-b_albisteak'] = array(
     'module' => 'views',
-    'delta' => 'menuaren_herri_zerrenda-block_1',
+    'delta' => 'menu_herri_zerrenda-b_albisteak',
     'theme' => 'aiaraldeacom',
     'status' => '1',
-    'weight' => '-30',
+    'weight' => '-38',
     'region' => 'header',
     'custom' => '0',
     'throttle' => '0',
@@ -69,12 +69,27 @@ function aiaraldea_menua_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-menuaren_herri_zerrenda-block_2'] = array(
+  $theme['views-menu_herri_zerrenda-b_argazkiak'] = array(
     'module' => 'views',
-    'delta' => 'menuaren_herri_zerrenda-block_2',
+    'delta' => 'menu_herri_zerrenda-b_argazkiak',
+    'theme' => 'aiaraldeacom',
+    'status' => 0,
+    'weight' => '3',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $theme['views-menu_herri_zerrenda-b_bideoak'] = array(
+    'module' => 'views',
+    'delta' => 'menu_herri_zerrenda-b_bideoak',
     'theme' => 'aiaraldeacom',
     'status' => '1',
-    'weight' => '-32',
+    'weight' => '-36',
     'region' => 'header',
     'custom' => '0',
     'throttle' => '0',
@@ -84,12 +99,12 @@ function aiaraldea_menua_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-menuaren_herri_zerrenda-block_3'] = array(
+  $theme['views-menu_herri_zerrenda-b_deialdiak'] = array(
     'module' => 'views',
-    'delta' => 'menuaren_herri_zerrenda-block_3',
+    'delta' => 'menu_herri_zerrenda-b_deialdiak',
     'theme' => 'aiaraldeacom',
     'status' => '1',
-    'weight' => '-31',
+    'weight' => '-34',
     'region' => 'header',
     'custom' => '0',
     'throttle' => '0',
@@ -149,13 +164,13 @@ function aiaraldea_menua_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-menuaren_herri_zerrenda-block_1'] = array(
+  $theme['views-menu_herri_zerrenda-b_albisteak'] = array(
     'module' => 'views',
-    'delta' => 'menuaren_herri_zerrenda-block_1',
+    'delta' => 'menu_herri_zerrenda-b_albisteak',
     'theme' => 'rubik',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'header',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
@@ -164,13 +179,13 @@ function aiaraldea_menua_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-menuaren_herri_zerrenda-block_2'] = array(
+  $theme['views-menu_herri_zerrenda-b_argazkiak'] = array(
     'module' => 'views',
-    'delta' => 'menuaren_herri_zerrenda-block_2',
+    'delta' => 'menu_herri_zerrenda-b_argazkiak',
     'theme' => 'rubik',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'header',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
@@ -179,13 +194,28 @@ function aiaraldea_menua_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-menuaren_herri_zerrenda-block_3'] = array(
+  $theme['views-menu_herri_zerrenda-b_bideoak'] = array(
     'module' => 'views',
-    'delta' => 'menuaren_herri_zerrenda-block_3',
+    'delta' => 'menu_herri_zerrenda-b_bideoak',
     'theme' => 'rubik',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'header',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $theme['views-menu_herri_zerrenda-b_deialdiak'] = array(
+    'module' => 'views',
+    'delta' => 'menu_herri_zerrenda-b_deialdiak',
+    'theme' => 'rubik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
@@ -244,13 +274,13 @@ function aiaraldea_menua_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-menuaren_herri_zerrenda-block_1'] = array(
+  $theme['views-menu_herri_zerrenda-b_albisteak'] = array(
     'module' => 'views',
-    'delta' => 'menuaren_herri_zerrenda-block_1',
+    'delta' => 'menu_herri_zerrenda-b_albisteak',
     'theme' => 'tao',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'header',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
@@ -259,13 +289,13 @@ function aiaraldea_menua_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-menuaren_herri_zerrenda-block_2'] = array(
+  $theme['views-menu_herri_zerrenda-b_argazkiak'] = array(
     'module' => 'views',
-    'delta' => 'menuaren_herri_zerrenda-block_2',
+    'delta' => 'menu_herri_zerrenda-b_argazkiak',
     'theme' => 'tao',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'header',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
@@ -274,13 +304,28 @@ function aiaraldea_menua_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-menuaren_herri_zerrenda-block_3'] = array(
+  $theme['views-menu_herri_zerrenda-b_bideoak'] = array(
     'module' => 'views',
-    'delta' => 'menuaren_herri_zerrenda-block_3',
+    'delta' => 'menu_herri_zerrenda-b_bideoak',
     'theme' => 'tao',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'header',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $theme['views-menu_herri_zerrenda-b_deialdiak'] = array(
+    'module' => 'views',
+    'delta' => 'menu_herri_zerrenda-b_deialdiak',
+    'theme' => 'tao',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',

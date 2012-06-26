@@ -15,6 +15,6 @@ function aiaraldea_menua_ctools_plugin_api() {
  */
 function aiaraldea_menua_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

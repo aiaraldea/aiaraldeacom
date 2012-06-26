@@ -19,7 +19,7 @@ function flickr_image_sets_ctools_plugin_api() {
 function flickr_image_sets_node_info() {
   $items = array(
     'flickr_image_set' => array(
-      'name' => t('Flicker image set'),
+      'name' => t('Argazki bilduma'),
       'module' => 'features',
       'description' => t('Allows to show a set from flickr.'),
       'has_title' => '1',
@@ -38,6 +38,6 @@ function flickr_image_sets_node_info() {
  */
 function flickr_image_sets_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

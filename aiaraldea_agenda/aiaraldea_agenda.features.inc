@@ -65,6 +65,6 @@ function aiaraldea_agenda_node_info() {
  */
 function aiaraldea_agenda_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

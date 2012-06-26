@@ -257,7 +257,7 @@ function aiaraldea_bideoak_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views';
-    $pane->subtype = 'azken_bideoak_1_2';
+    $pane->subtype = 'bideoak';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

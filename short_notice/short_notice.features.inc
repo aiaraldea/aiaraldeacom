@@ -16,7 +16,7 @@ function short_notice_ctools_plugin_api() {
 function short_notice_node_info() {
   $items = array(
     'short_notice' => array(
-      'name' => t('Short Notice'),
+      'name' => t('Ohar laburra'),
       'module' => 'features',
       'description' => '',
       'has_title' => '1',
@@ -36,6 +36,6 @@ Hemen argitaratuko duzun edukia seguruenez <a href="http://www.twitter.com/aiara
  */
 function short_notice_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

@@ -61,6 +61,6 @@ function aiaraldea_bideoak_imagecache_default_presets() {
  */
 function aiaraldea_bideoak_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

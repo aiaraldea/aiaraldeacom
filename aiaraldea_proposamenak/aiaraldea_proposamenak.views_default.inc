@@ -12,925 +12,462 @@ function aiaraldea_proposamenak_views_default_views() {
   $view->description = 'Proposamenak';
   $view->tag = '';
   $view->base_table = 'node';
+  $view->human_name = '';
   $view->core = 0;
-  $view->api_version = '2';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->override_option('fields', array(
-    'field_proposamena_irudia_fid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'proposamena_linked',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_proposamena_irudia_fid',
-      'table' => 'node_data_field_proposamena_irudia',
-      'field' => 'field_proposamena_irudia_fid',
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-    ),
-    'body' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 1,
-        'max_length' => '180',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 1,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => 0,
-      'id' => 'body',
-      'table' => 'node_revisions',
-      'field' => 'body',
-      'relationship' => 'none',
-    ),
-    'field_kolaboratzaile_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_kolaboratzaile_value',
-      'table' => 'node_data_field_kolaboratzaile',
-      'field' => 'field_kolaboratzaile_value',
-      'relationship' => 'none',
-    ),
-    'field_audio_fid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'mp3player_proposamenak_azala',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_audio_fid',
-      'table' => 'node_data_field_audio',
-      'field' => 'field_audio_fid',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Override',
-      ),
-    ),
-  ));
-  $handler->override_option('sorts', array(
-    'created' => array(
-      'order' => 'DESC',
-      'granularity' => 'second',
-      'id' => 'created',
-      'table' => 'node',
-      'field' => 'created',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('arguments', array(
-    'tid' => array(
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('header_format', '4');
-  $handler->override_option('header_empty', 0);
-  $handler->override_option('items_per_page', 1);
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-  ));
+  $handler->display->display_options['use_more_text'] = 'gehiago';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Eremua: Edukia: Irudia (field_proposamena_irudia) */
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['id'] = 'field_proposamena_irudia_fid';
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['table'] = 'node_data_field_proposamena_irudia';
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['field'] = 'field_proposamena_irudia_fid';
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['format'] = 'proposamena_linked';
+  /* Eremua: Nodoa: Izenburua */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Eremua: Nodoa: Testua */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'node_revisions';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '180';
+  $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['body']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['body']['empty_zero'] = 0;
+  /* Eremua: Edukia: Kolaboratzilea (field_kolaboratzaile) */
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['id'] = 'field_kolaboratzaile_value';
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['table'] = 'node_data_field_kolaboratzaile';
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['field'] = 'field_kolaboratzaile_value';
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['label_type'] = 'none';
+  /* Eremua: Edukia: Audio (field_audio) */
+  $handler->display->display_options['fields']['field_audio_fid']['id'] = 'field_audio_fid';
+  $handler->display->display_options['fields']['field_audio_fid']['table'] = 'node_data_field_audio';
+  $handler->display->display_options['fields']['field_audio_fid']['field'] = 'field_audio_fid';
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_audio_fid']['format'] = 'mp3player_proposamenak_azala';
+  /* Sort criterion: Nodoa: Argitaratze data */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Argumentua: Taxonomia: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'term_node';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['style_plugin'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Blokea Agenda */
   $handler = $view->new_display('block', 'Blokea Agenda', 'block_1');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(
-        27 => '27',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    27 => '27',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Blokea Musika */
   $handler = $view->new_display('block', 'Blokea Musika', 'block_2');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(
-        24 => '24',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    24 => '24',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Blokea Literatura */
   $handler = $view->new_display('block', 'Blokea Literatura', 'block_3');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(
-        26 => '26',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    26 => '26',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Blokea Zinema */
   $handler = $view->new_display('block', 'Blokea Zinema', 'block_4');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(
-        25 => '25',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    25 => '25',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Content pane agenda */
   $handler = $view->new_display('panel_pane', 'Content pane agenda', 'panel_pane_1');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(
-        27 => '27',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('pane_title', '');
-  $handler->override_option('pane_description', '');
-  $handler->override_option('pane_category', array(
-    'name' => 'View panes',
-    'weight' => 0,
-  ));
-  $handler->override_option('allow', array(
-    'use_pager' => FALSE,
-    'items_per_page' => FALSE,
-    'offset' => FALSE,
-    'link_to_view' => FALSE,
-    'more_link' => FALSE,
-    'path_override' => FALSE,
-    'title_override' => FALSE,
-    'exposed_form' => FALSE,
-    'fields_override' => FALSE,
-  ));
-  $handler->override_option('argument_input', array());
-  $handler->override_option('link_to_view', 0);
-  $handler->override_option('inherit_panels_path', 0);
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    27 => '27',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Zerrenda */
   $handler = $view->new_display('panel_pane', 'Zerrenda', 'panel_pane_4');
-  $handler->override_option('fields', array(
-    'field_proposamena_irudia_fid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'proposamenak_zerrenda_linked',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_proposamena_irudia_fid',
-      'table' => 'node_data_field_proposamena_irudia',
-      'field' => 'field_proposamena_irudia_fid',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-    'created' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'date_format' => 'custom',
-      'custom_date_format' => 'y.m.d',
-      'exclude' => 0,
-      'id' => 'created',
-      'table' => 'node',
-      'field' => 'created',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-    ),
-    'body' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 1,
-        'max_length' => '180',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 1,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'exclude' => 1,
-      'id' => 'body',
-      'table' => 'node_revisions',
-      'field' => 'body',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-    'field_kolaboratzaile_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_kolaboratzaile_value',
-      'table' => 'node_data_field_kolaboratzaile',
-      'field' => 'field_kolaboratzaile_value',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-    ),
-    'field_audio_fid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'mp3player_proposamenak_list',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_audio_fid',
-      'table' => 'node_data_field_audio',
-      'field' => 'field_audio_fid',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-  ));
-  $handler->override_option('arguments', array(
-    'tid' => array(
-      'default_action' => 'ignore',
-      'style_plugin' => 'default_summary',
-      'style_options' => array(),
-      'wildcard' => 'all',
-      'wildcard_substitution' => 'All',
-      'title' => '',
-      'breadcrumb' => '',
-      'default_argument_type' => 'fixed',
-      'default_argument' => '',
-      'validate_type' => 'none',
-      'validate_fail' => 'not found',
-      'break_phrase' => 0,
-      'add_table' => 0,
-      'require_value' => 0,
-      'reduce_duplicates' => 0,
-      'set_breadcrumb' => 0,
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'validate_user_argument_type' => 'uid',
-      'validate_user_roles' => array(
-        2 => 0,
-        3 => 0,
-        4 => 0,
-      ),
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'default_options_div_prefix' => '',
-      'default_argument_user' => 0,
-      'default_argument_fixed' => '',
-      'default_argument_php' => '',
-      'validate_argument_node_type' => array(
-        'deialdi' => 0,
-        'story' => 0,
-        'bideo' => 0,
-        'proposamena' => 0,
-        'panel' => 0,
-        'elkarrizketa' => 0,
-        'feed' => 0,
-        'page' => 0,
-      ),
-      'validate_argument_node_access' => 0,
-      'validate_argument_nid_type' => 'nid',
-      'validate_argument_vocabulary' => array(
-        2 => 0,
-        3 => 0,
-        1 => 0,
-        4 => 0,
-      ),
-      'validate_argument_type' => 'tid',
-      'validate_argument_transform' => 0,
-      'validate_user_restrict_roles' => 0,
-      'validate_argument_php' => '',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('items_per_page', 10);
-  $handler->override_option('use_pager', 'mini');
-  $handler->override_option('style_plugin', 'list');
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-    'type' => 'ul',
-  ));
-  $handler->override_option('pane_title', '');
-  $handler->override_option('pane_description', '');
-  $handler->override_option('pane_category', array(
-    'name' => 'View panes',
-    'weight' => 0,
-  ));
-  $handler->override_option('allow', array(
-    'use_pager' => FALSE,
-    'items_per_page' => FALSE,
-    'offset' => FALSE,
-    'link_to_view' => FALSE,
-    'more_link' => FALSE,
-    'path_override' => FALSE,
-    'title_override' => FALSE,
-    'exposed_form' => FALSE,
-    'fields_override' => FALSE,
-  ));
-  $handler->override_option('argument_input', array());
-  $handler->override_option('link_to_view', 0);
-  $handler->override_option('inherit_panels_path', 0);
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Eremua: Edukia: Irudia (field_proposamena_irudia) */
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['id'] = 'field_proposamena_irudia_fid';
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['table'] = 'node_data_field_proposamena_irudia';
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['field'] = 'field_proposamena_irudia_fid';
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_proposamena_irudia_fid']['format'] = 'proposamenak_zerrenda_linked';
+  /* Eremua: Nodoa: Argitaratze data */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['created']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['created']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'y.m.d';
+  /* Eremua: Nodoa: Izenburua */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Eremua: Nodoa: Testua */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'node_revisions';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '180';
+  $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['body']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['body']['empty_zero'] = 0;
+  /* Eremua: Edukia: Kolaboratzilea (field_kolaboratzaile) */
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['id'] = 'field_kolaboratzaile_value';
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['table'] = 'node_data_field_kolaboratzaile';
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['field'] = 'field_kolaboratzaile_value';
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_kolaboratzaile_value']['label_type'] = 'none';
+  /* Eremua: Edukia: Audio (field_audio) */
+  $handler->display->display_options['fields']['field_audio_fid']['id'] = 'field_audio_fid';
+  $handler->display->display_options['fields']['field_audio_fid']['table'] = 'node_data_field_audio';
+  $handler->display->display_options['fields']['field_audio_fid']['field'] = 'field_audio_fid';
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_audio_fid']['format'] = 'mp3player_proposamenak_list';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Argumentua: Taxonomia: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'term_node';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['style_plugin'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
+  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
+  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
+  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $translatables['proposamenak_list'] = array(
+    t('Defaults'),
+    t('gehiago'),
+    t('Ezarri'),
+    t('Garbitu'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Guztiak'),
+    t('Blokea Agenda'),
+    t('Blokea Musika'),
+    t('Blokea Literatura'),
+    t('Blokea Zinema'),
+    t('Content pane agenda'),
+    t('View panes'),
+    t('Zerrenda'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+  );
 
   $views[$view->name] = $view;
 
@@ -940,498 +477,278 @@ function aiaraldea_proposamenak_views_default_views() {
   $view->description = 'Proposamenak menu';
   $view->tag = '';
   $view->base_table = 'node';
+  $view->human_name = '';
   $view->core = 0;
-  $view->api_version = '2';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->override_option('fields', array(
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('sorts', array(
-    'created' => array(
-      'order' => 'DESC',
-      'granularity' => 'second',
-      'id' => 'created',
-      'table' => 'node',
-      'field' => 'created',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('arguments', array(
-    'tid' => array(
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('header_format', '4');
-  $handler->override_option('header_empty', 0);
-  $handler->override_option('items_per_page', 1);
+  $handler->display->display_options['use_more_text'] = 'gehiago';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = 1;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Eremua: Nodoa: Izenburua */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Sort criterion: Nodoa: Argitaratze data */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Argumentua: Taxonomia: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'term_node';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['style_plugin'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Blokea Agenda */
   $handler = $view->new_display('block', 'Blokea Agenda', 'block_1');
-  $handler->override_option('fields', array(
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => 'Agenda',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(
-        27 => '27',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Eremua: Nodoa: Izenburua */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['text'] = 'Agenda';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    27 => '27',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Blokea Musika */
   $handler = $view->new_display('block', 'Blokea Musika', 'block_2');
-  $handler->override_option('fields', array(
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => 'Musika',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(
-        24 => '24',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Eremua: Nodoa: Izenburua */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['text'] = 'Musika';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    24 => '24',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Blokea Literatura */
   $handler = $view->new_display('block', 'Blokea Literatura', 'block_3');
-  $handler->override_option('fields', array(
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => 'Literatura',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(
-        26 => '26',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Eremua: Nodoa: Izenburua */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['text'] = 'Literatura';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    26 => '26',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Blokea Zinema */
   $handler = $view->new_display('block', 'Blokea Zinema', 'block_4');
-  $handler->override_option('fields', array(
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => 'Zinema',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'strip_tags' => 0,
-        'html' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'term_node_tid_depth' => array(
-      'operator' => 'or',
-      'value' => array(
-        25 => '25',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '4',
-      'depth' => '0',
-      'id' => 'term_node_tid_depth',
-      'table' => 'node',
-      'field' => 'term_node_tid_depth',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Eremua: Nodoa: Izenburua */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['text'] = 'Zinema';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    25 => '25',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+  $translatables['proposamenak_menu'] = array(
+    t('Defaults'),
+    t('gehiago'),
+    t('Ezarri'),
+    t('Garbitu'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Guztiak'),
+    t('Blokea Agenda'),
+    t('Agenda'),
+    t('Blokea Musika'),
+    t('Musika'),
+    t('Blokea Literatura'),
+    t('Literatura'),
+    t('Blokea Zinema'),
+    t('Zinema'),
+  );
 
   $views[$view->name] = $view;
 

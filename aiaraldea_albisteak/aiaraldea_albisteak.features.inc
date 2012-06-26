@@ -111,6 +111,6 @@ function aiaraldea_albisteak_node_info() {
  */
 function aiaraldea_albisteak_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

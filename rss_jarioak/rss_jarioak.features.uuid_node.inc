@@ -95,8 +95,8 @@ function rss_jarioak_uuid_features_default_content() {
     'taxonomy' => array(),
     'radioactivity' => array(
       'energy' => array(
-        '1' => 18.710798672953,
-        '2' => 36.564342526617,
+        '1' => 0.80199711131606,
+        '2' => 7.5700370995867,
       ),
     ),
     'uuid' => 'fbf5f344-b970-11e1-a1f8-dc0ea1167747',

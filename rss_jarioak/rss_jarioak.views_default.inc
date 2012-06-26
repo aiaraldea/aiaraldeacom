@@ -12,220 +12,88 @@ function rss_jarioak_views_default_views() {
   $view->description = 'RSS';
   $view->tag = 'rss';
   $view->base_table = 'node';
+  $view->human_name = '';
   $view->core = 0;
-  $view->api_version = '2';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Lehenespenak */
   $handler = $view->new_display('default', 'Lehenespenak', 'default');
-  $handler->override_option('sorts', array(
-    'created' => array(
-      'order' => 'DESC',
-      'granularity' => 'second',
-      'id' => 'created',
-      'table' => 'node',
-      'field' => 'created',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('arguments', array(
-    'type' => array(
-      'default_action' => 'ignore',
-      'style_plugin' => 'default_summary',
-      'style_options' => array(),
-      'wildcard' => 'all',
-      'wildcard_substitution' => 'Guztiak',
-      'title' => '',
-      'breadcrumb' => '',
-      'default_argument_type' => 'fixed',
-      'default_argument' => '',
-      'validate_type' => 'none',
-      'validate_fail' => 'not found',
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'validate_user_argument_type' => 'uid',
-      'validate_user_roles' => array(
-        2 => 0,
-        3 => 0,
-        5 => 0,
-        4 => 0,
-      ),
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'default_options_div_prefix' => '',
-      'default_argument_fixed' => '',
-      'default_argument_user' => 0,
-      'default_argument_php' => '',
-      'validate_argument_node_type' => array(
-        'panel' => 0,
-        'albiste' => 0,
-        'audio_eduki_mota' => 0,
-        'bideo' => 0,
-        'deialdi' => 0,
-        'feed' => 0,
-        'flickr_set' => 0,
-        'page' => 0,
-        'proposamena' => 0,
-        'test1' => 0,
-      ),
-      'validate_argument_node_access' => 0,
-      'validate_argument_nid_type' => 'nid',
-      'validate_argument_vocabulary' => array(
-        2 => 0,
-        3 => 0,
-        1 => 0,
-        4 => 0,
-      ),
-      'validate_argument_type' => 'tid',
-      'validate_argument_transform' => 0,
-      'validate_user_restrict_roles' => 0,
-      'validate_argument_php' => '',
-    ),
-    'name' => array(
-      'default_action' => 'ignore',
-      'style_plugin' => 'default_summary',
-      'style_options' => array(),
-      'wildcard' => 'all',
-      'wildcard_substitution' => 'Guztiak',
-      'title' => '',
-      'breadcrumb' => '',
-      'default_argument_type' => 'fixed',
-      'default_argument' => '',
-      'validate_type' => 'none',
-      'validate_fail' => 'not found',
-      'glossary' => 0,
-      'limit' => '0',
-      'case' => 'none',
-      'path_case' => 'none',
-      'transform_dash' => 0,
-      'add_table' => 0,
-      'require_value' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'validate_user_argument_type' => 'uid',
-      'validate_user_roles' => array(
-        2 => 0,
-        3 => 0,
-        5 => 0,
-        4 => 0,
-      ),
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'default_options_div_prefix' => '',
-      'default_argument_fixed' => '',
-      'default_argument_user' => 0,
-      'default_argument_php' => '',
-      'validate_argument_node_type' => array(
-        'panel' => 0,
-        'albiste' => 0,
-        'audio_eduki_mota' => 0,
-        'bideo' => 0,
-        'deialdi' => 0,
-        'feed' => 0,
-        'flickr_set' => 0,
-        'page' => 0,
-        'proposamena' => 0,
-        'test1' => 0,
-      ),
-      'validate_argument_node_access' => 0,
-      'validate_argument_nid_type' => 'nid',
-      'validate_argument_vocabulary' => array(
-        2 => 0,
-        3 => 0,
-        1 => 0,
-        4 => 0,
-      ),
-      'validate_argument_type' => 'tid',
-      'validate_argument_transform' => 0,
-      'validate_user_restrict_roles' => 0,
-      'validate_argument_php' => '',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'albiste' => 'albiste',
-        'flickr_image_set' => 'flickr_image_set',
-        'bideo' => 'bideo',
-        'deialdi' => 'deialdi',
-        'proposamena' => 'proposamena',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('items_per_page', 20);
-  $handler->override_option('row_plugin', 'node');
-  $handler->override_option('row_options', array(
-    'relationship' => 'none',
-    'build_mode' => 'teaser',
-    'links' => 1,
-    'comments' => 0,
-  ));
+  $handler->display->display_options['use_more_text'] = 'gehiago';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = 20;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['links'] = 1;
+  $handler->display->display_options['row_options']['comments'] = 0;
+  /* Sort criterion: Nodoa: Argitaratze data */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Argumentua: Nodoa: Mota */
+  $handler->display->display_options['arguments']['type']['id'] = 'type';
+  $handler->display->display_options['arguments']['type']['table'] = 'node';
+  $handler->display->display_options['arguments']['type']['field'] = 'type';
+  $handler->display->display_options['arguments']['type']['style_plugin'] = 'default_summary';
+  $handler->display->display_options['arguments']['type']['default_argument_type'] = 'fixed';
+  /* Argumentua: Taxonomia: Termino */
+  $handler->display->display_options['arguments']['name']['id'] = 'name';
+  $handler->display->display_options['arguments']['name']['table'] = 'term_data';
+  $handler->display->display_options['arguments']['name']['field'] = 'name';
+  $handler->display->display_options['arguments']['name']['style_plugin'] = 'default_summary';
+  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['name']['glossary'] = 0;
+  $handler->display->display_options['arguments']['name']['limit'] = '0';
+  $handler->display->display_options['arguments']['name']['transform_dash'] = 0;
+  $handler->display->display_options['arguments']['name']['add_table'] = 0;
+  $handler->display->display_options['arguments']['name']['require_value'] = 0;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'albiste' => 'albiste',
+    'flickr_image_set' => 'flickr_image_set',
+    'bideo' => 'bideo',
+    'deialdi' => 'deialdi',
+    'proposamena' => 'proposamena',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+
+  /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed_1');
-  $handler->override_option('style_plugin', 'rss');
-  $handler->override_option('style_options', array(
-    'mission_description' => FALSE,
-    'description' => '',
-  ));
-  $handler->override_option('row_plugin', 'node_rss');
-  $handler->override_option('row_options', array(
-    'relationship' => 'none',
-    'item_length' => 'default',
-  ));
-  $handler->override_option('path', 'feed');
-  $handler->override_option('menu', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
-  $handler->override_option('displays', array());
-  $handler->override_option('sitename_title', 1);
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['style_options']['mission_description'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['path'] = 'feed';
+  $handler->display->display_options['sitename_title'] = 1;
+  $translatables['feed_rss'] = array(
+    t('Lehenespenak'),
+    t('gehiago'),
+    t('Ezarri'),
+    t('Garbitu'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Guztiak'),
+    t('Feed'),
+  );
 
   $views[$view->name] = $view;
 

@@ -52,6 +52,6 @@ function albiste_sailak_imagecache_default_presets() {
  */
 function albiste_sailak_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }
