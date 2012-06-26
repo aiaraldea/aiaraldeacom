@@ -22,7 +22,9 @@ function aiaraldea_menua_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_lifespan'] = '21600';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
@@ -119,6 +121,10 @@ function aiaraldea_menua_views_default_views() {
 
   /* Display: Blokea deialdiak */
   $handler = $view->new_display('block', 'Blokea deialdiak', 'b_deialdiak');
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Eremua: Taxonomia: Termino */
   $handler->display->display_options['fields']['name']['id'] = 'name';
