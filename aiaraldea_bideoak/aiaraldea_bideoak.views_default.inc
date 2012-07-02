@@ -418,14 +418,6 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['filters']['name']['value'] = 'vimeo bliptv';
   $handler->display->display_options['filters']['name']['expose']['operator'] = FALSE;
   $handler->display->display_options['filters']['name']['case'] = 1;
-  /* Iragazkia: Taxonomia: Hiztegia */
-  $handler->display->display_options['filters']['vid']['id'] = 'vid';
-  $handler->display->display_options['filters']['vid']['table'] = 'term_data';
-  $handler->display->display_options['filters']['vid']['field'] = 'vid';
-  $handler->display->display_options['filters']['vid']['value'] = array(
-    6 => '6',
-  );
-  $handler->display->display_options['filters']['vid']['expose']['operator'] = FALSE;
   $translatables['azken_bideoak_1_2'] = array(
     t('Defaults'),
     t('gehiago'),
@@ -687,14 +679,6 @@ function aiaraldea_bideoak_views_default_views() {
     6 => '6',
   );
   $handler->display->display_options['filters']['vid']['expose']['operator'] = FALSE;
-  /* Iragazkia: Taxonomia: Termino */
-  $handler->display->display_options['filters']['name']['id'] = 'name';
-  $handler->display->display_options['filters']['name']['table'] = 'term_data';
-  $handler->display->display_options['filters']['name']['field'] = 'name';
-  $handler->display->display_options['filters']['name']['operator'] = 'word';
-  $handler->display->display_options['filters']['name']['value'] = 'bliptv vimeo';
-  $handler->display->display_options['filters']['name']['expose']['operator'] = FALSE;
-  $handler->display->display_options['filters']['name']['case'] = 1;
 
   /* Display: Bideoak */
   $handler = $view->new_display('panel_pane', 'Bideoak', 'panel_pane_1');

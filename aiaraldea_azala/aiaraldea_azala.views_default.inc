@@ -190,8 +190,6 @@ function aiaraldea_azala_views_default_views() {
   $handler = $view->new_display('block', 'Blokea', 'block_1');
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['use_more_always'] = TRUE;
-  $handler->display->display_options['use_more_text'] = 'gehiago';
 
   /* Display: Deiladi nabarmena */
   $handler = $view->new_display('panel_pane', 'Deiladi nabarmena', 'panel_pane_3');
@@ -359,9 +357,6 @@ function aiaraldea_azala_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
     t('Guztiak'),
     t('Agenda: %1'),
     t('%1'),

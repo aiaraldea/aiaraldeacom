@@ -84,6 +84,33 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-1';
     $pane->panel = '1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Udako postalak embed',
+      'title' => 'Udako postalen lehiaketa',
+      'body' => '<script type="text/javascript">// <![CDATA[
+widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak", "width": "380", "height": "180", "widgetid": "web_widget_iframe_af819fe841b35004b5be0aae79caacab" };
+// ]]></script><script id="web_widget_iframe_af819fe841b35004b5be0aae79caacab" src="http://udakoargazkiak2011.aiaraldea.com/sites/all/modules/web_widgets/iframe/web_widgets_iframe.js"></script> 
+
+<div><a href="http://udakoargazkiak2012.aiaraldea.com"><img src="sites/all/modules/custom/aiaraldeacom/aiaraldea_azala/img/parte-hartu.gif" alt="Egin klik eta parte hartu" /></a></div>',
+      'format' => '2',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-1'] = $pane;
+    $display->panels['1'][0] = 'new-1';
+    $pane = new stdClass;
+    $pane->pid = 'new-2';
+    $pane->panel = '1';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_albisteak_1_1';
     $pane->shown = TRUE;
@@ -98,11 +125,11 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-1'] = $pane;
-    $display->panels['1'][0] = 'new-1';
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['1'][1] = 'new-2';
     $pane = new stdClass;
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-3';
     $pane->panel = '1';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -127,11 +154,11 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-2'] = $pane;
-    $display->panels['1'][1] = 'new-2';
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['1'][2] = 'new-3';
     $pane = new stdClass;
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = '1';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_agenda';
@@ -153,11 +180,11 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-3'] = $pane;
-    $display->panels['1'][2] = 'new-3';
+    $pane->position = 3;
+    $display->content['new-4'] = $pane;
+    $display->panels['1'][3] = 'new-4';
     $pane = new stdClass;
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = '1';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -176,11 +203,11 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
-    $display->content['new-4'] = $pane;
-    $display->panels['1'][3] = 'new-4';
+    $pane->position = 4;
+    $display->content['new-5'] = $pane;
+    $display->panels['1'][4] = 'new-5';
     $pane = new stdClass;
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = '2';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_plaza';
@@ -197,10 +224,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-5'] = $pane;
-    $display->panels['2'][0] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['2'][0] = 'new-6';
     $pane = new stdClass;
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = '2';
     $pane->type = 'views';
     $pane->subtype = 'azala_azken_iruzkinak_1_2';
@@ -229,10 +256,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-6'] = $pane;
-    $display->panels['2'][1] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['2'][1] = 'new-7';
     $pane = new stdClass;
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = '2';
     $pane->type = 'panels_mini';
     $pane->subtype = 'proposamenak_front_1_1';
@@ -255,10 +282,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
-    $display->content['new-7'] = $pane;
-    $display->panels['2'][2] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['2'][2] = 'new-8';
     $pane = new stdClass;
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = '3';
     $pane->type = 'views';
     $pane->subtype = 'aiaraldea_banner_nodequeue_1';
@@ -287,10 +314,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-8'] = $pane;
-    $display->panels['3'][0] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['3'][0] = 'new-9';
     $pane = new stdClass;
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = '3';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_bideoak_a2011';
@@ -318,10 +345,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-9'] = $pane;
-    $display->panels['3'][1] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['3'][1] = 'new-10';
     $pane = new stdClass;
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = '3';
     $pane->type = 'panels_mini';
     $pane->subtype = 'flickr_image_sets_main_page_1_2';
@@ -338,10 +365,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
-    $display->content['new-10'] = $pane;
-    $display->panels['3'][2] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['3'][2] = 'new-11';
     $pane = new stdClass;
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-12';
     $pane->panel = '3';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_bideoak_a2011';
@@ -369,10 +396,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 3;
-    $display->content['new-11'] = $pane;
-    $display->panels['3'][3] = 'new-11';
+    $display->content['new-12'] = $pane;
+    $display->panels['3'][3] = 'new-12';
     $pane = new stdClass;
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-13';
     $pane->panel = '3';
     $pane->type = 'block';
     $pane->subtype = 'openx-2';
@@ -389,10 +416,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 4;
-    $display->content['new-12'] = $pane;
-    $display->panels['3'][4] = 'new-12';
+    $display->content['new-13'] = $pane;
+    $display->panels['3'][4] = 'new-13';
     $pane = new stdClass;
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-14';
     $pane->panel = '3';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_mult_geh';
@@ -409,10 +436,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 5;
-    $display->content['new-13'] = $pane;
-    $display->panels['3'][5] = 'new-13';
+    $display->content['new-14'] = $pane;
+    $display->panels['3'][5] = 'new-14';
     $pane = new stdClass;
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-15';
     $pane->panel = '3';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -439,10 +466,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 6;
-    $display->content['new-14'] = $pane;
-    $display->panels['3'][6] = 'new-14';
+    $display->content['new-15'] = $pane;
+    $display->panels['3'][6] = 'new-15';
     $pane = new stdClass;
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-16';
     $pane->panel = '3';
     $pane->type = 'block';
     $pane->subtype = 'twitter_pull-0';
@@ -465,10 +492,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 7;
-    $display->content['new-15'] = $pane;
-    $display->panels['3'][7] = 'new-15';
+    $display->content['new-16'] = $pane;
+    $display->panels['3'][7] = 'new-16';
     $pane = new stdClass;
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-17';
     $pane->panel = 'header';
     $pane->type = 'views';
     $pane->subtype = 'short_notices';
@@ -497,10 +524,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-16'] = $pane;
-    $display->panels['header'][0] = 'new-16';
+    $display->content['new-17'] = $pane;
+    $display->panels['header'][0] = 'new-17';
     $pane = new stdClass;
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-18';
     $pane->panel = 'header';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -558,8 +585,8 @@ new TWTR.Widget({
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-17'] = $pane;
-    $display->panels['header'][1] = 'new-17';
+    $display->content['new-18'] = $pane;
+    $display->panels['header'][1] = 'new-18';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
