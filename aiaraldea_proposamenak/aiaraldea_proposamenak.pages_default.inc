@@ -184,7 +184,7 @@ function aiaraldea_proposamenak_default_page_manager_pages() {
   $page->path = 'proposamenak';
   $page->access = array();
   $page->menu = array(
-    'type' => 'normal',
+    'type' => 'none',
     'title' => 'Kultur leihoa',
     'name' => 'menu-goiko-menua',
     'weight' => '3',
