@@ -394,7 +394,6 @@ class AiaraldeaYoutubeParser extends FeedsParser {
 
     private function startsWith($haystack, $needle) {
         $length = strlen($needle);
-        return (substr($haystack, 0, $length) === $needle);
+        return (strtolower(substr($haystack, 0, $length)) === $needle);
     }
-
 }
