@@ -271,9 +271,9 @@ class AiaraldeaYoutubeParser extends FeedsParser {
                 'fav_count' => (string) $favCount,
                 'rating' => (string) $rating,
                 'updated_datetime' => date('Y-m-d H:i:s', strtotime($updated)),
-                'updated_timestamp' => strtotime($published),
+                'updated_timestamp' => strtotime($updated),
                 'published_datetime' => date('Y-m-d H:i:s', strtotime($published)),
-                'published_timestamp' => strtotime($updated),
+                'published_timestamp' => strtotime($published),
                 'jatorria' => array('youtube'),
             );
 
