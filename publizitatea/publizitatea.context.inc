@@ -21,21 +21,22 @@ function publizitatea_context_default_contexts() {
     'user' => array(
       'values' => array(
         'anonymous user' => 'anonymous user',
+        'authenticated user' => 'authenticated user',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'openx-0' => array(
-          'module' => 'openx',
-          'delta' => 0,
+        'adzerk-azk24056' => array(
+          'module' => 'adzerk',
+          'delta' => 'azk24056',
           'region' => 'absolute_top',
           'weight' => 0,
         ),
-        'openx-1' => array(
-          'module' => 'openx',
-          'delta' => 1,
+        'adzerk-azk22008' => array(
+          'module' => 'adzerk',
+          'delta' => 'azk22008',
           'region' => 'absolute_top',
           'weight' => 1,
         ),
