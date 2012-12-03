@@ -102,17 +102,16 @@ function aiaraldea_azala_imagecache_default_presets() {
       'presetname' => 'azala_azken_bideoak',
       'actions' => array(
         '0' => array(
-          'weight' => '0',
+          'weight' => '-10',
           'module' => 'imagecache',
-          'action' => 'imagecache_scale',
+          'action' => 'imagecache_scale_and_crop',
           'data' => array(
             'width' => '140',
-            'height' => '100%',
-            'upscale' => 0,
+            'height' => '80',
           ),
         ),
         '1' => array(
-          'weight' => '0',
+          'weight' => '-9',
           'module' => 'imagecache_canvasactions',
           'action' => 'canvasactions_file2canvas',
           'data' => array(

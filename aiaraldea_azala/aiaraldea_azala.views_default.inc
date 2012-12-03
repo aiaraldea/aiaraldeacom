@@ -131,7 +131,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_noiz_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_noiz_value']['format'] = 'short';
-  /* Sort criterion: Edukia: Noiz (field_noiz) */
+  /* Ordenazio irizpidea: Edukia: Noiz (field_noiz) */
   $handler->display->display_options['sorts']['field_noiz_value']['id'] = 'field_noiz_value';
   $handler->display->display_options['sorts']['field_noiz_value']['table'] = 'node_data_field_noiz';
   $handler->display->display_options['sorts']['field_noiz_value']['field'] = 'field_noiz_value';
@@ -195,6 +195,10 @@ function aiaraldea_azala_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Deiladi nabarmena', 'panel_pane_3');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'deialdi-nabarmena view-agenda';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -462,7 +466,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 0;
-  /* Sort criterion: Iruzkina: Argitaratze data */
+  /* Ordenazio irizpidea: Iruzkina: Argitaratze data */
   $handler->display->display_options['sorts']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['sorts']['timestamp']['table'] = 'comments';
   $handler->display->display_options['sorts']['timestamp']['field'] = 'timestamp';
@@ -548,6 +552,10 @@ function aiaraldea_azala_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['block_description'] = 'Recent comments view';
 
   /* Display: Content pane */
@@ -728,7 +736,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Sort criterion: Nodoa: Argitaratze data */
+  /* Ordenazio irizpidea: Nodoa: Argitaratze data */
   $handler->display->display_options['sorts']['created_1']['id'] = 'created_1';
   $handler->display->display_options['sorts']['created_1']['table'] = 'node';
   $handler->display->display_options['sorts']['created_1']['field'] = 'created';
@@ -920,12 +928,12 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_kolaboratzaile_value']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_kolaboratzaile_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_kolaboratzaile_value']['label_type'] = 'none';
-  /* Sort criterion: Nodoa: Argitaratze data */
+  /* Ordenazio irizpidea: Nodoa: Argitaratze data */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Argumentua: Taxonomia: Term ID */
+  /* Argumentua: Taxonomia: Terminoaren IDa */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'term_node';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -945,7 +953,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  /* Iragazkia: Taxonomia: Terminoaren IDa (sakontasunarekin) */
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
@@ -973,7 +981,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  /* Iragazkia: Taxonomia: Terminoaren IDa (sakontasunarekin) */
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
@@ -1005,7 +1013,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  /* Iragazkia: Taxonomia: Terminoaren IDa (sakontasunarekin) */
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
@@ -1037,7 +1045,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  /* Iragazkia: Taxonomia: Terminoaren IDa (sakontasunarekin) */
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
@@ -1069,7 +1077,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Iragazkia: Taxonomia: Term ID (with depth) */
+  /* Iragazkia: Taxonomia: Terminoaren IDa (sakontasunarekin) */
   $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
