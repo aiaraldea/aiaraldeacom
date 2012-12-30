@@ -29,6 +29,8 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementuak orriak';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Erlazioa: Flags: nabarmena */
@@ -129,7 +131,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_noiz_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_noiz_value']['format'] = 'short';
-  /* Sort criterion: Edukia: Noiz (field_noiz) */
+  /* Ordenazio irizpidea: Edukia: Noiz (field_noiz) */
   $handler->display->display_options['sorts']['field_noiz_value']['id'] = 'field_noiz_value';
   $handler->display->display_options['sorts']['field_noiz_value']['table'] = 'node_data_field_noiz';
   $handler->display->display_options['sorts']['field_noiz_value']['field'] = 'field_noiz_value';
@@ -339,7 +341,7 @@ function aiaraldea_agenda_views_default_views() {
   /* Display: Content pane by date */
   $handler = $view->new_display('panel_pane', 'Content pane by date', 'panel_pane_2');
   $handler->display->display_options['defaults']['empty'] = FALSE;
-  /* Empty text: Global: Text area */
+  /* Testu hutsa: Globala: Text area */
   $handler->display->display_options['empty']['text']['id'] = 'area';
   $handler->display->display_options['empty']['text']['table'] = 'views';
   $handler->display->display_options['empty']['text']['field'] = 'area';
@@ -498,9 +500,9 @@ function aiaraldea_agenda_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
+    t('Elementuak orriak'),
     t('- All -'),
-    t('Offset'),
+    t('Desplazamendua'),
     t('Guztiak'),
     t('Agenda: %1'),
     t('%1'),
@@ -597,7 +599,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['name']['hide_empty'] = 0;
   $handler->display->display_options['fields']['name']['empty_zero'] = 0;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 0;
-  /* Sort criterion: Edukia: Noiz (field_noiz) */
+  /* Ordenazio irizpidea: Edukia: Noiz (field_noiz) */
   $handler->display->display_options['sorts']['field_noiz_value']['id'] = 'field_noiz_value';
   $handler->display->display_options['sorts']['field_noiz_value']['table'] = 'node_data_field_noiz';
   $handler->display->display_options['sorts']['field_noiz_value']['field'] = 'field_noiz_value';

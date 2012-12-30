@@ -251,6 +251,40 @@ function aiaraldea_agenda_default_page_manager_pages() {
     $pane->position = 0;
     $display->content['new-2'] = $pane;
     $display->panels['right'][0] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'bidali zure deialdia',
+      'title' => 'bidali zure deialdia',
+      'body' => '<div id="webform-4430">Fill out my <a href="https://aiaraldea.webform.com/form/4430">weform</a>.</div>
+<script type="text/javascript">(function(d, s, id) {
+var js, wjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = \'//webform.com/external/embed.js\';
+js.onload = js.onreadystatechange = function() {
+  var rs = this.readyState; if (rs && rs !== \'complete\' && rs !== \'loaded\') return;
+  try { webformEmbed(\'https://aiaraldea.webform.com/form/4430?embed=1\', \'webform-4430\'); } catch (e) {}
+};
+wjs.parentNode.insertBefore(js, wjs);
+}(document, \'script\', \'webform-embed\'));</script>',
+      'format' => '2',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-3'] = $pane;
+    $display->panels['right'][1] = 'new-3';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;

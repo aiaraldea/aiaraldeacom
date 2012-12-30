@@ -53,7 +53,7 @@ function aiaraldea_agenda_default_panels_mini() {
     $pane->panel = 'middle';
     $pane->type = 'block';
     $pane->subtype = 'views-proposamenak_list-block_1';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
@@ -76,7 +76,7 @@ function aiaraldea_agenda_default_panels_mini() {
     $pane->panel = 'middle';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
