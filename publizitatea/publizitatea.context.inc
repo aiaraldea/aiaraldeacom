@@ -21,7 +21,6 @@ function publizitatea_context_default_contexts() {
     'user' => array(
       'values' => array(
         'anonymous user' => 'anonymous user',
-        'authenticated user' => 'authenticated user',
       ),
     ),
   );
