@@ -32,7 +32,7 @@ function rss_jarioak_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = 1;
   $handler->display->display_options['row_options']['comments'] = 0;
-  /* Sort criterion: Nodoa: Argitaratze data */
+  /* Ordenazio irizpidea: Nodoa: Argitaratze data */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -79,7 +79,8 @@ function rss_jarioak_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss';
-  $handler->display->display_options['style_options']['mission_description'] = FALSE;
+  $handler->display->display_options['style_options']['description'] = 'Aiaraldea komunikazio leihoa ';
+  $handler->display->display_options['style_options']['mission_description'] = 0;
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['path'] = 'feed';
   $handler->display->display_options['sitename_title'] = 1;
