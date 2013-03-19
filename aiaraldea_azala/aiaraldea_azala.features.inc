@@ -53,6 +53,7 @@ function aiaraldea_azala_flag_default_flags() {
         '1' => 7,
       ),
     ),
+    'weight' => 0,
     'show_on_page' => 1,
     'show_on_teaser' => 1,
     'show_on_form' => 1,
@@ -65,6 +66,7 @@ function aiaraldea_azala_flag_default_flags() {
     'api_version' => 2,
   );
   return $flags;
+
 }
 
 /**
