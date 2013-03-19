@@ -4,6 +4,10 @@ function albiste_sailak_install() {
   db_query("UPDATE {system} SET weight = 11 WHERE name = 'albiste_sailak'");
 }
 
+function albiste_sailak_update_6007() {
+  _create_vocabulary_and_terms();
+}
+
 function albiste_sailak_update_6003() {
   _create_vocabulary_and_terms();
   db_query("UPDATE {system} SET weight = 11 WHERE name = 'albiste_sailak'");
@@ -38,26 +42,30 @@ function _create_vocabulary_and_terms() {
   }
 
   $term1c = array(
-      'vid' => $vocabulary['vid'],
+      'vid' => $vocabulary->vid,
       'name' => '1. gunea',
   );
 
   $term2c = array(
-      'vid' => $vocabulary['vid'],
+      'vid' => $vocabulary->vid,
       'name' => '2. gunea',
   );
 
   $term3c = array(
-      'vid' => $vocabulary['vid'],
+      'vid' => $vocabulary->vid,
       'name' => '3. gunea',
   );
 
   $term4c = array(
-      'vid' => $vocabulary['vid'],
+      'vid' => $vocabulary->vid,
       'name' => 'Elkarrizketa',
   );
+  $term5c = array(
+      'vid' => $vocabulary->vid,
+      'name' => 'Korrikaren plaza',
+  );
 
-  $tree = taxonomy_get_tree($vocabulary['vid']);
+  $tree = taxonomy_get_tree($vocabulary->vid);
   foreach ($tree as $term_object) {
     if ($term_object->name === $term1c['name']) {
       $term1 = $term_object;
@@ -67,6 +75,8 @@ function _create_vocabulary_and_terms() {
       $term3 = $term_object;
     } else if ($term_object->name === $term4c['name']) {
       $term4 = $term_object;
+    } else if ($term_object->name === $term5c['name']) {
+      $term5 = $term_object;
     }
   }
   if (!isset($term1)) {
@@ -80,6 +90,9 @@ function _create_vocabulary_and_terms() {
   }
   if (!isset($term4)) {
     taxonomy_save_term($term4c);
+  }
+  if (!isset($term5)) {
+    taxonomy_save_term($term5c);
   }
 }
 
