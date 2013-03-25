@@ -358,7 +358,7 @@ if ($term_name == NULL) {
 }
 $terms = taxonomy_get_term_by_name($term_name);
 foreach ($terms as $term) {
-  if ($term->vid == 1 || $term->vid == 2) {
+  if ($term->vid == 1 || $term->vid == 2 || $term->vid == 5) {
     return TRUE;
   }
 }

@@ -212,7 +212,10 @@ function aiaraldea_bideoak_default_page_manager_pages() {
   $page->admin_title = 'Bideoak';
   $page->admin_description = '';
   $page->path = 'bideoak/!name';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array(
     'name' => array(

@@ -29,6 +29,8 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementuak orriak';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
@@ -172,7 +174,7 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = 0;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = 1;
   $handler->display->display_options['fields']['comment_count']['suffix'] = ' erantzun';
-  /* Sort criterion: Nodoa: Argitaratze data */
+  /* Ordenazio irizpidea: Nodoa: Argitaratze data */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -414,13 +416,12 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['arguments']['name']['style_plugin'] = 'default_summary';
   $handler->display->display_options['arguments']['name']['title'] = 'Albisteak: %1';
   $handler->display->display_options['arguments']['name']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['name']['default_argument_skip_url'] = 0;
   $handler->display->display_options['arguments']['name']['validate_type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['name']['validate_options']['vids'] = array(
     2 => 2,
     1 => 1,
-    4 => 4,
-    3 => 0,
-    5 => 0,
+    5 => 5,
   );
   $handler->display->display_options['arguments']['name']['validate_options']['type'] = 'name';
   $handler->display->display_options['arguments']['name']['validate_options']['transform'] = 0;
@@ -428,6 +429,7 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['arguments']['name']['ignorecase'] = 0;
   $handler->display->display_options['arguments']['name']['limit'] = '0';
   $handler->display->display_options['arguments']['name']['transform_dash'] = 0;
+  $handler->display->display_options['arguments']['name']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['name']['add_table'] = 0;
   $handler->display->display_options['arguments']['name']['require_value'] = 0;
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -458,9 +460,9 @@ function aiaraldea_albisteak_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
+    t('Elementuak orriak'),
     t('- All -'),
-    t('Offset'),
+    t('Desplazamendua'),
     t('Nid'),
     t('[comment_count] erantzun'),
     t('node/[nid]#comment-form'),
@@ -505,7 +507,9 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '30';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '1';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementuak orriak';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
@@ -570,7 +574,7 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['fields']['nid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['nid']['empty_zero'] = 0;
   $handler->display->display_options['fields']['nid']['hide_alter_empty'] = 1;
-  /* Sort criterion: Nodoa: Nid */
+  /* Ordenazio irizpidea: Nodoa: Nid */
   $handler->display->display_options['sorts']['nid']['id'] = 'nid';
   $handler->display->display_options['sorts']['nid']['table'] = 'node';
   $handler->display->display_options['sorts']['nid']['field'] = 'nid';
@@ -602,7 +606,9 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '30';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '1';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementuak orriak';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
 
   /* Display: Albisteen etiketak: Herriak */
   $handler = $view->new_display('panel_pane', 'Albisteen etiketak: Herriak', 'panel_pane_2');
@@ -613,7 +619,9 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '16';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '2';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementuak orriak';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Iragazkia: Nodoa: Mota */
   $handler->display->display_options['filters']['type']['id'] = 'type';
@@ -638,9 +646,9 @@ function aiaraldea_albisteak_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
+    t('Elementuak orriak'),
     t('- All -'),
-    t('Offset'),
+    t('Desplazamendua'),
     t('nodoa'),
     t('albisteak/[name]'),
     t('([nid])'),

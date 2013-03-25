@@ -47,7 +47,7 @@ function aiaraldea_bideoak_imagecache_default_presets() {
           'action' => 'imagecache_scale_and_crop',
           'data' => array(
             'width' => '162',
-            'height' => '112',
+            'height' => '90',
           ),
         ),
       ),

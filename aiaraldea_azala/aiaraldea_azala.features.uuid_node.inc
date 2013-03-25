@@ -52,8 +52,7 @@ function aiaraldea_azala_uuid_features_default_content() {
     'taxonomy' => array(),
     'radioactivity' => array(
       'energy' => array(
-        '1' => 0.921542763052,
-        '2' => 0.959970188959,
+        '2' => 0.87456778516046,
       ),
     ),
     'pathauto_perform_alias' => FALSE,
