@@ -863,11 +863,11 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<div class="widget-wrap widget-inside">
 <div class="textwidget">
 <a onclick="window.open(this.href, this.target, \'width=250,height=180\'); return false;" target="_blank" href="http://fm.aiaraldea.com/_zuzenean_popupa.php">
-<img alt="Zuzenean entzun" src="/sites/default/files/irratia/zuzenean.gif">
+<img alt="Zuzenean entzun" src="/sites/all/themes/aiaraldeacom/img/irratia/zuzenean.gif">
 </a>
-<div class="">
+<div class="irratia-link">
 <a target="_blank" href="http://fm.aiaraldea.com">
-<img alt="irratia blog" src="/sites/default/files/irratia/blog-lotura.gif">
+<img alt="irratia blog" src="/sites/all/themes/aiaraldeacom/img/irratia/blog-lotura.gif">
 </a>
 </div>';
   $handler->display->display_options['header']['area']['format'] = '5';
@@ -992,11 +992,11 @@ function aiaraldea_azala_views_default_views() {
     t('<div class="widget-wrap widget-inside">
 <div class="textwidget">
 <a onclick="window.open(this.href, this.target, \'width=250,height=180\'); return false;" target="_blank" href="http://fm.aiaraldea.com/_zuzenean_popupa.php">
-<img alt="Zuzenean entzun" src="/sites/default/files/irratia/zuzenean.gif">
+<img alt="Zuzenean entzun" src="/sites/all/themes/aiaraldeacom/img/irratia/zuzenean.gif">
 </a>
-<div class="">
+<div class="irratia-link">
 <a target="_blank" href="http://fm.aiaraldea.com">
-<img alt="irratia blog" src="/sites/default/files/irratia/blog-lotura.gif">
+<img alt="irratia blog" src="/sites/all/themes/aiaraldeacom/img/irratia/blog-lotura.gif">
 </a>
 </div>'),
     t('<div class="irratia-footer">
