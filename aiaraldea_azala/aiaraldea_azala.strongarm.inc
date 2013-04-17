@@ -9,6 +9,34 @@ function aiaraldea_azala_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'aggregator_allowed_html_tags';
+  $strongarm->value = '<a> <b> <br> <dd> <dl> <dt> <em> <i> <li> <ol> <p> <strong> <u> <ul><audio><enclosure>';
+  $export['aggregator_allowed_html_tags'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'aggregator_category_selector';
+  $strongarm->value = 'checkboxes';
+  $export['aggregator_category_selector'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'aggregator_clear';
+  $strongarm->value = '9676800';
+  $export['aggregator_clear'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'aggregator_summary_items';
+  $strongarm->value = '3';
+  $export['aggregator_summary_items'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_elkarrizketa_aurr';
   $strongarm->value = '0';
   $export['comment_anonymous_elkarrizketa_aurr'] = $strongarm;

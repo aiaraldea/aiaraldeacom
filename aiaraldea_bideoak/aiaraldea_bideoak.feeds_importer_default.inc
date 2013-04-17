@@ -25,7 +25,7 @@ function aiaraldea_bideoak_feeds_importer_default() {
       'plugin_key' => 'AiaraldeaVimeoParser',
       'config' => array(
         'vimeo_key' => 'f59f443ff7c3d1defcf5c0665bf49344fb25f8df',
-        'vimeo_secret' => '',
+        'vimeo_secret' => '9b900b46962c455a78820b3d6e16133964f464a2',
         'vimeo_user_id' => 'aiaraldea',
         'vimeo_data_request' => 'videos.getAll',
       ),

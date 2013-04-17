@@ -52,7 +52,7 @@ function aiaraldea_azala_uuid_features_default_content() {
     'taxonomy' => array(),
     'radioactivity' => array(),
     'pathauto_perform_alias' => FALSE,
-    'date' => '2012-05-31 22:43:11 +0100',
+    'date' => '2012-05-31 23:43:11 +0200',
   );
   return $nodes;
 }
