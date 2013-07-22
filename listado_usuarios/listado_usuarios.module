@@ -1,0 +1,63 @@
+<?php
+// $Id: listado_usuarios.module,v 1.133.2.14 2013/08/17 09:10:52 interzonas Exp $
+
+/**
+ * Implementación del hook_block
+ */
+function listado_usuarios_block($op = 'list', $delta = 0, $edit = array()) {
+  switch($op){
+    case'list':
+      $blocks[0]['info'] = t("Komunitateko kideak");
+      return $blocks;
+  case'view':
+    $block['subject'] = t('Komunitateko kideak');
+    $block['content'] = theme('listado_usuarios_block');
+    return $block;
+  case 'configure':
+    $form['listado_usuarios_block_num_'. $delta] = array('#type' => 'select', '#title' => t('Número usuarios con los que hacer la comparación'), '#default_value' => variable_get('listado_usuarios_num_categorias', '10'), '#options' =>drupal_map_assoc(array(5,10, 15, 20, 30, 40, 50)));
+      return $form;
+  case 'save':
+    variable_set('listado_usuarios_num_categorias', $edit['listado_usuarios_block_num_'. $delta]);
+    break;
+  }
+}
+
+/**
+ * Implementación del hook_theme
+ */
+function listado_usuarios_theme($existing, $type, $theme, $path){
+  return array(
+    'listado_usuarios_block' => array(
+      'arguments' => array('variables' => array()),
+    )
+  );
+}
+
+/**
+ * Crea el bloque con las categorías más visitadas.
+ */
+function theme_listado_usuarios_block() {
+  $usuarios = get_categorias();
+  $output = '';
+  foreach ($usuarios as $key) {
+    $user =  user_load($key);
+    $output .= '<div class="kidea-listado">';
+    $output .= '<div class="k-kidea">'.theme_image($user->picture) .'</div>';
+    $output .= '<div class="k-user"> <a href="/user/'.$user->uid.'">'. $user->name  .'</a></div>';
+    $output .= '</div>';
+  }
+  return $output;
+}
+
+/**
+ * Devuelve un array con las categorías con más visitas
+ */
+function get_categorias(){
+  $result = db_query("SELECT users.uid AS uid_1, users.uid AS uid, node_users.created AS node_users_created FROM users users  LEFT JOIN node node_users ON users.uid = node_users.uid INNER JOIN users_roles users_roles ON users.uid = users_roles.uid WHERE (users_roles.rid = 12) AND (node_users.status = 1) ORDER BY node_users_created DESC LIMIT 15");
+  $categorias = array();
+  while($row = db_fetch_object($result)){
+    $categorias[] = $row->uid;
+  }
+  $usuarios_unicos = array_unique($categorias);
+  return $usuarios_unicos;
+}

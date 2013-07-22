@@ -1,0 +1,4 @@
+name = "Menu usuario"
+description = "Genera un bloque para el menu de usuario"
+core = "6.x"
+package = interzonas

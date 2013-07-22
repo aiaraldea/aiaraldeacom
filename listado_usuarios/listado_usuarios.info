@@ -1,0 +1,4 @@
+name = "Listado usuarios"
+description = "Provee de un bloque con los ultimos usuarios que han creado contenido con el rol kidea"
+core = "6.x"
+package = interzonas

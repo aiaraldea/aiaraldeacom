@@ -1,0 +1,49 @@
+<?php
+// $Id: menu_usuario.module,v 1.133.2.14 2013/08/17 09:10:52 interzonas Exp $
+
+
+/**
+ * Implementación del hook_block
+ */
+function menu_usuario_block($op = 'list', $delta = 0, $edit = array()) {
+  switch($op){
+    case'list':
+      $blocks[0]['info'] = t("Erabiltzaile menua");
+      return $blocks;
+    case'view':
+      $block['subject'] = t('Erabiltzaile manua');
+      $block['content'] = theme('menu_usuario_block');
+      return $block;
+    case 'save':
+      variable_set('menu_usuario_num_categorias', $edit['menu_usuario_block_num_'. $delta]);
+      break;
+  }
+}
+
+/**
+ * Implementación del hook_theme
+ */
+function menu_usuario_theme($existing, $type, $theme, $path){
+  return array(
+    'menu_usuario_block' => array(
+      'arguments' => array('variables' => array()),
+      'template' => 'menu-usuario',
+    )
+  );
+}
+
+/**
+ * Crea el bloque con las categorías más visitadas.
+ */
+function theme_menu_usuario_block() {
+  $output = '';
+  foreach ($usuarios as $key) {
+    $user =  user_load($key);
+    $output .= '<div class="kidea-listado">';
+    $output .= '<span class="k-kidea">'.theme_image($user->picture) .'</span>';
+    $output .= '<span class="k-user">'. $user->name  .'</span>';
+    $output .= '</div>';
+  }
+  return $output;
+}
+
