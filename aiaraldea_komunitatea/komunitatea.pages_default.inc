@@ -1846,36 +1846,21 @@ function komunitatea_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'ongi-etorri',
       'title' => 'Ongi etorri',
-      'body' => '<p>Komunitateko kide edo erabiltzaile bezala izena eman duzu, eta beraz web-gunean egiten dituzun iruzkinak edo sortzen dituzun edukiak zure profileko izenarekin argitaratuko dira.</p>
-
-<p>Gogoratu <strong>erabiltzailea</strong> bazara iruzkinak baino ezingo dituzula egin, eta kidea bazara aldiz, nahi beste eduki sortu ahal izango dituzu Komunitatea atalean.</p>
+      'body' => '<p>Komunitateko kide edo erabiltzaile bezala izena eman duzu, eta beraz web-gunean egiten dituzun iruzkinak edo sortzen dituzun edukiak <strong>zure profileko izenarekin argitaratuko dira</strong></p>
+<ul>
+ <li><strong>Komunitateko KIDEA</strong> izatea hautatu baduzu (norbanako bezala zein talde bezala), <strong>zurekin harremanetan jarri arte ezingo duzu edukirik sortu</strong>. Horretarako zure profila editatu eta<strong> posta helbide bat eman beharko duzu</strong> administratzaileak edukiak sortzeko baimena eman ahal izateko.  Ahal bezain pronto jarriko gara zurekin harremanetan eta edukiak argitaratzeko eskumena emango dizugu. Iruzkinak aldiz hasieratik bertatik idatzi ahal izango dituzu.</li>
+ <li><strong>ERABILTZAILE</strong> bezala izena eman baduzu <strong>iruzkinak baino ezingo dituzu egin</strong>.</li>
+</ul>
 
 <p>Gogoan izan atal honetan argitaratutako edukiak web-guneko azalean ere argitaratuko direla, eta Aiaraldea Komunikazio Leihoak eduki hauek erredakzio lerrora eramateko eskumena gordeko duela.</p>
-
-<p>Aiaraldea Komunikazio Leihoa ez da erabiltzaile edo kideek argitaratzen dituzten edukien arduradun.</p>
-
+<p> Aiaraldea Komunikazio Leihoa ez da erabiltzaile edo kideek argitaratzen dituzten edukien arduradun.</p>
 <p>Azkenik, komunitateko partaide zaren heinean, errespetuz eta abegikor jokatzeko deia luzatzen dizugu, iruzkinak egiteko arauak zein edukiak sortzeko jarraibideak betetzeko deia.</p>
 
 <p>Argibide gehiago behar izanez gero jo ezazu laguntza orrialde honetara: <a href="/komunitatea-faq/zer-da">Zer da komunitatea</a></p>
 
-<p>OHARRA: Facebook edo Twitter bidez sartu bazara, gogoan izan <a href="http://www.aiaraldea.com"> www.aiaraldea.com</a>-en eta sare sozial horietan ere “irten” klikatu beharko duzula saioa irekita utzi nahi ez baduzu behintzat.</p>
+<p><strong>Posta elektronikoa:</strong> <a href="mailto:komunitatea@aiaraldea.com">komunitatea@aiaraldea.com</a></p>
+<p><strong>Telefonoak:</strong> 945 656 85 54 / 688 848 152</p>
 
-<p dir="ltr">Komunitateko kide edo erabiltzaile bezala izena eman duzu, eta beraz web-gunean egiten dituzun iruzkinak edo sortzen dituzun edukiak <strong>zure profileko izenarekin argitaratuko dira.</strong></p>
-<ul>
-<li dir="ltr">
-<p dir="ltr"><strong>Komunitateko KIDEA</strong> izatea hautatu baduzu (norbanako bezala zein talde bezala), <strong>zurekin harremanetan jarri arte ezingo duzu edukirik sortu.</strong> Ahal bezain pronto jarriko gara zurekin harremanetan eta horretarako eskumena emango dizugu. Iruzkina aldiz hasieratik bertatik idatzi ahal izango dituzu.</p>
-</li>
-<li dir="ltr">
-<p dir="ltr"><strong>ERABILTZAILE</strong> bezala izena eman baduzu <strong>iruzkinak baino ezingo dituzu egin.</strong></p>
-</li>
-</ul>
-<p dir="ltr">Gogoan izan atal honetan argitaratutako edukiak web-guneko azalean ere argitaratuko direla, eta Aiaraldea Komunikazio Leihoak eduki hauek erredakzio lerrora eramateko eskumena gordeko duela.</p>
-<p dir="ltr">Aiaraldea Komunikazio Leihoa ez da erabiltzaile edo kideek argitaratzen dituzten edukien arduradun.</p>
-<p dir="ltr">Azkenik, komunitateko partaide zaren heinean,<strong> errespetuz eta abegikor jokatzeko deia</strong> luzatzen dizugu, iruzkinak egiteko arauak zein edukiak sortzeko jarraibideak betetzeko deia.</p>
-<p dir="ltr">Argibide gehiago behar izanez gero jo ezazu laguntza orrialde honetara: <a href="/komunitatea-faq/zer-da">zer da komunitatea?</a> edo jar zaitez gurekin harremanetan:</p>
-<p dir="ltr"><strong>Posta elektronikoa:</strong> <a href="mailto:komunitatea@aiaraldea.com">komunitatea@aiaraldea.com</a></p>
-<p dir="ltr"><strong>Telefonoak:</strong> 945 656 85 54 / 688 848 152</p>
-<p>&nbsp;</p>
 <p dir="ltr">OHARRA: Facebook edo Twitter bidez sartu bazara, gogoan izan <a href="http://www.aiaraldea.com/">www.aiaraldea.com</a>-en eta sare sozial horietan ere “irten” klikatu beharko duzula saioa irekita utzi nahi ez baduzu.</p>',
       'format' => '5',
       'substitute' => TRUE,
