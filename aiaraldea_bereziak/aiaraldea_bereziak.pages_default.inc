@@ -11,8 +11,11 @@ function aiaraldea_bereziak_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Amurrioko Jaiak 2013';
   $page->admin_description = '';
-  $page->path = 'bereziak/jaiak/amurrio/2013/egitaraua2';
-  $page->access = array();
+  $page->path = 'bereziak/jaiak/amurrio/2013/egitaraua';
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array();
@@ -454,7 +457,7 @@ function aiaraldea_bereziak_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Araba Euskaraz Storify';
   $page->admin_description = '';
-  $page->path = 'bereziak/araba-euskaraz/storify2';
+  $page->path = 'bereziak/araba-euskaraz/storify';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
