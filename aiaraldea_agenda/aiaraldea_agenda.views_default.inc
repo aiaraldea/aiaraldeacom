@@ -30,10 +30,11 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementuak orriak';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Dena -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Erlazioa: Flags: nabarmena */
+  /* Erlazioa: Banderak: nabarmena */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -341,7 +342,7 @@ function aiaraldea_agenda_views_default_views() {
   /* Display: Content pane by date */
   $handler = $view->new_display('panel_pane', 'Content pane by date', 'panel_pane_2');
   $handler->display->display_options['defaults']['empty'] = FALSE;
-  /* Testu hutsa: Globala: Text area */
+  /* Testu hutsa: Globala: Testu eremua */
   $handler->display->display_options['empty']['text']['id'] = 'area';
   $handler->display->display_options['empty']['text']['table'] = 'views';
   $handler->display->display_options['empty']['text']['field'] = 'area';
@@ -501,7 +502,7 @@ function aiaraldea_agenda_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Elementuak orriak'),
-    t('- All -'),
+    t('- Dena -'),
     t('Desplazamendua'),
     t('Guztiak'),
     t('Agenda: %1'),

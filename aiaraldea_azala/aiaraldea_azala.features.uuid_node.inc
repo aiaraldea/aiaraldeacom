@@ -50,12 +50,7 @@ function aiaraldea_azala_uuid_features_default_content() {
     'last_comment_name' => NULL,
     'comment_count' => '0',
     'taxonomy' => array(),
-    'radioactivity' => array(
-      'energy' => array(
-        '1' => 0.66109637956085,
-        '2' => 1.1413709879843,
-      ),
-    ),
+    'radioactivity' => array(),
     'pathauto_perform_alias' => FALSE,
     'date' => '2012-05-31 23:43:11 +0200',
   );

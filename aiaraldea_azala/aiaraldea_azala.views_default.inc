@@ -190,6 +190,10 @@ function aiaraldea_azala_views_default_views() {
   $handler = $view->new_display('block', 'Blokea', 'block_1');
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
 
   /* Display: Deiladi nabarmena */
   $handler = $view->new_display('panel_pane', 'Deiladi nabarmena', 'panel_pane_3');
@@ -786,13 +790,22 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_photo_set_id']['field'] = 'field_photo_set_id';
   $handler->display->display_options['fields']['field_photo_set_id']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_photo_set_id']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_photo_set_id']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_photo_set_id']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_photo_set_id']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_photo_set_id']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_photo_set_id']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_photo_set_id']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_photo_set_id']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_photo_set_id']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_photo_set_id']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_photo_set_id']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_photo_set_id']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_photo_set_id']['element_wrapper_class'] = 'zerrendak-argazkiak-irudia';
+  $handler->display->display_options['fields']['field_photo_set_id']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['field_photo_set_id']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_photo_set_id']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_photo_set_id']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_photo_set_id']['link_to_node'] = 1;
   $handler->display->display_options['fields']['field_photo_set_id']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_photo_set_id']['format'] = 't_primary_for_sets';
@@ -803,13 +816,22 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'zerrendak-argazkiak-izenburua';
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 0;
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
   $translatables['flickr_image_sets_main_page_1_2'] = array(
     t('Lehenespenak'),

@@ -74,7 +74,7 @@ function aiaraldea_menua_default_fe_block_settings() {
     'delta' => 'menu_herri_zerrenda-b_argazkiak',
     'theme' => 'aiaraldeacom',
     'status' => 0,
-    'weight' => '3',
+    'weight' => '10',
     'region' => '',
     'custom' => '0',
     'throttle' => '0',

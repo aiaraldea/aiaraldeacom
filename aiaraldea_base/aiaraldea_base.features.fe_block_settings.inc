@@ -13,7 +13,7 @@ function aiaraldea_base_default_fe_block_settings() {
     'module' => 'block',
     'theme' => 'aiaraldeacom',
     'status' => '1',
-    'weight' => '-25',
+    'weight' => '-45',
     'region' => 'closure_region',
     'custom' => '0',
     'throttle' => '0',

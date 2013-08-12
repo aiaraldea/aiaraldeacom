@@ -86,16 +86,16 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->panel = '1';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = FALSE;
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Udako postalak embed',
       'title' => 'Udako postalen lehiaketa',
       'body' => '<script type="text/javascript">// <![CDATA[
-widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak", "width": "380", "height": "180", "widgetid": "web_widget_iframe_af819fe841b35004b5be0aae79caacab" };
+widgetContext = { "url": "http://udakoargazkiak2013.aiaraldea.com/widget/azkenak", "width": "380", "height": "180", "widgetid": "web_widget_iframe_af819fe841b35004b5be0aae79caacab" };
 // ]]></script><script id="web_widget_iframe_af819fe841b35004b5be0aae79caacab" src="http://udakoargazkiak2011.aiaraldea.com/sites/all/modules/web_widgets/iframe/web_widgets_iframe.js"></script> 
 
-<div><a href="http://udakoargazkiak2012.aiaraldea.com"><img src="sites/all/modules/custom/aiaraldeacom/aiaraldea_azala/img/parte-hartu.gif" alt="Egin klik eta parte hartu" /></a></div>',
+<div><a href="http://udakoargazkiak2013.aiaraldea.com"><img src="sites/all/modules/custom/aiaraldeacom/aiaraldea_azala/img/parte-hartu.gif" alt="Egin klik eta parte hartu" /></a></div>',
       'format' => '2',
       'substitute' => TRUE,
     );
@@ -208,6 +208,48 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     $display->panels['1'][4] = 'new-5';
     $pane = new stdClass;
     $pane->pid = 'new-6';
+    $pane->panel = '1';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'komunitatea_azalan-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $display->content['new-6'] = $pane;
+    $display->panels['1'][5] = 'new-6';
+    $pane = new stdClass;
+    $pane->pid = 'new-7';
+    $pane->panel = '2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = FALSE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '#ArabaEuskaraz',
+      'title' => '#ArabaEuskaraz',
+      'body' => '<a class="twitter-timeline" href="https://twitter.com/search?q=%23ArabaEuskaraz" data-widget-id="344706736793460736">"#ArabaEuskaraz"(r)i buruzko Txioak</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+',
+      'format' => '2',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-7'] = $pane;
+    $display->panels['2'][0] = 'new-7';
+    $pane = new stdClass;
+    $pane->pid = 'new-8';
     $pane->panel = '2';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_korrikaren_plaza';
@@ -225,11 +267,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-6'] = $pane;
-    $display->panels['2'][0] = 'new-6';
+    $pane->position = 1;
+    $display->content['new-8'] = $pane;
+    $display->panels['2'][1] = 'new-8';
     $pane = new stdClass;
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-9';
     $pane->panel = '2';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_plaza';
@@ -245,11 +287,37 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-7'] = $pane;
-    $display->panels['2'][1] = 'new-7';
+    $pane->position = 2;
+    $display->content['new-9'] = $pane;
+    $display->panels['2'][2] = 'new-9';
     $pane = new stdClass;
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-10';
+    $pane->panel = '2';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'proposamenak_front_1_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array(
+      'method' => 'simple',
+      'settings' => array(
+        'lifetime' => '60',
+        'granularity' => 'none',
+      ),
+    );
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $display->content['new-10'] = $pane;
+    $display->panels['2'][3] = 'new-10';
+    $pane = new stdClass;
+    $pane->pid = 'new-11';
     $pane->panel = '2';
     $pane->type = 'views';
     $pane->subtype = 'azala_azken_iruzkinak_1_2';
@@ -277,37 +345,35 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-8'] = $pane;
-    $display->panels['2'][2] = 'new-8';
+    $pane->position = 4;
+    $display->content['new-11'] = $pane;
+    $display->panels['2'][4] = 'new-11';
     $pane = new stdClass;
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-12';
     $pane->panel = '2';
-    $pane->type = 'panels_mini';
-    $pane->subtype = 'proposamenak_front_1_1';
-    $pane->shown = TRUE;
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'admin_title' => '',
+      'title' => 'Enplegua Aiaraldean',
+      'body' => '<iframe scrolling="no" src="http://burdinola.aiaraldea.com/GizarteSegurantzaAiaraldea/ssembed.html" style="border: none; width:220px;height:140px;" frameborder="0"></iframe>
+<div class="more-link"><a href="http://www.aiaraldea.com/bereziak/ekonomia/enplegua/gizarte-sergurantzaren-afiliazioen-bilakaera-aiaraldean">Enpleguaren bilakaera</a></div>',
+      'format' => '2',
+      'substitute' => TRUE,
     );
-    $pane->cache = array(
-      'method' => 'simple',
-      'settings' => array(
-        'lifetime' => '60',
-        'granularity' => 'none',
-      ),
-    );
+    $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
-    $display->content['new-9'] = $pane;
-    $display->panels['2'][3] = 'new-9';
+    $pane->position = 5;
+    $display->content['new-12'] = $pane;
+    $display->panels['2'][5] = 'new-12';
     $pane = new stdClass;
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-13';
     $pane->panel = '3';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -334,27 +400,10 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-10'] = $pane;
-    $display->panels['3'][0] = 'new-10';
+    $display->content['new-13'] = $pane;
+    $display->panels['3'][0] = 'new-13';
     $pane = new stdClass;
-    $pane->pid = 'new-11';
-    $pane->panel = '3';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'irratia_feeds-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-11'] = $pane;
-    $display->panels['3'][1] = 'new-11';
-    $pane = new stdClass;
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-14';
     $pane->panel = '3';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -373,11 +422,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-12'] = $pane;
-    $display->panels['3'][2] = 'new-12';
+    $pane->position = 1;
+    $display->content['new-14'] = $pane;
+    $display->panels['3'][1] = 'new-14';
     $pane = new stdClass;
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-15';
     $pane->panel = '3';
     $pane->type = 'views';
     $pane->subtype = 'aiaraldea_banner_nodequeue_1';
@@ -405,11 +454,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
-    $display->content['new-13'] = $pane;
-    $display->panels['3'][3] = 'new-13';
+    $pane->position = 2;
+    $display->content['new-15'] = $pane;
+    $display->panels['3'][2] = 'new-15';
     $pane = new stdClass;
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-16';
     $pane->panel = '3';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_bideoak_a2011';
@@ -436,11 +485,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
-    $display->content['new-14'] = $pane;
-    $display->panels['3'][4] = 'new-14';
+    $pane->position = 3;
+    $display->content['new-16'] = $pane;
+    $display->panels['3'][3] = 'new-16';
     $pane = new stdClass;
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-17';
     $pane->panel = '3';
     $pane->type = 'panels_mini';
     $pane->subtype = 'flickr_image_sets_main_page_1_2';
@@ -456,11 +505,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
-    $display->content['new-15'] = $pane;
-    $display->panels['3'][5] = 'new-15';
+    $pane->position = 4;
+    $display->content['new-17'] = $pane;
+    $display->panels['3'][4] = 'new-17';
     $pane = new stdClass;
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-18';
     $pane->panel = '3';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_bideoak_a2011';
@@ -487,11 +536,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
-    $display->content['new-16'] = $pane;
-    $display->panels['3'][6] = 'new-16';
+    $pane->position = 5;
+    $display->content['new-18'] = $pane;
+    $display->panels['3'][5] = 'new-18';
     $pane = new stdClass;
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-19';
     $pane->panel = '3';
     $pane->type = 'block';
     $pane->subtype = 'adzerk-azk49793';
@@ -520,11 +569,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 7;
-    $display->content['new-17'] = $pane;
-    $display->panels['3'][7] = 'new-17';
+    $pane->position = 6;
+    $display->content['new-19'] = $pane;
+    $display->panels['3'][6] = 'new-19';
     $pane = new stdClass;
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-20';
     $pane->panel = '3';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -533,8 +582,8 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     $pane->configuration = array(
       'admin_title' => 'Twitter timeline',
       'title' => 'Aiaraldea Twitterren',
-      'body' => '<a class="twitter-timeline" href="https://twitter.com/aiaraldea" data-widget-id="244171714471268352">Tweets by @aiaraldea</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      'body' => '<a class="twitter-timeline" href="https://twitter.com/aiaraldea" data-widget-id="344721690888122368">@aiaraldea(r)en Txioak</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 ',
       'format' => '2',
       'substitute' => TRUE,
@@ -545,11 +594,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 8;
-    $display->content['new-18'] = $pane;
-    $display->panels['3'][8] = 'new-18';
+    $pane->position = 7;
+    $display->content['new-20'] = $pane;
+    $display->panels['3'][7] = 'new-20';
     $pane = new stdClass;
-    $pane->pid = 'new-19';
+    $pane->pid = 'new-21';
     $pane->panel = '3';
     $pane->type = 'panels_mini';
     $pane->subtype = 'orri_nagusiko_mult_geh';
@@ -565,11 +614,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
-    $display->content['new-19'] = $pane;
-    $display->panels['3'][9] = 'new-19';
+    $pane->position = 8;
+    $display->content['new-21'] = $pane;
+    $display->panels['3'][8] = 'new-21';
     $pane = new stdClass;
-    $pane->pid = 'new-20';
+    $pane->pid = 'new-22';
     $pane->panel = '3';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -595,11 +644,11 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 10;
-    $display->content['new-20'] = $pane;
-    $display->panels['3'][10] = 'new-20';
+    $pane->position = 9;
+    $display->content['new-22'] = $pane;
+    $display->panels['3'][9] = 'new-22';
     $pane = new stdClass;
-    $pane->pid = 'new-21';
+    $pane->pid = 'new-23';
     $pane->panel = '3';
     $pane->type = 'block';
     $pane->subtype = 'twitter_pull-0';
@@ -621,11 +670,86 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 11;
-    $display->content['new-21'] = $pane;
-    $display->panels['3'][11] = 'new-21';
+    $pane->position = 10;
+    $display->content['new-23'] = $pane;
+    $display->panels['3'][10] = 'new-23';
     $pane = new stdClass;
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-24';
+    $pane->panel = '3';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Google plus',
+      'title' => '',
+      'body' => '<!-- Place this tag where you want the badge to render. -->
+<div class="g-plus" data-href="//plus.google.com/101984233907829155947" data-rel="publisher"></div>
+
+<!-- Place this tag after the last badge tag. -->
+<script type="text/javascript">
+  window.___gcfg = {lang: \'eu\'};
+
+  (function() {
+    var po = document.createElement(\'script\'); po.type = \'text/javascript\'; po.async = true;
+    po.src = \'https://apis.google.com/js/plusone.js\';
+    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>',
+      'format' => '2',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 11;
+    $display->content['new-24'] = $pane;
+    $display->panels['3'][11] = 'new-24';
+    $pane = new stdClass;
+    $pane->pid = 'new-25';
+    $pane->panel = '3';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Google Currents',
+      'title' => '',
+      'body' => '<a href="http://qr.aiaraldea.com/googlecurrents"><img src="/static/currents_white_42.png" alt="Irakurri Aiaraldea Google Currents-en"/></a>',
+      'format' => '2',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 12;
+    $display->content['new-25'] = $pane;
+    $display->panels['3'][12] = 'new-25';
+    $pane = new stdClass;
+    $pane->pid = 'new-26';
+    $pane->panel = '3';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'irratia_feeds-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 13;
+    $display->content['new-26'] = $pane;
+    $display->panels['3'][13] = 'new-26';
+    $pane = new stdClass;
+    $pane->pid = 'new-27';
     $pane->panel = 'header';
     $pane->type = 'views';
     $pane->subtype = 'short_notices';
@@ -654,10 +778,10 @@ widgetContext = { "url": "http://udakoargazkiak2012.aiaraldea.com/widget/azkenak
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-22'] = $pane;
-    $display->panels['header'][0] = 'new-22';
+    $display->content['new-27'] = $pane;
+    $display->panels['header'][0] = 'new-27';
     $pane = new stdClass;
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-28';
     $pane->panel = 'header';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -715,8 +839,8 @@ new TWTR.Widget({
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-23'] = $pane;
-    $display->panels['header'][1] = 'new-23';
+    $display->content['new-28'] = $pane;
+    $display->panels['header'][1] = 'new-28';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
