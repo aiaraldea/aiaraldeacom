@@ -1,7 +1,7 @@
 name = "aiaraldea_bereziak"
 description = "Aiaraldearen orri bereziak"
 core = "6.x"
-package = "Features"
+package = "Aiaraldea"
 version = "6.x-1.0"
 project = "aiaraldea_bereziak"
 dependencies[] = "comment"

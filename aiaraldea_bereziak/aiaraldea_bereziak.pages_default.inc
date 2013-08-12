@@ -372,6 +372,23 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-2';
     $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'azken_bideoak_aj2013-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-2'] = $pane;
+    $display->panels['right'][0] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'albisteak_bereziak';
     $pane->shown = TRUE;
@@ -398,11 +415,11 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-2'] = $pane;
-    $display->panels['right'][0] = 'new-2';
+    $pane->position = 1;
+    $display->content['new-3'] = $pane;
+    $display->panels['right'][1] = 'new-3';
     $pane = new stdClass;
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'right';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -421,9 +438,9 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][1] = 'new-3';
+    $pane->position = 2;
+    $display->content['new-4'] = $pane;
+    $display->panels['right'][2] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
@@ -438,7 +455,10 @@ function aiaraldea_bereziak_default_page_manager_pages() {
   $page->admin_title = 'Araba Euskaraz Storify';
   $page->admin_description = '';
   $page->path = 'bereziak/araba-euskaraz/storify2';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array();
