@@ -29,6 +29,9 @@ function aiaraldea_banner_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementuak orriak';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Dena -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Erlazioa: Nodequeue: Queue (qid) */
@@ -73,7 +76,7 @@ function aiaraldea_banner_views_default_views() {
   $handler->display->display_options['fields']['field_banner_image_fid']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_banner_image_fid']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_banner_image_fid']['format'] = 'image_plain';
-  /* Sort criterion: Nodequeue: Kokapena */
+  /* Ordenazio irizpidea: Nodequeue: Kokapena */
   $handler->display->display_options['sorts']['position']['id'] = 'position';
   $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['sorts']['position']['field'] = 'position';
@@ -112,9 +115,9 @@ function aiaraldea_banner_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
+    t('Elementuak orriak'),
+    t('- Dena -'),
+    t('Desplazamendua'),
     t('ilara'),
     t('Banner link'),
     t('[field_banner_link_url]'),

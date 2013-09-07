@@ -427,7 +427,7 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['css_class'] = 'azala-albisteak-2gunea view-albisteak';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Eremua: Nodoa: Nid */

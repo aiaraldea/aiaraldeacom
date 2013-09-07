@@ -33,7 +33,9 @@ function aiaraldea_banner_default_fe_nodequeue_queue() {
   $fe_nodequeue_queue->types = array(
     0 => 'aiaraldea_banner',
   );
-  $fe_nodequeue_queue->roles = array();
+  $fe_nodequeue_queue->roles = array(
+    0 => '11',
+  );
   $fe_nodequeue_queue->count = 0;
   $fe_nodequeue_queue->machine_name = 'aiaraldea_banner_queue_1';
 
