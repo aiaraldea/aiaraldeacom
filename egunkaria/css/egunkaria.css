@@ -1,0 +1,6 @@
+.view-egunkaria ul {
+    list-style: none;
+}
+.view-egunkaria ul li{
+    display: inline-block;
+}

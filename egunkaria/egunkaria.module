@@ -1,0 +1,31 @@
+<?php
+
+include_once('egunkaria.features.inc');
+
+function egunkaria_theme_registry_alter(&$theme_registry) {
+    // Get the path to this module
+    $modulepath = drupal_get_path('module', 'egunkaria');
+    // Add the module path on top in the array of paths
+    array_unshift($theme_registry['content_field']['theme paths'], $modulepath . '/templates');
+}
+
+// add a template file suggestion
+function egunkaria_preprocess_content_field(&$vars) {
+    $vars['template_files'][] = 'content-field-field_scribdid';
+}
+
+function egunkaria_theme($existing) {
+  return array(
+    'views_view__egunkaria' => array (
+      'arguments' => array('view' => NULL),
+      'template' => 'views-view--egunkaria',
+      'original hook' => 'views_view',
+      'path' => drupal_get_path('module', 'egunkaria'),
+    ),
+  );
+}
+
+function egunkaria_preprocess_views_view__egunkaria(&$vars) {
+//print "HELLL";
+  drupal_add_css(drupal_get_path('module', 'egunkaria') . '/css/egunkaria.css');
+}
