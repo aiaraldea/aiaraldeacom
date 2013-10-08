@@ -11,7 +11,9 @@ function egunkaria_theme_registry_alter(&$theme_registry) {
 
 // add a template file suggestion
 function egunkaria_preprocess_content_field(&$vars) {
+  if ('field_scribdid' == $variables['field_name']) {
     $vars['template_files'][] = 'content-field-field_scribdid';
+  }
 }
 
 function egunkaria_theme($existing) {
