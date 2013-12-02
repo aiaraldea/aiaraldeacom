@@ -1,7 +1,7 @@
 name = "Egunkaria"
 description = "Egunkariaren aleak"
 core = "6.x"
-package = "Aiaraldea    "
+package = "Aiaraldea"
 version = "6.x-1.0-alpha1"
 project = "egunkaria"
 dependencies[] = "ctools"
