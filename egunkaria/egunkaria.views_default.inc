@@ -111,6 +111,56 @@ function egunkaria_views_default_views() {
 
   /* Display: Azkena */
   $handler = $view->new_display('panel_pane', 'Azkena', 'panel_pane_azkena');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Egunkaria';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Eremua: Edukia: Azala (field_azala) */
+  $handler->display->display_options['fields']['field_azala_fid']['id'] = 'field_azala_fid';
+  $handler->display->display_options['fields']['field_azala_fid']['table'] = 'node_data_field_azala';
+  $handler->display->display_options['fields']['field_azala_fid']['field'] = 'field_azala_fid';
+  $handler->display->display_options['fields']['field_azala_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_azala_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_azala_fid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_azala_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_azala_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_azala_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_azala_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_azala_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_azala_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_azala_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_azala_fid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_azala_fid']['link_to_node'] = 1;
+  $handler->display->display_options['fields']['field_azala_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_azala_fid']['format'] = 'image_nodelink';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratua */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Mota */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'egunkari_alea' => 'egunkari_alea',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Iragazkia: Nodoa: Argitaratze data */
+  $handler->display->display_options['filters']['created']['id'] = 'created';
+  $handler->display->display_options['filters']['created']['table'] = 'node';
+  $handler->display->display_options['filters']['created']['field'] = 'created';
+  $handler->display->display_options['filters']['created']['operator'] = '>';
+  $handler->display->display_options['filters']['created']['value']['value'] = '-5 days';
+  $handler->display->display_options['filters']['created']['value']['type'] = 'offset';
+  $handler->display->display_options['filters']['created']['allow_null'] = 1;
   $translatables['egunkaria'] = array(
     t('Defaults'),
     t('gehiago'),
@@ -125,6 +175,7 @@ function egunkaria_views_default_views() {
     t('Content pane'),
     t('View panes'),
     t('Azkena'),
+    t('Egunkaria'),
   );
 
   $views[$view->name] = $view;
