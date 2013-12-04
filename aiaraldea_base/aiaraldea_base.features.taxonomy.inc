@@ -10,7 +10,7 @@ function aiaraldea_base_taxonomy_default_vocabularies() {
       'description' => 'lekua',
       'help' => 'Idatzi zer herrian gertatu edo gertatuko den. Herri bat baino gehiago zehazteko komaz banatu.',
       'relations' => '1',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'multiple' => '0',
       'required' => '1',
       'tags' => '1',
@@ -20,6 +20,7 @@ function aiaraldea_base_taxonomy_default_vocabularies() {
         'albiste' => 'albiste',
         'bideo' => 'bideo',
         'deialdi' => 'deialdi',
+        'flickr_image_set' => 'flickr_image_set',
       ),
     ),
     'etiketak' => array(
@@ -27,7 +28,7 @@ function aiaraldea_base_taxonomy_default_vocabularies() {
       'description' => '',
       'help' => '',
       'relations' => '1',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'multiple' => '0',
       'required' => '0',
       'tags' => '1',
@@ -36,6 +37,7 @@ function aiaraldea_base_taxonomy_default_vocabularies() {
       'nodes' => array(
         'albiste' => 'albiste',
         'bideo' => 'bideo',
+        'flickr_image_set' => 'flickr_image_set',
       ),
     ),
   );
