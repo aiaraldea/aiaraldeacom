@@ -16,8 +16,8 @@ function flickr_image_sets_default_page_manager_handlers() {
   $handler->weight = 7;
   $handler->conf = array(
     'title' => 'flicker image sets',
-    'no_blocks' => FALSE,
-    'css_id' => '',
+    'no_blocks' => 0,
+    'css_id' => 'panel_detaile_argazki_bildumak',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
@@ -36,6 +36,7 @@ function flickr_image_sets_default_page_manager_handlers() {
       ),
       'logic' => 'and',
     ),
+    'pipeline' => 'standard',
   );
   $display = new panels_display;
   $display->layout = 'twocol';
