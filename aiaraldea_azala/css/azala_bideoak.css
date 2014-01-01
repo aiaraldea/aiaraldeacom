@@ -1,15 +1,16 @@
 /*// Azaleko bideoen zerrendea 1.1*/
 div.view-azken-bideoak-1-2.view-display-azken-bideoa .views-field-title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Exo 2', Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     line-height: 1em;
-    font-weight: normal;
+    font-weight: bold;
     display: block;
     margin-bottom: 6px;
+    margin-top: 12px;
 }
 div.view-azken-bideoak-1-2.view-display-azken-bideoa .views-field-tid,
 div.view-azken-bideoak-1-2.view-display-azken-bideoa .views-field-created {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Exo 2', Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-weight: bolder;
     display: inline;
@@ -44,6 +45,6 @@ div.view-azken-bideoak-1-2.view-display-azken-bideoa .views-field-created {
     padding-left: 150px;
 }
 .view-display-azken-bideoak .views-field-title {
-    font-size: 1.5em;
+    font-size: 1.4em;
     line-height: 1.0em;
 }
