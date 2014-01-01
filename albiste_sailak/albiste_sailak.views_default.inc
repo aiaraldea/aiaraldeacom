@@ -71,8 +71,8 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['value']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['value']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['value']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['value']['element_class'] = 'zerrendak-egilea';
   $handler->display->display_options['fields']['value']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['value']['element_wrapper_class'] = 'zerrendak-egilea';
   $handler->display->display_options['fields']['value']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['value']['hide_empty'] = 0;
   $handler->display->display_options['fields']['value']['empty_zero'] = 0;
@@ -268,8 +268,8 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['value']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['value']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['value']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['value']['element_class'] = 'zerrendak-egilea';
   $handler->display->display_options['fields']['value']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['value']['element_wrapper_class'] = 'zerrendak-egilea';
   $handler->display->display_options['fields']['value']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['value']['hide_empty'] = 0;
   $handler->display->display_options['fields']['value']['empty_zero'] = 0;
@@ -427,7 +427,7 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['css_class'] = 'azala-albisteak-2gunea view-albisteak';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Eremua: Nodoa: Nid */
@@ -462,8 +462,8 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['value']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['value']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['value']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['value']['element_class'] = 'zerrendak-egilea';
   $handler->display->display_options['fields']['value']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['value']['element_wrapper_class'] = 'zerrendak-egilea';
   $handler->display->display_options['fields']['value']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['value']['hide_empty'] = 0;
   $handler->display->display_options['fields']['value']['empty_zero'] = 0;
