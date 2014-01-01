@@ -99,7 +99,7 @@ function aiaraldea_albisteak_node_info() {
       'title_label' => t('Title'),
       'has_body' => '1',
       'body_label' => t('Body'),
-      'min_word_count' => '25',
+      'min_word_count' => '100',
       'help' => '',
     ),
   );
