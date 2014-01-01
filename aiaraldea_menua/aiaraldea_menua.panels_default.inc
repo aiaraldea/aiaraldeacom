@@ -34,7 +34,7 @@ function aiaraldea_menua_default_panels_mini() {
     $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'proposamenak_menu';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_pager_settings' => 0,

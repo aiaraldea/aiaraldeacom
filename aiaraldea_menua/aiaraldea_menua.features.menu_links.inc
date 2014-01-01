@@ -58,7 +58,7 @@ function aiaraldea_menua_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-30',
+    'weight' => '-45',
   );
   // Exported menu link: menu-goiko-menua:argazkiak
   $menu_links['menu-goiko-menua:argazkiak'] = array(
@@ -76,7 +76,7 @@ function aiaraldea_menua_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-47',
+    'weight' => '-46',
   );
   // Exported menu link: menu-goiko-menua:bideoak
   $menu_links['menu-goiko-menua:bideoak'] = array(
@@ -112,7 +112,7 @@ function aiaraldea_menua_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '40',
+    'weight' => '-41',
   );
   // Exported menu link: menu-goiko-menua:proposamenak
   $menu_links['menu-goiko-menua:proposamenak'] = array(
@@ -130,7 +130,7 @@ function aiaraldea_menua_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-40',
+    'weight' => '-47',
   );
   // Translatables
   // Included for use with string extractors like potx.
