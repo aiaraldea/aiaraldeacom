@@ -545,6 +545,7 @@ function aiaraldea_bideoak_views_default_views() {
 
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->display->display_options['title'] = 'Bideoak';
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -644,12 +645,22 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['arguments']['name']['table'] = 'term_data';
   $handler->display->display_options['arguments']['name']['field'] = 'name';
   $handler->display->display_options['arguments']['name']['style_plugin'] = 'default_summary';
+  $handler->display->display_options['arguments']['name']['title'] = 'Bideoak: %1';
   $handler->display->display_options['arguments']['name']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['name']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['name']['validate_type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['name']['validate_options']['vids'] = array(
+    2 => 2,
+    1 => 1,
+  );
+  $handler->display->display_options['arguments']['name']['validate_options']['type'] = 'name';
+  $handler->display->display_options['arguments']['name']['validate_options']['transform'] = 0;
   $handler->display->display_options['arguments']['name']['glossary'] = 0;
   $handler->display->display_options['arguments']['name']['ignorecase'] = 0;
   $handler->display->display_options['arguments']['name']['limit'] = '0';
   $handler->display->display_options['arguments']['name']['transform_dash'] = 0;
-  $handler->display->display_options['arguments']['name']['add_table'] = 1;
+  $handler->display->display_options['arguments']['name']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['name']['add_table'] = 0;
   $handler->display->display_options['arguments']['name']['require_value'] = 0;
   /* Iragazkia: Nodoa: Mota */
   $handler->display->display_options['filters']['type']['id'] = 'type';
@@ -665,14 +676,6 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Iragazkia: Taxonomia: Hiztegia */
-  $handler->display->display_options['filters']['vid']['id'] = 'vid';
-  $handler->display->display_options['filters']['vid']['table'] = 'term_data';
-  $handler->display->display_options['filters']['vid']['field'] = 'vid';
-  $handler->display->display_options['filters']['vid']['value'] = array(
-    6 => '6',
-  );
-  $handler->display->display_options['filters']['vid']['expose']['operator'] = FALSE;
 
   /* Display: Bideoak */
   $handler = $view->new_display('panel_pane', 'Bideoak', 'panel_pane_1');
@@ -756,8 +759,29 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y.m.d';
+  $handler->display->display_options['pane_title'] = 'Bideoak';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'name' => array(
+      'type' => 'panel',
+      'context' => 'terms.vid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Taxonomia: Termino',
+    ),
+  );
   $translatables['bideoak'] = array(
     t('Defaults'),
+    t('Bideoak'),
     t('gehiago'),
     t('Ezarri'),
     t('Garbitu'),
@@ -768,7 +792,7 @@ function aiaraldea_bideoak_views_default_views() {
     t('- Dena -'),
     t('Desplazamendua'),
     t('Guztiak'),
-    t('Bideoak'),
+    t('Bideoak: %1'),
     t('View panes'),
   );
 

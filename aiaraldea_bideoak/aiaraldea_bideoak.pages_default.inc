@@ -211,18 +211,20 @@ function aiaraldea_bideoak_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Bideoak';
   $page->admin_description = '';
-  $page->path = 'bideoak/!name';
+  $page->path = 'bideoak/!term';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
   );
   $page->menu = array();
   $page->arguments = array(
-    'name' => array(
-      'id' => '',
-      'identifier' => '',
-      'argument' => '',
-      'settings' => array(),
+    'term' => array(
+      'id' => 1,
+      'identifier' => 'term_name',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
     ),
   );
   $page->conf = array();
@@ -242,6 +244,29 @@ function aiaraldea_bideoak_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'test code',
+            'php' => '$term_name = $contexts[argument_string_1]->data;
+if ($term_name == NULL) {
+  return TRUE;
+}
+$terms = taxonomy_get_term_by_name($term_name);
+foreach ($terms as $term) {
+  if ($term->vid == 1 || $term->vid == 2 || $term->vid == 5) {
+    return TRUE;
+  }
+}
+return FALSE;',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display;
   $display->layout = 'akl_column_two';
@@ -297,24 +322,12 @@ function aiaraldea_bideoak_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-3';
     $pane->panel = 'main';
-    $pane->type = 'views';
-    $pane->subtype = 'bideoak';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'bideoak-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 1,
-      'nodes_per_page' => '12',
-      'pager_id' => '',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '%1',
-      'url' => '',
-      'display' => 'panel_pane_1',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -326,8 +339,8 @@ function aiaraldea_bideoak_default_page_manager_pages() {
     $pane->position = 0;
     $display->content['new-3'] = $pane;
     $display->panels['main'][0] = 'new-3';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = 'new-3';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['bideoak'] = $page;
