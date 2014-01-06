@@ -173,3 +173,152 @@ function flickr_image_sets_default_page_manager_handlers() {
 
   return $export;
 }
+
+/**
+ * Implementation of hook_default_page_manager_pages().
+ */
+function flickr_image_sets_default_page_manager_pages() {
+  $page = new stdClass;
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'argazki_bildumak';
+  $page->task = 'page';
+  $page->admin_title = 'Argazki bildumak';
+  $page->admin_description = '';
+  $page->path = 'argazkiak/!term';
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array();
+  $page->arguments = array(
+    'term' => array(
+      'id' => 1,
+      'identifier' => 'term_name',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
+  );
+  $page->conf = array();
+  $page->default_handlers = array();
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_argazki_bildumak_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'argazki_bildumak';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => FALSE,
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'test code',
+            'php' => '$term_name = $contexts[argument_string_1]->data;
+if ($term_name == NULL) {
+  return TRUE;
+}
+$terms = taxonomy_get_term_by_name($term_name);
+foreach ($terms as $term) {
+  if ($term->vid == 1 || $term->vid == 2 || $term->vid == 5) {
+    return TRUE;
+  }
+}
+return FALSE;',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display;
+  $display->layout = 'akl_column_two';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'header' => NULL,
+      'main' => NULL,
+      'aside' => NULL,
+      'footer' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Bideoak';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass;
+    $pane->pid = 'new-1';
+    $pane->panel = 'aside';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'argazkien_etiketak-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-1'] = $pane;
+    $display->panels['aside'][0] = 'new-1';
+    $pane = new stdClass;
+    $pane->pid = 'new-2';
+    $pane->panel = 'aside';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'argazkien_etiketak-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['aside'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'flickr_image_sets-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-3'] = $pane;
+    $display->panels['main'][0] = 'new-3';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = 'new-3';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['argazki_bildumak'] = $page;
+
+ return $pages;
+
+}
