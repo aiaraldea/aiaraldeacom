@@ -376,10 +376,18 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'azken_bideoak_aj2013-panel_pane_1';
+    $pane->subtype = 'azken_bideoak_bereziak-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'exposed' => array(
+        'name_1' => 'Amurrioko Jaiak',
+        'created' => array(
+          'min' => '2013-06-01',
+          'max' => '2013-10-01',
+        ),
+      ),
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -392,25 +400,20 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-3';
     $pane->panel = 'right';
-    $pane->type = 'views';
-    $pane->subtype = 'albisteak_bereziak';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'albisteak_bereziak-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '25',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block_1',
-      'override_title' => 1,
-      'override_title_text' => 'Albisteak',
+      'exposed' => array(
+        'name' => 'Amurrioko jaiak',
+        'created' => array(
+          'min' => '2013-01-01',
+          'max' => '2013-11-01',
+        ),
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -423,6 +426,34 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     $display->panels['right'][1] = 'new-3';
     $pane = new stdClass;
     $pane->pid = 'new-4';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'flickr_image_sets_bereziak-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '10',
+      'exposed' => array(
+        'name' => 'Amurrioko jaiak',
+        'created' => array(
+          'min' => '2012-10-01',
+          'max' => '2013-10-01',
+        ),
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-4'] = $pane;
+    $display->panels['right'][2] = 'new-4';
+    $pane = new stdClass;
+    $pane->pid = 'new-5';
     $pane->panel = 'right';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -441,9 +472,9 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][2] = 'new-4';
+    $pane->position = 3;
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][3] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
@@ -567,25 +598,20 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-2';
     $pane->panel = 'rigth';
-    $pane->type = 'views';
-    $pane->subtype = 'albisteak_bereziak';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'albisteak_bereziak-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '5',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block_6',
-      'override_title' => 1,
-      'override_title_text' => 'Albisteak',
+      'exposed' => array(
+        'name' => 'Araba Euskaraz',
+        'created' => array(
+          'min' => '2012-01-01',
+          'max' => '2013-10-01',
+        ),
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -603,7 +629,18 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     $pane->subtype = 'flickr_image_sets_bereziak-panel_pane_3';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'items_per_page' => '10',
+      'exposed' => array(
+        'name' => 'Araba Euskaraz',
+        'created' => array(
+          'min' => '2012-10-01',
+          'max' => '2013-10-01',
+        ),
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -616,25 +653,18 @@ function aiaraldea_bereziak_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-4';
     $pane->panel = 'rigth';
-    $pane->type = 'views';
-    $pane->subtype = 'azken_bideoak_bereziak';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'azken_bideoak_bereziak-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '6',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block_3',
-      'override_title' => 1,
-      'override_title_text' => 'Bideoak',
+      'exposed' => array(
+        'name_1' => 'Araba euskaraz',
+        'created' => array(
+          'min' => '2012-06-01',
+          'max' => '2013-10-01',
+        ),
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
