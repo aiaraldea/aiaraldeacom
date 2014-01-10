@@ -38,7 +38,7 @@ function aiaraldea_proposamenak_default_page_manager_handlers() {
     'pipeline' => 'standard',
   );
   $display = new panels_display;
-  $display->layout = 'twocol';
+  $display->layout = 'akl_column_two';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -53,22 +53,14 @@ function aiaraldea_proposamenak_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass;
     $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'node_content';
-    $pane->subtype = 'node_content';
+    $pane->panel = 'aside';
+    $pane->type = 'block';
+    $pane->subtype = 'adzerk-azk49793';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'links' => 0,
-      'page' => 1,
-      'no_extras' => 0,
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
-      'teaser' => 0,
-      'identifier' => '',
-      'link' => 0,
-      'leave_node_title' => 1,
-      'context' => 'argument_nid_1',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -78,55 +70,10 @@ function aiaraldea_proposamenak_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $display->panels['aside'][0] = 'new-1';
     $pane = new stdClass;
     $pane->pid = 'new-2';
-    $pane->panel = 'left';
-    $pane->type = 'node_comments';
-    $pane->subtype = 'node_comments';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'mode' => '2',
-      'order' => '1',
-      'comments_per_page' => '50',
-      'context' => 'argument_nid_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
-    $pane = new stdClass;
-    $pane->pid = 'new-3';
-    $pane->panel = 'left';
-    $pane->type = 'node_comment_form';
-    $pane->subtype = 'node_comment_form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_nid_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-3'] = $pane;
-    $display->panels['left'][2] = 'new-3';
-    $pane = new stdClass;
-    $pane->pid = 'new-4';
-    $pane->panel = 'right';
+    $pane->panel = 'aside';
     $pane->type = 'views';
     $pane->subtype = 'proposamenak_list';
     $pane->shown = TRUE;
@@ -159,11 +106,84 @@ function aiaraldea_proposamenak_default_page_manager_handlers() {
       'css_class' => '',
     );
     $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['aside'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'main';
+    $pane->type = 'node_content';
+    $pane->subtype = 'node_content';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'links' => 0,
+      'page' => 1,
+      'no_extras' => 0,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'teaser' => 0,
+      'identifier' => '',
+      'link' => 0,
+      'leave_node_title' => 1,
+      'context' => 'argument_nid_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 0;
+    $display->content['new-3'] = $pane;
+    $display->panels['main'][0] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
+    $pane->panel = 'main';
+    $pane->type = 'node_comments';
+    $pane->subtype = 'node_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'mode' => '2',
+      'order' => '1',
+      'comments_per_page' => '50',
+      'context' => 'argument_nid_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
     $display->content['new-4'] = $pane;
-    $display->panels['right'][0] = 'new-4';
+    $display->panels['main'][1] = 'new-4';
+    $pane = new stdClass;
+    $pane->pid = 'new-5';
+    $pane->panel = 'main';
+    $pane->type = 'node_comment_form';
+    $pane->subtype = 'node_comment_form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_nid_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-5'] = $pane;
+    $display->panels['main'][2] = 'new-5';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-3';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_p'] = $handler;
 

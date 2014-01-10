@@ -279,11 +279,14 @@ return FALSE;',
     $pane = new stdClass;
     $pane->pid = 'new-2';
     $pane->panel = 'aside';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'argazkien_etiketak-panel_pane_1';
+    $pane->type = 'block';
+    $pane->subtype = 'adzerk-azk49793';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -295,6 +298,23 @@ return FALSE;',
     $display->panels['aside'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
+    $pane->panel = 'aside';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'argazkien_etiketak-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['aside'][2] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
     $pane->subtype = 'flickr_image_sets-panel_pane_1';
@@ -311,10 +331,10 @@ return FALSE;',
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-3'] = $pane;
-    $display->panels['main'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['main'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-4';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['argazki_bildumak'] = $page;

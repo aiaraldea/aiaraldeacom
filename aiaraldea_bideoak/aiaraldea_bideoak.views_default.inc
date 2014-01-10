@@ -938,7 +938,7 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['title'] = 'Herriak';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '16';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '24';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '2';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementuak orriak';
