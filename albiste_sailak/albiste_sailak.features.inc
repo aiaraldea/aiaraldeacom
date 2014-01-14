@@ -43,6 +43,20 @@ function albiste_sailak_imagecache_default_presets() {
         ),
       ),
     ),
+    'albisteak_azala_estra' => array(
+      'presetname' => 'albisteak_azala_estra',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '606',
+            'height' => '260',
+          ),
+        ),
+      ),
+    ),
   );
   return $items;
 }
