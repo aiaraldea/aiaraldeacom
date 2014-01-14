@@ -12,3 +12,26 @@ function aiaraldea_base_ctools_plugin_api() {
     return array("version" => 1);
   }
 }
+
+/**
+ * Implementation of hook_imagecache_default_presets().
+ */
+function aiaraldea_base_imagecache_default_presets() {
+  $items = array(
+    'erabiltzailea_zerrendak' => array(
+      'presetname' => 'erabiltzailea_zerrendak',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '20',
+            'height' => '20',
+          ),
+        ),
+      ),
+    ),
+  );
+  return $items;
+}
