@@ -4,15 +4,10 @@ function albiste_sailak_install() {
   db_query("UPDATE {system} SET weight = 11 WHERE name = 'albiste_sailak'");
 }
 
-function albiste_sailak_update_6007() {
-  _create_vocabulary_and_terms();
-}
-
-function albiste_sailak_update_6003() {
+function albiste_sailak_update_6008() {
   _create_vocabulary_and_terms();
   db_query("UPDATE {system} SET weight = 11 WHERE name = 'albiste_sailak'");
 }
-
 
 function albiste_sailak_uninstall() {
   $vocabulary = _get_vocabulary_by_module("features_albiste_kokapena");
@@ -62,7 +57,7 @@ function _create_vocabulary_and_terms() {
   );
   $term5c = array(
       'vid' => $vocabulary->vid,
-      'name' => 'Korrikaren plaza',
+      'name' => 'Estra',
   );
 
   $tree = taxonomy_get_tree($vocabulary->vid);
