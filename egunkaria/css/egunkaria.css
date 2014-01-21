@@ -3,4 +3,7 @@
 }
 .view-egunkaria ul li{
     display: inline-block;
+    width: 230px;
+    min-height: 350px;
+    vertical-align: top;
 }
