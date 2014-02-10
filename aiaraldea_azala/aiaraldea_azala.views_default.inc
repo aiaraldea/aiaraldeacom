@@ -322,7 +322,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['tid_2']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid_2']['limit'] = 1;
   $handler->display->display_options['fields']['tid_2']['vids'] = array(
-    11 => 11,
+    12 => 12,
     2 => 0,
     3 => 0,
     1 => 0,
@@ -333,7 +333,7 @@ function aiaraldea_azala_views_default_views() {
     6 => 0,
     8 => 0,
     9 => 0,
-    12 => 0,
+    11 => 0,
   );
   /* Eremua: Edukia: Lekua (field_lekua) */
   $handler->display->display_options['fields']['field_lekua_value']['id'] = 'field_lekua_value';
@@ -633,11 +633,11 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['tid']['table'] = 'term_node';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['value'] = array(
-    5980 => '5980',
+    6039 => '6039',
   );
   $handler->display->display_options['filters']['tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vid'] = '12';
+  $handler->display->display_options['filters']['tid']['vid'] = '11';
 
   /* Display: Argazkiak home */
   $handler = $view->new_display('panel_pane', 'Argazkiak home', 'panel_pane_1');
@@ -1724,11 +1724,11 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['tid']['table'] = 'term_node';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['value'] = array(
-    5980 => '5980',
+    6039 => '6039',
   );
   $handler->display->display_options['filters']['tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vid'] = '12';
+  $handler->display->display_options['filters']['tid']['vid'] = '11';
 
   /* Display: Bideoak home */
   $handler = $view->new_display('panel_pane', 'Bideoak home', 'panel_pane_1');
