@@ -98,7 +98,7 @@ function aiaraldea_azala_default_panels_mini() {
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'agenda_azala-panel_pane_3';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
@@ -142,6 +142,29 @@ function aiaraldea_azala_default_panels_mini() {
     $pane->position = 1;
     $display->content['new-2'] = $pane;
     $display->panels['middle'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Deialdi gehiago loturak',
+      'title' => '',
+      'body' => '<div class="more-link"><a href="agenda">Deialdi gehiago</a></div>',
+      'format' => '5',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['middle'][2] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
@@ -448,7 +471,7 @@ function aiaraldea_azala_default_panels_mini() {
     $pane->panel = 'middle';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'azala proposamenak izenburua',

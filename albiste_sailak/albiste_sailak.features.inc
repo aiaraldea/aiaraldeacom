@@ -23,7 +23,7 @@ function albiste_sailak_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale_and_crop',
           'data' => array(
-            'width' => '366',
+            'width' => '380',
             'height' => '190',
           ),
         ),

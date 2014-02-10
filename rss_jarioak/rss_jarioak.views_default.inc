@@ -32,18 +32,18 @@ function rss_jarioak_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = 1;
   $handler->display->display_options['row_options']['comments'] = 0;
-  /* Ordenazio irizpidea: Nodoa: Argitaratze data */
+  /* Sort criterion: Node: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Argumentua: Nodoa: Mota */
+  /* Argument: Node: Type */
   $handler->display->display_options['arguments']['type']['id'] = 'type';
   $handler->display->display_options['arguments']['type']['table'] = 'node';
   $handler->display->display_options['arguments']['type']['field'] = 'type';
   $handler->display->display_options['arguments']['type']['style_plugin'] = 'default_summary';
   $handler->display->display_options['arguments']['type']['default_argument_type'] = 'fixed';
-  /* Argumentua: Taxonomia: Termino */
+  /* Argument: Taxonomy: Term */
   $handler->display->display_options['arguments']['name']['id'] = 'name';
   $handler->display->display_options['arguments']['name']['table'] = 'term_data';
   $handler->display->display_options['arguments']['name']['field'] = 'name';
@@ -54,13 +54,13 @@ function rss_jarioak_views_default_views() {
   $handler->display->display_options['arguments']['name']['transform_dash'] = 0;
   $handler->display->display_options['arguments']['name']['add_table'] = 0;
   $handler->display->display_options['arguments']['name']['require_value'] = 0;
-  /* Iragazkia: Nodoa: Argitaratua */
+  /* Filter: Node: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Iragazkia: Nodoa: Mota */
+  /* Filter: Node: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -92,8 +92,9 @@ function rss_jarioak_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Guztiak'),
+    t('All'),
     t('Feed'),
+    t('more'),
   );
 
   $views[$view->name] = $view;

@@ -13,6 +13,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-3',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'above',
       ),
@@ -22,10 +26,6 @@ function komunitatea_content_default_fields() {
       ),
       'full' => array(
         'format' => 'hidden',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
         'exclude' => 0,
       ),
       '2' => array(
@@ -75,6 +75,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-4',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'above',
       ),
@@ -84,10 +88,6 @@ function komunitatea_content_default_fields() {
       ),
       'full' => array(
         'format' => 'hidden',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
         'exclude' => 0,
       ),
       '2' => array(
@@ -138,6 +138,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-2',
       'parent' => '',
+      '4' => array(
+        'format' => '600x450_linked',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -147,10 +151,6 @@ function komunitatea_content_default_fields() {
       ),
       'full' => array(
         'format' => '600x450_default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'image_plain',
         'exclude' => 0,
       ),
       '2' => array(
@@ -215,6 +215,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-1',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -223,10 +227,6 @@ function komunitatea_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -300,6 +300,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-4',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'above',
       ),
@@ -308,10 +312,6 @@ function komunitatea_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -331,7 +331,7 @@ function komunitatea_content_default_fields() {
     'widget_active' => '1',
     'type' => 'content_taxonomy',
     'required' => '1',
-    'multiple' => '1',
+    'multiple' => '0',
     'module' => 'content_taxonomy',
     'active' => '1',
     'save_term_node' => 1,
@@ -362,6 +362,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-3',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'above',
       ),
@@ -370,10 +374,6 @@ function komunitatea_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -425,6 +425,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-2',
       'parent' => '',
+      '4' => array(
+        'format' => '600x450_default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -434,10 +438,6 @@ function komunitatea_content_default_fields() {
       ),
       'full' => array(
         'format' => '650x480_default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'image_plain',
         'exclude' => 0,
       ),
       '2' => array(
@@ -502,6 +502,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => 0,
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -510,10 +514,6 @@ function komunitatea_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -597,7 +597,7 @@ function komunitatea_content_default_fields() {
     'widget_active' => '1',
     'type' => 'content_taxonomy',
     'required' => '1',
-    'multiple' => '1',
+    'multiple' => '0',
     'module' => 'content_taxonomy',
     'active' => '1',
     'save_term_node' => 1,
@@ -666,8 +666,8 @@ function komunitatea_content_default_fields() {
       'video_width' => '425',
       'video_height' => '350',
       'video_autoplay' => 0,
-      'preview_width' => '425',
-      'preview_height' => '350',
+      'preview_width' => '300',
+      'preview_height' => '200',
       'preview_autoplay' => 0,
       'thumbnail_width' => '120',
       'thumbnail_height' => '90',
@@ -837,8 +837,12 @@ function komunitatea_content_default_fields() {
     'field_name' => 'field_hitzordua_arloa',
     'type_name' => 'hitzordua',
     'display_settings' => array(
-      'weight' => '-3',
+      'weight' => '20',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'above',
       ),
@@ -848,10 +852,6 @@ function komunitatea_content_default_fields() {
       ),
       'full' => array(
         'format' => 'hidden',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
         'exclude' => 0,
       ),
       '2' => array(
@@ -870,7 +870,7 @@ function komunitatea_content_default_fields() {
     'widget_active' => '1',
     'type' => 'content_taxonomy',
     'required' => '1',
-    'multiple' => '1',
+    'multiple' => '0',
     'module' => 'content_taxonomy',
     'active' => '1',
     'save_term_node' => 1,
@@ -887,7 +887,7 @@ function komunitatea_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Arloa',
-      'weight' => '-3',
+      'weight' => '20',
       'description' => '',
       'type' => 'content_taxonomy_tree',
       'module' => 'content_taxonomy_tree',
@@ -899,8 +899,12 @@ function komunitatea_content_default_fields() {
     'field_name' => 'field_hitzordua_bideoak',
     'type_name' => 'hitzordua',
     'display_settings' => array(
-      'weight' => '2',
+      'weight' => '25',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -909,10 +913,6 @@ function komunitatea_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -972,7 +972,7 @@ function komunitatea_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Bideo-lotura',
-      'weight' => '2',
+      'weight' => '25',
       'description' => '',
       'type' => 'emvideo_textfields',
       'module' => 'emvideo',
@@ -984,8 +984,12 @@ function komunitatea_content_default_fields() {
     'field_name' => 'field_hitzordua_herria',
     'type_name' => 'hitzordua',
     'display_settings' => array(
-      'weight' => '-4',
+      'weight' => '21',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'above',
       ),
@@ -995,10 +999,6 @@ function komunitatea_content_default_fields() {
       ),
       'full' => array(
         'format' => 'hidden',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
         'exclude' => 0,
       ),
       '2' => array(
@@ -1035,7 +1035,7 @@ function komunitatea_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Herria',
-      'weight' => '-4',
+      'weight' => '21',
       'description' => '',
       'type' => 'content_taxonomy_select',
       'module' => 'content_taxonomy_options',
@@ -1047,8 +1047,12 @@ function komunitatea_content_default_fields() {
     'field_name' => 'field_hitzordua_hora',
     'type_name' => 'hitzordua',
     'display_settings' => array(
-      'weight' => '-1',
+      'weight' => '23',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'inline',
       ),
@@ -1057,10 +1061,6 @@ function komunitatea_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -1108,7 +1108,7 @@ function komunitatea_content_default_fields() {
       'year_range' => '-3:+3',
       'label_position' => 'above',
       'label' => 'Hasiera eta bukaera',
-      'weight' => '-1',
+      'weight' => '23',
       'description' => '',
       'type' => 'date_popup',
       'module' => 'date',
@@ -1120,8 +1120,12 @@ function komunitatea_content_default_fields() {
     'field_name' => 'field_hitzordua_img',
     'type_name' => 'hitzordua',
     'display_settings' => array(
-      'weight' => 0,
+      'weight' => '26',
       'parent' => '',
+      '4' => array(
+        'format' => '600x450_default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -1131,10 +1135,6 @@ function komunitatea_content_default_fields() {
       ),
       'full' => array(
         'format' => '650x480_default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'image_plain',
         'exclude' => 0,
       ),
       '2' => array(
@@ -1185,7 +1185,7 @@ function komunitatea_content_default_fields() {
       'filefield_source_attach_mode' => 'move',
       'filefield_source_autocomplete' => '0',
       'label' => 'Argazkia',
-      'weight' => 0,
+      'weight' => '26',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -1197,8 +1197,12 @@ function komunitatea_content_default_fields() {
     'field_name' => 'field_hitzordua_mota',
     'type_name' => 'hitzordua',
     'display_settings' => array(
-      'weight' => '-2',
+      'weight' => '22',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'inline',
       ),
@@ -1207,10 +1211,6 @@ function komunitatea_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -1249,7 +1249,7 @@ function komunitatea_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Deialdi mota',
-      'weight' => '-2',
+      'weight' => '22',
       'description' => '',
       'type' => 'content_taxonomy_select',
       'module' => 'content_taxonomy_options',
@@ -1261,8 +1261,12 @@ function komunitatea_content_default_fields() {
     'field_name' => 'field_hitzordua_testua',
     'type_name' => 'hitzordua',
     'display_settings' => array(
-      'weight' => '1',
+      'weight' => '24',
       'parent' => '',
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -1271,10 +1275,6 @@ function komunitatea_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -1312,7 +1312,7 @@ function komunitatea_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Testua',
-      'weight' => '1',
+      'weight' => '24',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -1577,6 +1577,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-3',
       'parent' => '',
+      'home' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'above',
       ),
@@ -1639,6 +1643,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-4',
       'parent' => '',
+      'home' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'above',
       ),
@@ -1702,6 +1710,10 @@ function komunitatea_content_default_fields() {
     'display_settings' => array(
       'weight' => '-2',
       'parent' => '',
+      'home' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),

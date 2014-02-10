@@ -69,15 +69,15 @@ function komunitatea_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_hitzordua';
   $strongarm->value = array(
-    'title' => '-5',
-    'revision_information' => '6',
-    'author' => '5',
-    'options' => '4',
-    'comment_settings' => '10',
-    'menu' => '3',
-    'path' => '9',
-    'custom_breadcrumbs' => '7',
-    'path_redirect' => '8',
+    'title' => '19',
+    'revision_information' => '28',
+    'author' => '27',
+    'options' => '33',
+    'comment_settings' => '34',
+    'menu' => '29',
+    'path' => '31',
+    'custom_breadcrumbs' => '30',
+    'path_redirect' => '32',
   );
   $export['content_extra_weights_hitzordua'] = $strongarm;
 
@@ -588,7 +588,7 @@ AIARALDEA KOMUNIKAZIO LEIHOA';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_register_no_approval_required_subject';
-  $strongarm->value = 'Ongi etorri !username at !, aiaraldea.com weg-guneko erabiltzaile egin zara';
+  $strongarm->value = 'Ongi etorri !username aiaraldea.com weg-guneko erabiltzaile egin zara';
   $export['user_mail_register_no_approval_required_subject'] = $strongarm;
 
   $strongarm = new stdClass;

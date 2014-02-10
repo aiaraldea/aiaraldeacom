@@ -53,7 +53,7 @@ function theme_listado_usuarios_block() {
  * Devuelve un array con las categorías con más visitas
  */
 function get_categorias(){
-  $result = db_query("SELECT users.uid AS uid_1, users.uid AS uid, node_users.created AS node_users_created FROM users users  LEFT JOIN node node_users ON users.uid = node_users.uid INNER JOIN users_roles users_roles ON users.uid = users_roles.uid WHERE (users_roles.rid = 12) AND (node_users.status = 1) ORDER BY node_users_created DESC LIMIT 15");
+  $result = db_query("SELECT users.uid AS uid_1, users.uid AS uid, node_users.created AS node_users_created FROM users users  LEFT JOIN node node_users ON users.uid = node_users.uid INNER JOIN users_roles users_roles ON users.uid = users_roles.uid WHERE (users_roles.rid = 12) AND (node_users.status = 1) ORDER BY node_users_created DESC LIMIT 250");
   $categorias = array();
   while($row = db_fetch_object($result)){
     $categorias[] = $row->uid;

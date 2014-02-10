@@ -74,6 +74,50 @@ function aiaraldea_azala_flag_default_flags() {
  */
 function aiaraldea_azala_imagecache_default_presets() {
   $items = array(
+    '150x100' => array(
+      'presetname' => '150x100',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '150',
+            'height' => '100',
+          ),
+        ),
+      ),
+    ),
+    '200x' => array(
+      'presetname' => '200x',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '200',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+    '300x200' => array(
+      'presetname' => '300x200',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '300px',
+            'height' => '200px',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
     'azala_azken_bideoa' => array(
       'presetname' => 'azala_azken_bideoa',
       'actions' => array(
@@ -133,7 +177,7 @@ function aiaraldea_azala_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale_and_crop',
           'data' => array(
-            'width' => '206',
+            'width' => '220',
             'height' => '140',
           ),
         ),

@@ -34,7 +34,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Erlazioa: Banderak: nabarmena */
+  /* Relationship: Flags: nabarmena */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
@@ -42,7 +42,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'nabarmena';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
-  /* Eremua: Taxonomia: Termino guztiak */
+  /* Field: Taxonomy: All terms */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'term_node';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
@@ -64,7 +64,7 @@ function aiaraldea_agenda_views_default_views() {
     1 => 0,
     4 => 0,
   );
-  /* Eremua: Taxonomia: Termino guztiak */
+  /* Field: Taxonomy: All terms */
   $handler->display->display_options['fields']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['fields']['tid_1']['table'] = 'term_node';
   $handler->display->display_options['fields']['tid_1']['field'] = 'tid';
@@ -86,7 +86,7 @@ function aiaraldea_agenda_views_default_views() {
     2 => 0,
     4 => 0,
   );
-  /* Eremua: Nodoa: Izenburua */
+  /* Field: Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -101,7 +101,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Eremua: Edukia: Lekua (field_lekua) */
+  /* Field: Content: Lekua (field_lekua) */
   $handler->display->display_options['fields']['field_lekua_value']['id'] = 'field_lekua_value';
   $handler->display->display_options['fields']['field_lekua_value']['table'] = 'node_data_field_lekua';
   $handler->display->display_options['fields']['field_lekua_value']['field'] = 'field_lekua_value';
@@ -116,7 +116,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_lekua_value']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['label_type'] = 'none';
-  /* Eremua: Edukia: Noiz (field_noiz) */
+  /* Field: Content: Noiz (field_noiz) */
   $handler->display->display_options['fields']['field_noiz_value']['id'] = 'field_noiz_value';
   $handler->display->display_options['fields']['field_noiz_value']['table'] = 'node_data_field_noiz';
   $handler->display->display_options['fields']['field_noiz_value']['field'] = 'field_noiz_value';
@@ -132,11 +132,11 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_noiz_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_noiz_value']['format'] = 'short';
-  /* Ordenazio irizpidea: Edukia: Noiz (field_noiz) */
+  /* Sort criterion: Content: Noiz (field_noiz) */
   $handler->display->display_options['sorts']['field_noiz_value']['id'] = 'field_noiz_value';
   $handler->display->display_options['sorts']['field_noiz_value']['table'] = 'node_data_field_noiz';
   $handler->display->display_options['sorts']['field_noiz_value']['field'] = 'field_noiz_value';
-  /* Argumentua: Data: Data (node) */
+  /* Argument: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -151,13 +151,13 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['year_range'] = '-0:+3';
   $handler->display->display_options['arguments']['date_argument']['date_method'] = 'AND';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'month';
-  /* Argumentua: Taxonomia: Termino */
+  /* Argument: Taxonomy: Term */
   $handler->display->display_options['arguments']['name']['id'] = 'name';
   $handler->display->display_options['arguments']['name']['table'] = 'term_data';
   $handler->display->display_options['arguments']['name']['field'] = 'name';
   $handler->display->display_options['arguments']['name']['style_plugin'] = 'default_summary';
   $handler->display->display_options['arguments']['name']['default_argument_type'] = 'fixed';
-  /* Iragazkia: Nodoa: Mota */
+  /* Filter: Node: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -165,7 +165,7 @@ function aiaraldea_agenda_views_default_views() {
     'deialdi' => 'deialdi',
   );
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
-  /* Iragazkia: Data: Data (node) */
+  /* Filter: Date: Date (node) */
   $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['table'] = 'node';
   $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
@@ -180,7 +180,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
   $handler->display->display_options['filters']['date_filter']['default_to_date'] = '';
   $handler->display->display_options['filters']['date_filter']['year_range'] = '-0:+3';
-  /* Iragazkia: Nodoa: Argitaratua */
+  /* Filter: Node: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -190,7 +190,7 @@ function aiaraldea_agenda_views_default_views() {
   /* Display: Content pane by term */
   $handler = $view->new_display('panel_pane', 'Content pane by term', 'panel_pane_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Eremua: Taxonomia: Termino guztiak */
+  /* Field: Taxonomy: All terms */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'term_node';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
@@ -212,7 +212,7 @@ function aiaraldea_agenda_views_default_views() {
     1 => 0,
     4 => 0,
   );
-  /* Eremua: Taxonomia: Termino guztiak */
+  /* Field: Taxonomy: All terms */
   $handler->display->display_options['fields']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['fields']['tid_1']['table'] = 'term_node';
   $handler->display->display_options['fields']['tid_1']['field'] = 'tid';
@@ -234,7 +234,7 @@ function aiaraldea_agenda_views_default_views() {
     2 => 0,
     4 => 0,
   );
-  /* Eremua: Nodoa: Izenburua */
+  /* Field: Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -249,7 +249,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Eremua: Edukia: Lekua (field_lekua) */
+  /* Field: Content: Lekua (field_lekua) */
   $handler->display->display_options['fields']['field_lekua_value']['id'] = 'field_lekua_value';
   $handler->display->display_options['fields']['field_lekua_value']['table'] = 'node_data_field_lekua';
   $handler->display->display_options['fields']['field_lekua_value']['field'] = 'field_lekua_value';
@@ -264,7 +264,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_lekua_value']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['label_type'] = 'none';
-  /* Eremua: Edukia: Noiz (field_noiz) */
+  /* Field: Content: Noiz (field_noiz) */
   $handler->display->display_options['fields']['field_noiz_value']['id'] = 'field_noiz_value';
   $handler->display->display_options['fields']['field_noiz_value']['table'] = 'node_data_field_noiz';
   $handler->display->display_options['fields']['field_noiz_value']['field'] = 'field_noiz_value';
@@ -280,7 +280,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_noiz_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_noiz_value']['format'] = 'short';
-  /* Eremua: Nodoa: Testua */
+  /* Field: Node: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'node_revisions';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -296,7 +296,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 0;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Argumentua: Taxonomia: Termino */
+  /* Argument: Taxonomy: Term */
   $handler->display->display_options['arguments']['name']['id'] = 'name';
   $handler->display->display_options['arguments']['name']['table'] = 'term_data';
   $handler->display->display_options['arguments']['name']['field'] = 'name';
@@ -342,7 +342,7 @@ function aiaraldea_agenda_views_default_views() {
   /* Display: Content pane by date */
   $handler = $view->new_display('panel_pane', 'Content pane by date', 'panel_pane_2');
   $handler->display->display_options['defaults']['empty'] = FALSE;
-  /* Testu hutsa: Globala: Testu eremua */
+  /* Empty text: Global: Text area */
   $handler->display->display_options['empty']['text']['id'] = 'area';
   $handler->display->display_options['empty']['text']['table'] = 'views';
   $handler->display->display_options['empty']['text']['field'] = 'area';
@@ -350,7 +350,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['empty']['text']['empty'] = FALSE;
   $handler->display->display_options['empty']['text']['content'] = 'Hilabete honetan oraindik ez dago deialdirik. Bidali iezaguzu zure deialdia eposta bidez.';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Eremua: Taxonomia: Termino guztiak */
+  /* Field: Taxonomy: All terms */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'term_node';
   $handler->display->display_options['fields']['tid']['field'] = 'tid';
@@ -372,7 +372,7 @@ function aiaraldea_agenda_views_default_views() {
     1 => 0,
     4 => 0,
   );
-  /* Eremua: Taxonomia: Termino guztiak */
+  /* Field: Taxonomy: All terms */
   $handler->display->display_options['fields']['tid_1']['id'] = 'tid_1';
   $handler->display->display_options['fields']['tid_1']['table'] = 'term_node';
   $handler->display->display_options['fields']['tid_1']['field'] = 'tid';
@@ -394,7 +394,7 @@ function aiaraldea_agenda_views_default_views() {
     2 => 0,
     4 => 0,
   );
-  /* Eremua: Nodoa: Izenburua */
+  /* Field: Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -409,7 +409,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Eremua: Edukia: Lekua (field_lekua) */
+  /* Field: Content: Lekua (field_lekua) */
   $handler->display->display_options['fields']['field_lekua_value']['id'] = 'field_lekua_value';
   $handler->display->display_options['fields']['field_lekua_value']['table'] = 'node_data_field_lekua';
   $handler->display->display_options['fields']['field_lekua_value']['field'] = 'field_lekua_value';
@@ -424,7 +424,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_lekua_value']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['label_type'] = 'none';
-  /* Eremua: Edukia: Noiz (field_noiz) */
+  /* Field: Content: Noiz (field_noiz) */
   $handler->display->display_options['fields']['field_noiz_value']['id'] = 'field_noiz_value';
   $handler->display->display_options['fields']['field_noiz_value']['table'] = 'node_data_field_noiz';
   $handler->display->display_options['fields']['field_noiz_value']['field'] = 'field_noiz_value';
@@ -440,7 +440,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_noiz_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_noiz_value']['format'] = 'short';
-  /* Eremua: Nodoa: Testua */
+  /* Field: Node: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'node_revisions';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -456,7 +456,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 0;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Argumentua: Data: Data (node) */
+  /* Argument: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -504,10 +504,11 @@ function aiaraldea_agenda_views_default_views() {
     t('Elementuak orriak'),
     t('- Dena -'),
     t('Desplazamendua'),
-    t('Guztiak'),
+    t('All'),
     t('Agenda: %1'),
     t('%1'),
     t('Content pane by term'),
+    t('more'),
     t('View panes'),
     t('Content pane by date'),
     t('Hilabete honetan oraindik ez dago deialdirik. Bidali iezaguzu zure deialdia eposta bidez.'),
@@ -540,7 +541,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'calendar_style';
-  /* Eremua: Edukia: Noiz (field_noiz) */
+  /* Field: Content: Noiz (field_noiz) */
   $handler->display->display_options['fields']['field_noiz_value']['id'] = 'field_noiz_value';
   $handler->display->display_options['fields']['field_noiz_value']['table'] = 'node_data_field_noiz';
   $handler->display->display_options['fields']['field_noiz_value']['field'] = 'field_noiz_value';
@@ -555,7 +556,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_noiz_value']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['label_type'] = 'none';
-  /* Eremua: Edukia: Lekua (field_lekua) */
+  /* Field: Content: Lekua (field_lekua) */
   $handler->display->display_options['fields']['field_lekua_value']['id'] = 'field_lekua_value';
   $handler->display->display_options['fields']['field_lekua_value']['table'] = 'node_data_field_lekua';
   $handler->display->display_options['fields']['field_lekua_value']['field'] = 'field_lekua_value';
@@ -570,7 +571,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['field_lekua_value']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['label_type'] = 'none';
-  /* Eremua: Nodoa: Izenburua */
+  /* Field: Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -585,7 +586,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Eremua: Taxonomia: Termino */
+  /* Field: Taxonomy: Term */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -600,11 +601,11 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['fields']['name']['hide_empty'] = 0;
   $handler->display->display_options['fields']['name']['empty_zero'] = 0;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 0;
-  /* Ordenazio irizpidea: Edukia: Noiz (field_noiz) */
+  /* Sort criterion: Content: Noiz (field_noiz) */
   $handler->display->display_options['sorts']['field_noiz_value']['id'] = 'field_noiz_value';
   $handler->display->display_options['sorts']['field_noiz_value']['table'] = 'node_data_field_noiz';
   $handler->display->display_options['sorts']['field_noiz_value']['field'] = 'field_noiz_value';
-  /* Argumentua: Data: Data (node) */
+  /* Argument: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -617,7 +618,7 @@ function aiaraldea_agenda_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['year_range'] = '-0:+3';
   $handler->display->display_options['arguments']['date_argument']['date_method'] = 'OR';
   $handler->display->display_options['arguments']['date_argument']['granularity'] = 'month';
-  /* Iragazkia: Nodoa: Mota */
+  /* Filter: Node: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -625,7 +626,7 @@ function aiaraldea_agenda_views_default_views() {
     'deialdi' => 'deialdi',
   );
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
-  /* Iragazkia: Nodoa: Argitaratua */
+  /* Filter: Node: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -675,8 +676,9 @@ function aiaraldea_agenda_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Guztiak'),
+    t('All'),
     t('Date browser'),
+    t('more'),
     t('Content pane'),
     t('View panes'),
   );

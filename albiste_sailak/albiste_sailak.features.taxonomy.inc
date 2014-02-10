@@ -10,7 +10,7 @@ function albiste_sailak_taxonomy_default_vocabularies() {
       'description' => 'Albistea azalean agertzen denean zein tokitan agertu behar den.',
       'help' => '',
       'relations' => '1',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'multiple' => '0',
       'required' => '1',
       'tags' => '0',

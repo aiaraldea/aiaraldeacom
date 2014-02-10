@@ -35,8 +35,8 @@ function aiaraldea_albisteak_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale_and_crop',
           'data' => array(
-            'width' => '60',
-            'height' => '45',
+            'width' => '120',
+            'height' => '85',
           ),
         ),
       ),

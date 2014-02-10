@@ -46,12 +46,12 @@ function flickr_image_sets_views_default_views() {
   );
   $handler->display->display_options['row_options']['hide_empty'] = 0;
   $handler->display->display_options['row_options']['default_field_elements'] = 1;
-  /* Erlazioa: Taxonomia: Nodoa */
+  /* Relationship: Taxonomy: Node */
   $handler->display->display_options['relationships']['vid']['id'] = 'vid';
   $handler->display->display_options['relationships']['vid']['table'] = 'term_node';
   $handler->display->display_options['relationships']['vid']['field'] = 'vid';
   $handler->display->display_options['relationships']['vid']['required'] = 0;
-  /* Eremua: Taxonomia: Termino */
+  /* Field: Taxonomy: Term */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -76,7 +76,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['fields']['name']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['name']['convert_spaces'] = 0;
-  /* Eremua: Nodoa: Nid */
+  /* Field: Node: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -102,14 +102,14 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['fields']['nid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['nid']['empty_zero'] = 0;
   $handler->display->display_options['fields']['nid']['hide_alter_empty'] = 1;
-  /* Ordenazio irizpidea: Nodoa: Nid */
+  /* Sort criterion: Node: Nid */
   $handler->display->display_options['sorts']['nid']['id'] = 'nid';
   $handler->display->display_options['sorts']['nid']['table'] = 'node';
   $handler->display->display_options['sorts']['nid']['field'] = 'nid';
   $handler->display->display_options['sorts']['nid']['relationship'] = 'vid';
   $handler->display->display_options['sorts']['nid']['group_type'] = 'count';
   $handler->display->display_options['sorts']['nid']['order'] = 'DESC';
-  /* Iragazkia: Nodoa: Mota */
+  /* Filter: Node: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -117,7 +117,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'flickr_image_set' => 'flickr_image_set',
   );
-  /* Iragazkia: Taxonomia: Hiztegia */
+  /* Filter: Taxonomy: Vocabulary */
   $handler->display->display_options['filters']['vid']['id'] = 'vid';
   $handler->display->display_options['filters']['vid']['table'] = 'term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
@@ -154,7 +154,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Dena -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Iragazkia: Nodoa: Mota */
+  /* Filter: Node: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -162,7 +162,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'flickr_image_set' => 'flickr_image_set',
   );
-  /* Iragazkia: Taxonomia: Hiztegia */
+  /* Filter: Taxonomy: Vocabulary */
   $handler->display->display_options['filters']['vid']['id'] = 'vid';
   $handler->display->display_options['filters']['vid']['table'] = 'term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
@@ -181,12 +181,13 @@ function flickr_image_sets_views_default_views() {
     t('Elementuak orriak'),
     t('- Dena -'),
     t('Desplazamendua'),
-    t('nodoa'),
+    t('node'),
     t('argazkiak/[name]'),
     t('([nid])'),
     t('albisteak/[name]'),
     t('Argazki bildumen etiketak'),
     t('Etiketak'),
+    t('more'),
     t('View panes'),
     t('Argazki bildumen etiketak: Herriak'),
     t('Herriak'),
@@ -224,7 +225,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['fill_single_line'] = 1;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Eremua: Edukia: Flickr Photo Set (field_photo_set) */
+  /* Field: Content: Flickr Photo Set (field_photo_set) */
   $handler->display->display_options['fields']['field_photo_set_id']['id'] = 'field_photo_set_id';
   $handler->display->display_options['fields']['field_photo_set_id']['table'] = 'node_data_field_photo_set';
   $handler->display->display_options['fields']['field_photo_set_id']['field'] = 'field_photo_set_id';
@@ -240,7 +241,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['fields']['field_photo_set_id']['link_to_node'] = 1;
   $handler->display->display_options['fields']['field_photo_set_id']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_photo_set_id']['format'] = 't_primary_for_sets';
-  /* Eremua: Nodoa: Izenburua */
+  /* Field: Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -255,12 +256,12 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Ordenazio irizpidea: Nodoa: Argitaratze data */
+  /* Sort criterion: Node: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Argumentua: Taxonomia: Termino */
+  /* Argument: Taxonomy: Term */
   $handler->display->display_options['arguments']['name']['id'] = 'name';
   $handler->display->display_options['arguments']['name']['table'] = 'term_data';
   $handler->display->display_options['arguments']['name']['field'] = 'name';
@@ -282,7 +283,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['arguments']['name']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['name']['add_table'] = 0;
   $handler->display->display_options['arguments']['name']['require_value'] = 0;
-  /* Iragazkia: Nodoa: Mota */
+  /* Filter: Node: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -296,7 +297,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['optional'] = TRUE;
   $handler->display->display_options['filters']['type']['expose']['remember'] = FALSE;
   $handler->display->display_options['filters']['type']['expose']['single'] = TRUE;
-  /* Iragazkia: Nodoa: Argitaratua */
+  /* Filter: Node: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -337,10 +338,11 @@ function flickr_image_sets_views_default_views() {
     t('Elementuak orriak'),
     t('- Dena -'),
     t('Desplazamendua'),
-    t('Guztiak'),
+    t('All'),
     t('Argazki bildumak: %1'),
     t('Nodo: Mota'),
     t('Content pane'),
+    t('more'),
     t('View panes'),
   );
 
@@ -370,7 +372,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = 12;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Eremua: Edukia: Flickr Photo Set (field_photo_set) */
+  /* Field: Content: Flickr Photo Set (field_photo_set) */
   $handler->display->display_options['fields']['field_photo_set_id']['id'] = 'field_photo_set_id';
   $handler->display->display_options['fields']['field_photo_set_id']['table'] = 'node_data_field_photo_set';
   $handler->display->display_options['fields']['field_photo_set_id']['field'] = 'field_photo_set_id';
@@ -386,7 +388,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['fields']['field_photo_set_id']['link_to_node'] = 1;
   $handler->display->display_options['fields']['field_photo_set_id']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_photo_set_id']['format'] = 't_primary_for_sets';
-  /* Eremua: Nodoa: Izenburua */
+  /* Field: Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -401,12 +403,12 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Ordenazio irizpidea: Radioactivity (ikusienak astean): Node energy */
+  /* Sort criterion: Radioactivity (ikusienak astean): Node energy */
   $handler->display->display_options['sorts']['energy']['id'] = 'energy';
   $handler->display->display_options['sorts']['energy']['table'] = 'radioactivity_node_1_s';
   $handler->display->display_options['sorts']['energy']['field'] = 'energy';
   $handler->display->display_options['sorts']['energy']['order'] = 'DESC';
-  /* Iragazkia: Nodoa: Mota */
+  /* Filter: Node: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -420,7 +422,7 @@ function flickr_image_sets_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['optional'] = TRUE;
   $handler->display->display_options['filters']['type']['expose']['remember'] = FALSE;
   $handler->display->display_options['filters']['type']['expose']['single'] = TRUE;
-  /* Iragazkia: Nodoa: Argitaratua */
+  /* Filter: Node: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';

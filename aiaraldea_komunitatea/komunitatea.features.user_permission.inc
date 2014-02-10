@@ -30,8 +30,8 @@ function komunitatea_user_default_permissions() {
   $permissions['create argazkiak content'] = array(
     'name' => 'create argazkiak content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -39,8 +39,8 @@ function komunitatea_user_default_permissions() {
   $permissions['create artikulua content'] = array(
     'name' => 'create artikulua content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -48,8 +48,8 @@ function komunitatea_user_default_permissions() {
   $permissions['create bideoak content'] = array(
     'name' => 'create bideoak content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -57,8 +57,8 @@ function komunitatea_user_default_permissions() {
   $permissions['create hitzordua content'] = array(
     'name' => 'create hitzordua content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -66,8 +66,8 @@ function komunitatea_user_default_permissions() {
   $permissions['create iritzi_gutuna content'] = array(
     'name' => 'create iritzi_gutuna content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -75,8 +75,8 @@ function komunitatea_user_default_permissions() {
   $permissions['create zutabea content'] = array(
     'name' => 'create zutabea content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -132,8 +132,8 @@ function komunitatea_user_default_permissions() {
   $permissions['delete own argazkiak content'] = array(
     'name' => 'delete own argazkiak content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -141,8 +141,8 @@ function komunitatea_user_default_permissions() {
   $permissions['delete own artikulua content'] = array(
     'name' => 'delete own artikulua content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -150,8 +150,8 @@ function komunitatea_user_default_permissions() {
   $permissions['delete own bideoak content'] = array(
     'name' => 'delete own bideoak content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -159,8 +159,8 @@ function komunitatea_user_default_permissions() {
   $permissions['delete own hitzordua content'] = array(
     'name' => 'delete own hitzordua content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -168,8 +168,8 @@ function komunitatea_user_default_permissions() {
   $permissions['delete own iritzi_gutuna content'] = array(
     'name' => 'delete own iritzi_gutuna content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -177,8 +177,8 @@ function komunitatea_user_default_permissions() {
   $permissions['delete own zutabea content'] = array(
     'name' => 'delete own zutabea content',
     'roles' => array(
-      '0' => 'Kides',
-      '1' => 'administrator',
+      '0' => 'administrator',
+      '1' => 'kide',
     ),
   );
 
@@ -187,6 +187,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'edit any argazkiak content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -195,6 +196,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'edit any artikulua content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -203,6 +205,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'edit any bideoak content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -211,6 +214,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'edit any hitzordua content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -219,6 +223,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'edit any iritzi_gutuna content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -227,6 +232,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'edit any zutabea content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -253,6 +259,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'show format selection for nodes',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
