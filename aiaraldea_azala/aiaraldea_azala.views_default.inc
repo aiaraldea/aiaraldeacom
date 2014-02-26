@@ -2845,7 +2845,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '7';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';

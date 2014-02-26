@@ -9,9 +9,135 @@ function komunitatea_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_iritzi_gutuna';
+  $strongarm->value = 0;
+  $export['comment_anonymous_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_zutabea';
+  $strongarm->value = 0;
+  $export['comment_anonymous_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_controls_iritzi_gutuna';
+  $strongarm->value = '3';
+  $export['comment_controls_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_controls_zutabea';
+  $strongarm->value = '3';
+  $export['comment_controls_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_iritzi_gutuna';
+  $strongarm->value = '4';
+  $export['comment_default_mode_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_zutabea';
+  $strongarm->value = '4';
+  $export['comment_default_mode_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_order_iritzi_gutuna';
+  $strongarm->value = '1';
+  $export['comment_default_order_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_order_zutabea';
+  $strongarm->value = '1';
+  $export['comment_default_order_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_iritzi_gutuna';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_zutabea';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_iritzi_gutuna';
+  $strongarm->value = '0';
+  $export['comment_form_location_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_zutabea';
+  $strongarm->value = '0';
+  $export['comment_form_location_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_iritzi_gutuna';
+  $strongarm->value = '2';
+  $export['comment_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_iritzi_gutuna';
+  $strongarm->value = '1';
+  $export['comment_preview_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_zutabea';
+  $strongarm->value = '1';
+  $export['comment_preview_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_iritzi_gutuna';
+  $strongarm->value = '1';
+  $export['comment_subject_field_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_panel';
   $strongarm->value = '1';
   $export['comment_subject_field_panel'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_zutabea';
+  $strongarm->value = '1';
+  $export['comment_subject_field_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_zutabea';
+  $strongarm->value = '2';
+  $export['comment_zutabea'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -414,6 +540,20 @@ function komunitatea_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_iritzi_gutuna';
+  $strongarm->value = '0';
+  $export['language_content_type_iritzi_gutuna'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_zutabea';
+  $strongarm->value = '0';
+  $export['language_content_type_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_argazkiak';
   $strongarm->value = array(
     0 => 'status',
@@ -551,13 +691,12 @@ After logging in, you will be redirected to !edit_uri so you can change your pas
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_register_no_approval_required_body';
-  $strongarm->value = '!username,
+  $strongarm->value = 'Kaixo !username,
 
-Eskerrik asko eta ongi etorri www.aiaraldea.com web-guneko komunitatera. 
-Zure erregistroa bukatzeko mesedez klik egin ezazu lotura honetan: 
+Eskerrik asko eta ongi etorri www.aiaraldea.com web-guneko komunitatera.
 
-
-Erabiltzaile bezala izena eman duzu, eta beraz, aurrerantzean iruzkinak idatzi ahal izango dituzu web-gunean argitaratzen diren eduki guztietan, baina gogoan izan arau hauek:
+Dagoeneko erabiltzailea egin zara, eta beraz, aurrerantzean iruzkinak idatzi ahal izango dituzu web-gunean argitaratzen diren eduki guztietan.
+Horretarako gogoan izan arau eta argibide hauek:
 
     - Modu zuzen edo traketsean izan, euskarazko testuak onartuko dira soilik.
     - Irainak, debaldeko salaketak eta difamazioak onargaitzak dira.
@@ -565,30 +704,31 @@ Erabiltzaile bezala izena eman duzu, eta beraz, aurrerantzean iruzkinak idatzi a
     - Aiaraldea Komunikazio Leihoa ez da erabiltzaileek ematen dituzten iritzien arduradun
     - Azkenik, errespetuz eta zentzuz jokatzeko deia luzatzen dizuegu.
 
+Izena ematean “erabiltzaile” beharrean “komunitateko kide” izatea hautatu baduzu (iruzkinak idaztetik harago) edukiak argitaratu nahi dituzulako web-gunean, laster batean jarriko gara zurekin harremanetan horretarako eskumena emateko (Informazio gehiago hemen: http://www.aiaraldea.com/komunitatea-faq/zer-da)
 
-Gogoratu erabiltzaile bezala web-gunean sartzeko !login_uri zure izen eta pasahitza hauek direla: 
+Erabiltzaile bezala web-gunean sartzeko zure izen eta pasahitza hauek dira: 
 
-username: !username
-password: !password
+erabiltzaile-izena: !username
+pasahitza: !password
 
+Lotura honetan sartu zaitezke: !login_uri 
 
-Era berean, erabiltzaile bezala sartzeko lotura honetan klik egin dezakezu:
-!login_url
+Gogora ezazu erabiltzaile bezala lehenengo aldiz sartzen zarenean zure profila editatu beharko duzula (jendaurrean bistaratuko den informazioa eta argazkia), bai eta zure pasahitza ezarri ere. Izena-emanda zaudela, pantailaren goialdean, eskumatara topatuko duzu "Editatu probila" aukera.
 
+Edozein zalantza edo galdera duzula, jar zaitez gurekin harremanetan:
 
+Posta elektronikoa: komunitatea@aiaraldea.com
 
-Gogora ezazu erabiltzaile bezala lehenengo aldiz sartzen zarenean zure profila editatu beharko duzula !edit_uri, bai eta zure pasahitza ezarri ere.
+Telefonoak: 945 656 85 54 / 688 848 152
 
-Eskerrik asko eta ongi etorri aiaraldea.com web-guneko komunitatera
-
-AIARALDEA KOMUNIKAZIO LEIHOA';
+AIARALDEA KOMUNIKAZIO LEIHOA ';
   $export['user_mail_register_no_approval_required_body'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_mail_register_no_approval_required_subject';
-  $strongarm->value = 'Ongi etorri !username aiaraldea.com weg-guneko erabiltzaile egin zara';
+  $strongarm->value = 'Ongi etorri !username, www.aiaraldea.com weg-guneko erabiltzaile egin zara';
   $export['user_mail_register_no_approval_required_subject'] = $strongarm;
 
   $strongarm = new stdClass;

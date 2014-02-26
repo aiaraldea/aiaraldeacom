@@ -33,7 +33,9 @@ function aiaraldea_azala_flag_default_flags() {
     'title' => 'Nabarmena',
     'global' => '1',
     'types' => array(
-      '0' => 'deialdi',
+      '0' => 'zutabea',
+      '1' => 'iritzi_gutuna',
+      '2' => 'argazkiak',
     ),
     'flag_short' => 'Nabarmendu',
     'flag_long' => 'Nabarmendu eduki hau zerrendetan agertzeko',
@@ -42,7 +44,7 @@ function aiaraldea_azala_flag_default_flags() {
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
-    'link_type' => 'toggle',
+    'link_type' => 'normal',
     'roles' => array(
       'flag' => array(
         '0' => 11,

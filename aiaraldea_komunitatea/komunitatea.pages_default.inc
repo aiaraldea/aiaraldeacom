@@ -242,13 +242,13 @@ function komunitatea_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'links' => 0,
-      'page' => 0,
+      'page' => 1,
       'no_extras' => 0,
       'override_title' => 1,
       'override_title_text' => '',
       'identifier' => '',
       'link' => 0,
-      'leave_node_title' => 1,
+      'leave_node_title' => 0,
       'build_mode' => 'full',
       'context' => 'argument_nid_1',
     );
@@ -414,7 +414,7 @@ function komunitatea_default_page_manager_handlers() {
     $pane->position = 2;
     $display->content['new-6'] = $pane;
     $display->panels['rigth'][2] = 'new-6';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;

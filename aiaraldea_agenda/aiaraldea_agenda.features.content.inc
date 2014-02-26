@@ -43,7 +43,7 @@ function aiaraldea_agenda_content_default_fields() {
     ),
     'widget_active' => '1',
     'type' => 'filefield',
-    'required' => '1',
+    'required' => '0',
     'multiple' => '1',
     'module' => 'filefield',
     'active' => '1',

@@ -237,6 +237,7 @@ function komunitatea_views_default_views() {
 
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->display->display_options['title'] = 'Komunitatea - Aiaraldea Komunikazio Leihoa';
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -269,7 +270,8 @@ function komunitatea_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss';
-  $handler->display->display_options['style_options']['mission_description'] = FALSE;
+  $handler->display->display_options['style_options']['description'] = 'Komunitatearen edukiak';
+  $handler->display->display_options['style_options']['mission_description'] = 0;
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Iragazkia: Nodoa: Argitaratua */
@@ -290,8 +292,10 @@ function komunitatea_views_default_views() {
     'zutabea' => 'zutabea',
   );
   $handler->display->display_options['path'] = 'feed/komunitatea';
+  $handler->display->display_options['sitename_title'] = 0;
   $translatables['komunitatea_feed'] = array(
     t('Defaults'),
+    t('Komunitatea - Aiaraldea Komunikazio Leihoa'),
     t('gehiago'),
     t('Ezarri'),
     t('Garbitu'),
