@@ -892,7 +892,7 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['css_class'] = 'view-albisteak azala-albisteak-elkarrizketak';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Eremua: Nodoa: Nid */
