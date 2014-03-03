@@ -1279,7 +1279,9 @@ function komunitatea_views_default_views() {
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
@@ -1395,7 +1397,45 @@ function komunitatea_views_default_views() {
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '-1';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '518400';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '-1';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '518400';
+  $handler->display->display_options['cache']['keys'] = array(
+    'AND' => array(
+      'comment' => array(
+        'changed' => 0,
+      ),
+      'node' => array(
+        'artikulua' => 'artikulua',
+        'argazkiak' => 'argazkiak',
+        'bideoak' => 'bideoak',
+        'hitzordua' => 'hitzordua',
+        'iritzi_gutuna' => 'iritzi_gutuna',
+        'zutabea' => 'zutabea',
+        'albiste' => 0,
+        'flickr_image_set' => 0,
+        'aiaraldea_banner' => 0,
+        'bideo' => 0,
+        'deialdi' => 0,
+        'egunkari_alea' => 0,
+        'elkarrizketa_aurr' => 0,
+        'short_notice' => 0,
+        'page' => 0,
+        'panel' => 0,
+        'proposamena' => 0,
+      ),
+      'node_only' => array(
+        'node_changed' => 0,
+      ),
+    ),
+    'OR' => array(
+      'nodequeue' => array(
+        1 => 0,
+      ),
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
@@ -1507,7 +1547,45 @@ function komunitatea_views_default_views() {
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '-1';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '-1';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'AND' => array(
+      'comment' => array(
+        'changed' => 0,
+      ),
+      'node' => array(
+        'artikulua' => 'artikulua',
+        'argazkiak' => 'argazkiak',
+        'bideoak' => 'bideoak',
+        'hitzordua' => 'hitzordua',
+        'iritzi_gutuna' => 'iritzi_gutuna',
+        'zutabea' => 'zutabea',
+        'albiste' => 0,
+        'flickr_image_set' => 0,
+        'aiaraldea_banner' => 0,
+        'bideo' => 0,
+        'deialdi' => 0,
+        'egunkari_alea' => 0,
+        'elkarrizketa_aurr' => 0,
+        'short_notice' => 0,
+        'page' => 0,
+        'panel' => 0,
+        'proposamena' => 0,
+      ),
+      'node_only' => array(
+        'node_changed' => 0,
+      ),
+    ),
+    'OR' => array(
+      'nodequeue' => array(
+        1 => 0,
+      ),
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';

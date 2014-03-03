@@ -26,7 +26,7 @@ function aiaraldea_base_taxonomy_default_vocabularies() {
     'etiketak' => array(
       'name' => 'Etiketak',
       'description' => '',
-      'help' => '',
+      'help' => 'Edukia deskribatzen duen gai zerrenda, koma bidez banatuta, idatzi. Galdera hauei erantzun hurrenkera honetan: Zein arlori dagokio edukia? (Politika, Jendartea...) Zein pertsona ageri da edukian? (Natxo Urkixo...) Zein erakunde edo elkarte? (Udala, EAJ..)',
       'relations' => '1',
       'hierarchy' => '0',
       'multiple' => '0',

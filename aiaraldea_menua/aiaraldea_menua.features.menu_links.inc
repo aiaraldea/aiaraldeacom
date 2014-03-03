@@ -108,11 +108,11 @@ function aiaraldea_menua_menu_default_menu_links() {
       ),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-41',
+    'weight' => '-40',
   );
   // Exported menu link: menu-goiko-menua:proposamenak
   $menu_links['menu-goiko-menua:proposamenak'] = array(
