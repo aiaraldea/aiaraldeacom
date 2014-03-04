@@ -1958,7 +1958,7 @@ function komunitatea_views_default_views() {
   $handler->display->display_options['fields']['field_artikulua_img_fid']['hide_empty'] = 1;
   $handler->display->display_options['fields']['field_artikulua_img_fid']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_artikulua_img_fid']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_artikulua_img_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['link_to_node'] = 1;
   $handler->display->display_options['fields']['field_artikulua_img_fid']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_artikulua_img_fid']['format'] = '300x200_linked';
   /* Eremua: bideoak_azalpena */
@@ -2032,7 +2032,7 @@ function komunitatea_views_default_views() {
   $handler->display->display_options['fields']['field_argazkiak_irudiak_fid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_argazkiak_irudiak_fid']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_argazkiak_irudiak_fid']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_argazkiak_irudiak_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_argazkiak_irudiak_fid']['link_to_node'] = 1;
   $handler->display->display_options['fields']['field_argazkiak_irudiak_fid']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_argazkiak_irudiak_fid']['format'] = '300x200_default';
   /* Eremua: iritzi_testua */
@@ -2109,7 +2109,7 @@ function komunitatea_views_default_views() {
   $handler->display->display_options['fields']['field_hitzordua_img_fid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_hitzordua_img_fid']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_hitzordua_img_fid']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_hitzordua_img_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_hitzordua_img_fid']['link_to_node'] = 1;
   $handler->display->display_options['fields']['field_hitzordua_img_fid']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_hitzordua_img_fid']['format'] = '150x100_default';
   /* Eremua: hitzordua_mota */
