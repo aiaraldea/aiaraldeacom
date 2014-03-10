@@ -663,8 +663,8 @@ function komunitatea_content_default_fields() {
     'module' => 'emvideo',
     'active' => '1',
     'widget' => array(
-      'video_width' => '425',
-      'video_height' => '350',
+      'video_width' => '620',
+      'video_height' => '420',
       'video_autoplay' => 0,
       'preview_width' => '300',
       'preview_height' => '200',
