@@ -453,7 +453,8 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = 8;
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Eremua: Edukia: Bideo (field_bideo) */
@@ -503,6 +504,44 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'y.m.d';
+  /* Eremua: Taxonomia: Termino guztiak */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'term_node';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['label'] = '';
+  $handler->display->display_options['fields']['tid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['tid']['alter']['path'] = 'bideoak/[tid-name]';
+  $handler->display->display_options['fields']['tid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['tid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['tid']['alter']['strip_tags'] = 1;
+  $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['tid']['link_to_taxonomy'] = 0;
+  $handler->display->display_options['fields']['tid']['limit'] = 1;
+  $handler->display->display_options['fields']['tid']['vids'] = array(
+    2 => 2,
+    3 => 0,
+    1 => 0,
+    4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    10 => 0,
+    8 => 0,
+    9 => 0,
+    11 => 0,
+  );
   /* Ordenazio irizpidea: Radioactivity (ikusienak astean): Node energy */
   $handler->display->display_options['sorts']['energy']['id'] = 'energy';
   $handler->display->display_options['sorts']['energy']['table'] = 'radioactivity_node_1_s';
@@ -530,6 +569,7 @@ function aiaraldea_bideoak_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('bideoak/[tid-name]'),
   );
 
   $views[$view->name] = $view;

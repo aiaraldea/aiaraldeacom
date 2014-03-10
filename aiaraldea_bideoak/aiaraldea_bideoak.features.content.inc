@@ -49,8 +49,8 @@ function aiaraldea_bideoak_content_default_fields() {
     'module' => 'emvideo',
     'active' => '1',
     'widget' => array(
-      'video_width' => '425',
-      'video_height' => '307',
+      'video_width' => '620',
+      'video_height' => '380',
       'video_autoplay' => 0,
       'preview_width' => '380',
       'preview_height' => '210',
