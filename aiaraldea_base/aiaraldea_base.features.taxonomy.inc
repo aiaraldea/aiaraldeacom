@@ -6,11 +6,11 @@
 function aiaraldea_base_taxonomy_default_vocabularies() {
   return array(
     'aiaraldea_non' => array(
-      'name' => 'Non',
+      'name' => 'Herria',
       'description' => 'lekua',
       'help' => 'Idatzi zer herrian gertatu edo gertatuko den. Herri bat baino gehiago zehazteko komaz banatu.',
       'relations' => '1',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'multiple' => '0',
       'required' => '1',
       'tags' => '1',

@@ -20,6 +20,26 @@ function aiaraldea_bideoak_ctools_plugin_api() {
 }
 
 /**
+ * Implementation of hook_node_info().
+ */
+function aiaraldea_bideoak_node_info() {
+  $items = array(
+    'bideo' => array(
+      'name' => t('Bideo'),
+      'module' => 'features',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Izenburua'),
+      'has_body' => '1',
+      'body_label' => t('Deskribapena'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implementation of hook_imagecache_default_presets().
  */
 function aiaraldea_bideoak_imagecache_default_presets() {
