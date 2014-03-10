@@ -11,6 +11,9 @@ function bilaketa_ctools_plugin_api() {
   elseif ($module == "apachesolr_search" && $api == "apachesolr_search_defaults") {
     return array("version" => 3);
   }
+  elseif ($module == "elysia_cron" && $api == "default_elysia_cron_rules") {
+    return array("version" => 1);
+  }
   elseif ($module == "facetapi" && $api == "facetapi_defaults") {
     return array("version" => 1);
   }
