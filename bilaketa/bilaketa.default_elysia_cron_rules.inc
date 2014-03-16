@@ -21,7 +21,7 @@ function bilaketa_default_elysia_cron_rules() {
   $cron_rule->api_version = 1;
   $cron_rule->name = 'apachesolr_cron';
   $cron_rule->disable = FALSE;
-  $cron_rule->rule = '*/15 * * * *';
+  $cron_rule->rule = '0 * * * *';
   $cron_rule->weight = NULL;
   $cron_rule->context = NULL;
   $cron_rules['apachesolr_cron'] = $cron_rule;

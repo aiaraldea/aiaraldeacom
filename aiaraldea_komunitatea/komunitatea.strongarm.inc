@@ -9,6 +9,13 @@ function komunitatea_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_bideoak';
+  $strongarm->value = 0;
+  $export['comment_anonymous_bideoak'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_iritzi_gutuna';
   $strongarm->value = 0;
   $export['comment_anonymous_iritzi_gutuna'] = $strongarm;
@@ -19,6 +26,20 @@ function komunitatea_strongarm() {
   $strongarm->name = 'comment_anonymous_zutabea';
   $strongarm->value = 0;
   $export['comment_anonymous_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_bideoak';
+  $strongarm->value = '2';
+  $export['comment_bideoak'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_controls_bideoak';
+  $strongarm->value = '3';
+  $export['comment_controls_bideoak'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -37,6 +58,13 @@ function komunitatea_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_bideoak';
+  $strongarm->value = '4';
+  $export['comment_default_mode_bideoak'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_iritzi_gutuna';
   $strongarm->value = '4';
   $export['comment_default_mode_iritzi_gutuna'] = $strongarm;
@@ -47,6 +75,13 @@ function komunitatea_strongarm() {
   $strongarm->name = 'comment_default_mode_zutabea';
   $strongarm->value = '4';
   $export['comment_default_mode_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_order_bideoak';
+  $strongarm->value = '1';
+  $export['comment_default_order_bideoak'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -65,6 +100,13 @@ function komunitatea_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_bideoak';
+  $strongarm->value = '50';
+  $export['comment_default_per_page_bideoak'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_per_page_iritzi_gutuna';
   $strongarm->value = '50';
   $export['comment_default_per_page_iritzi_gutuna'] = $strongarm;
@@ -75,6 +117,13 @@ function komunitatea_strongarm() {
   $strongarm->name = 'comment_default_per_page_zutabea';
   $strongarm->value = '50';
   $export['comment_default_per_page_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_bideoak';
+  $strongarm->value = '0';
+  $export['comment_form_location_bideoak'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -100,6 +149,13 @@ function komunitatea_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_bideoak';
+  $strongarm->value = '1';
+  $export['comment_preview_bideoak'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_iritzi_gutuna';
   $strongarm->value = '1';
   $export['comment_preview_iritzi_gutuna'] = $strongarm;
@@ -110,6 +166,13 @@ function komunitatea_strongarm() {
   $strongarm->name = 'comment_preview_zutabea';
   $strongarm->value = '1';
   $export['comment_preview_zutabea'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_bideoak';
+  $strongarm->value = '1';
+  $export['comment_subject_field_bideoak'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -144,15 +207,17 @@ function komunitatea_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_argazkiak';
   $strongarm->value = array(
+    'apachesolr' => '9',
     'title' => '-5',
-    'revision_information' => '1',
-    'author' => '0',
-    'options' => '2',
-    'comment_settings' => '6',
-    'menu' => '-1',
-    'path' => '5',
-    'custom_breadcrumbs' => '4',
-    'path_redirect' => '3',
+    'revision_information' => '3',
+    'author' => '2',
+    'options' => '4',
+    'comment_settings' => '8',
+    'menu' => '0',
+    'path' => '7',
+    'custom_breadcrumbs' => '6',
+    'flag' => '1',
+    'path_redirect' => '5',
   );
   $export['content_extra_weights_argazkiak'] = $strongarm;
 
@@ -536,6 +601,13 @@ function komunitatea_strongarm() {
   $strongarm->name = 'fboauth_user_username';
   $strongarm->value = 'username';
   $export['fboauth_user_username'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_bideoak';
+  $strongarm->value = '0';
+  $export['language_content_type_bideoak'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

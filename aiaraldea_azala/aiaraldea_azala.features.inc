@@ -27,20 +27,20 @@ function aiaraldea_azala_ctools_plugin_api() {
  */
 function aiaraldea_azala_flag_default_flags() {
   $flags = array();
-  // Exported flag: "Nabarmena".
+  // Exported flag: "Iritzi atalean".
   $flags['nabarmena'] = array(
     'content_type' => 'node',
-    'title' => 'Nabarmena',
+    'title' => 'Iritzi atalean',
     'global' => '1',
     'types' => array(
-      '0' => 'zutabea',
+      '0' => 'argazkiak',
       '1' => 'iritzi_gutuna',
-      '2' => 'argazkiak',
+      '2' => 'zutabea',
     ),
-    'flag_short' => 'Nabarmendu',
-    'flag_long' => 'Nabarmendu eduki hau zerrendetan agertzeko',
+    'flag_short' => 'Iritzi atalan erakutsi',
+    'flag_long' => 'Nabarmendu eduki hau iritzi atalan agertzeko',
     'flag_message' => '',
-    'unflag_short' => 'Nabardura kendu',
+    'unflag_short' => 'Ez erakutsi iritzi atalan',
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
@@ -55,7 +55,7 @@ function aiaraldea_azala_flag_default_flags() {
         '1' => 7,
       ),
     ),
-    'weight' => 0,
+    'weight' => '-6',
     'show_on_page' => 1,
     'show_on_teaser' => 1,
     'show_on_form' => 1,

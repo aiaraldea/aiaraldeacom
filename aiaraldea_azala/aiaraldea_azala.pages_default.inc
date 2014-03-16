@@ -174,27 +174,15 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-5';
     $pane->panel = 'aside_beta';
-    $pane->type = 'views';
-    $pane->subtype = 'aiaraldea_banner_nodequeue_1';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'komunitatearen_home_panels-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '5',
-      'pager_id' => '',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block',
-      'override_title' => 1,
-      'override_title_text' => '',
+    $pane->configuration = array();
+    $pane->cache = array(
+      'method' => '0',
+      'settings' => array(),
     );
-    $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
@@ -206,15 +194,18 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-6';
     $pane->panel = 'aside_beta';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'komunitatearen_home_panels-panel_pane_1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array(
-      'method' => '0',
-      'settings' => array(),
+    $pane->configuration = array(
+      'admin_title' => 'Eguraldia Amurrion',
+      'title' => 'Eguraldia Amurrion',
+      'body' => '<p><script type="text/javascript" src="http://www.aemet.es/eu/eltiempo/prediccion/municipios/launchwidget/amurrio-id01002?w=g3p01110010ohmffffffw300z167xCCCC00t2D3C01r0s3n2"></script></p><noscript><a target=\'_blank\' style=\'font-weight: bold;font-size: 1.20em;\' href=\'http://www.aemet.es/eu/eltiempo/prediccion/municipios/amurrio-id01002\'>Eguraldia. Kontsultatu AEMETeko iragarpena-erako Amurrio</a></noscript>',
+      'format' => '2',
+      'substitute' => TRUE,
     );
+    $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
@@ -286,29 +277,6 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-9';
     $pane->panel = 'aside_beta';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'irratia_feeds-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array(
-      'method' => 'simple',
-      'settings' => array(
-        'lifetime' => '60',
-        'granularity' => 'none',
-      ),
-    );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $display->content['new-9'] = $pane;
-    $display->panels['aside_beta'][4] = 'new-9';
-    $pane = new stdClass;
-    $pane->pid = 'new-10';
-    $pane->panel = 'aside_beta';
     $pane->type = 'block';
     $pane->subtype = 'adzerk-azk49793';
     $pane->shown = TRUE;
@@ -323,24 +291,56 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 4;
+    $display->content['new-9'] = $pane;
+    $display->panels['aside_beta'][4] = 'new-9';
+    $pane = new stdClass;
+    $pane->pid = 'new-10';
+    $pane->panel = 'aside_beta';
+    $pane->type = 'views';
+    $pane->subtype = 'aiaraldea_banner_nodequeue_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '5',
+      'pager_id' => '',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 5;
     $display->content['new-10'] = $pane;
     $display->panels['aside_beta'][5] = 'new-10';
     $pane = new stdClass;
     $pane->pid = 'new-11';
     $pane->panel = 'aside_beta';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'irratia_feeds-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Eguraldia Amurrion',
-      'title' => 'Eguraldia Amurrion',
-      'body' => '<p><script type="text/javascript" src="http://www.aemet.es/eu/eltiempo/prediccion/municipios/launchwidget/amurrio-id01002?w=g3p01110010ohmffffffw300z167xCCCC00t2D3C01r0s3n2"></script></p><noscript><a target=\'_blank\' style=\'font-weight: bold;font-size: 1.20em;\' href=\'http://www.aemet.es/eu/eltiempo/prediccion/municipios/amurrio-id01002\'>Eguraldia. Kontsultatu AEMETeko iragarpena-erako Amurrio</a></noscript>',
-      'format' => '2',
-      'substitute' => TRUE,
+    $pane->configuration = array();
+    $pane->cache = array(
+      'method' => 'simple',
+      'settings' => array(
+        'lifetime' => '60',
+        'granularity' => 'none',
+      ),
     );
-    $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
@@ -428,7 +428,7 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->pid = 'new-15';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
-    $pane->subtype = 'argazkiak_home-panel_pane_1';
+    $pane->subtype = 'komunitatea_azala_aktualitatean-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -508,40 +508,6 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-18';
     $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'argazkiak_home-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $display->content['new-18'] = $pane;
-    $display->panels['main'][4] = 'new-18';
-    $pane = new stdClass;
-    $pane->pid = 'new-19';
-    $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'bideoak_home-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $display->content['new-19'] = $pane;
-    $display->panels['main'][5] = 'new-19';
-    $pane = new stdClass;
-    $pane->pid = 'new-20';
-    $pane->panel = 'main';
     $pane->type = 'views';
     $pane->subtype = 'albisteak_azala_1_1';
     $pane->shown = TRUE;
@@ -568,32 +534,51 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 4;
+    $display->content['new-18'] = $pane;
+    $display->panels['main'][4] = 'new-18';
+    $pane = new stdClass;
+    $pane->pid = 'new-19';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'komunitatea_azala_aktualitatean-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $display->content['new-19'] = $pane;
+    $display->panels['main'][5] = 'new-19';
+    $pane = new stdClass;
+    $pane->pid = 'new-20';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'komunitatea_azala_aktualitatean-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 6;
     $display->content['new-20'] = $pane;
     $display->panels['main'][6] = 'new-20';
     $pane = new stdClass;
     $pane->pid = 'new-21';
     $pane->panel = 'main';
-    $pane->type = 'views';
-    $pane->subtype = 'albisteak_azala_1_1';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'bideoak_home-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '3',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block_5',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -623,11 +608,26 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-23';
     $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'bideoak_home-panel_pane_3';
+    $pane->type = 'views';
+    $pane->subtype = 'albisteak_azala_1_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '3',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block_5',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -641,7 +641,7 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->pid = 'new-24';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
-    $pane->subtype = 'argazkiak_home-panel_pane_3';
+    $pane->subtype = 'argazkiak_home-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -657,14 +657,65 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-25';
     $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'bideoak_home-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 11;
+    $display->content['new-25'] = $pane;
+    $display->panels['main'][11] = 'new-25';
+    $pane = new stdClass;
+    $pane->pid = 'new-26';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'argazkiak_home-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 12;
+    $display->content['new-26'] = $pane;
+    $display->panels['main'][12] = 'new-26';
+    $pane = new stdClass;
+    $pane->pid = 'new-27';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'argazkiak_home-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 13;
+    $display->content['new-27'] = $pane;
+    $display->panels['main'][13] = 'new-27';
+    $pane = new stdClass;
+    $pane->pid = 'new-28';
+    $pane->panel = 'main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Albiste gehiago lotura',
+      'admin_title' => 'Aktualitate gehiago lotura',
       'title' => '',
-      'body' => '<div class="more-link"><a href="albisteak">Albiste gehiago</a></div>',
+      'body' => '<div class="more-link"><a href="aktualitatea">Aktualitate gehiago</a></div>',
       'format' => '2',
       'substitute' => TRUE,
     );
@@ -680,9 +731,9 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 11;
-    $display->content['new-25'] = $pane;
-    $display->panels['main'][11] = 'new-25';
+    $pane->position = 14;
+    $display->content['new-28'] = $pane;
+    $display->panels['main'][14] = 'new-28';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

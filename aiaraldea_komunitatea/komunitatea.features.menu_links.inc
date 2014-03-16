@@ -7,9 +7,9 @@ function komunitatea_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: menu-komunitatearen:node/8783
-  $menu_links['menu-komunitatearen:node/8783'] = array(
+  $menu_links['menu-komunitatearen:node/9280'] = array(
     'menu_name' => 'menu-komunitatearen',
-    'link_path' => 'node/8783',
+    'link_path' => 'node/9280',
     'router_path' => 'node/%',
     'link_title' => 'Zer da hau?',
     'options' => array(

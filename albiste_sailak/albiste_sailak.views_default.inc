@@ -151,13 +151,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_wrapper_class'] = 'zerrendak-herria';
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['tid']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid']['limit'] = 1;
   $handler->display->display_options['fields']['tid']['vids'] = array(
@@ -165,6 +174,14 @@ function albiste_sailak_views_default_views() {
     3 => 0,
     1 => 0,
     4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    10 => 0,
+    13 => 0,
+    8 => 0,
+    9 => 0,
+    11 => 0,
   );
   /* Eremua: Nodoa: Argitaratze data */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -173,13 +190,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['created']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'zerrendak-argitaratze-data';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['created']['hide_empty'] = 0;
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['created']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y.m.d';
   /* Eremua: Nodoa: Izenburua */
@@ -374,13 +400,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_wrapper_class'] = 'zerrendak-herria';
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['tid']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid']['limit'] = 1;
   $handler->display->display_options['fields']['tid']['vids'] = array(
@@ -388,6 +423,14 @@ function albiste_sailak_views_default_views() {
     3 => 0,
     1 => 0,
     4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    10 => 0,
+    13 => 0,
+    8 => 0,
+    9 => 0,
+    11 => 0,
   );
   /* Eremua: Nodoa: Argitaratze data */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -396,13 +439,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['created']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'zerrendak-argitaratze-data';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['created']['hide_empty'] = 0;
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['created']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y.m.d';
   /* Eremua: Nodoa: Izenburua */
@@ -594,13 +646,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_wrapper_class'] = 'zerrendak-herria';
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['tid']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid']['limit'] = 1;
   $handler->display->display_options['fields']['tid']['vids'] = array(
@@ -608,6 +669,14 @@ function albiste_sailak_views_default_views() {
     3 => 0,
     1 => 0,
     4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    10 => 0,
+    13 => 0,
+    8 => 0,
+    9 => 0,
+    11 => 0,
   );
   /* Eremua: Nodoa: Argitaratze data */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -616,13 +685,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['created']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'zerrendak-argitaratze-data';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['created']['hide_empty'] = 0;
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['created']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y.m.d';
   /* Eremua: Nodoa: Izenburua */
@@ -826,13 +904,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_wrapper_class'] = 'zerrendak-herria';
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['tid']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid']['limit'] = 1;
   $handler->display->display_options['fields']['tid']['vids'] = array(
@@ -840,6 +927,14 @@ function albiste_sailak_views_default_views() {
     3 => 0,
     1 => 0,
     4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    10 => 0,
+    13 => 0,
+    8 => 0,
+    9 => 0,
+    11 => 0,
   );
   /* Eremua: Nodoa: Argitaratze data */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -848,13 +943,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['created']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'zerrendak-argitaratze-data';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['created']['hide_empty'] = 0;
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['created']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y.m.d';
   /* Eremua: Nodoa: Izenburua */
@@ -992,6 +1096,7 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
   $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_wrapper_class'] = 'zerrendak-herria';
   $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
@@ -1003,12 +1108,14 @@ function albiste_sailak_views_default_views() {
     3 => 0,
     1 => 0,
     4 => 0,
+    12 => 0,
     5 => 0,
     7 => 0,
     10 => 0,
-    6 => 0,
+    13 => 0,
     8 => 0,
     9 => 0,
+    11 => 0,
   );
   /* Eremua: Nodoa: Argitaratze data */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -1029,6 +1136,7 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['created']['alter']['html'] = 0;
   $handler->display->display_options['fields']['created']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'zerrendak-argitaratze-data';
   $handler->display->display_options['fields']['created']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['created']['hide_empty'] = 0;
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
@@ -1227,13 +1335,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_wrapper_class'] = 'zerrendak-herria';
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['tid']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid']['limit'] = 1;
   $handler->display->display_options['fields']['tid']['vids'] = array(
@@ -1241,6 +1358,14 @@ function albiste_sailak_views_default_views() {
     3 => 0,
     1 => 0,
     4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    10 => 0,
+    13 => 0,
+    8 => 0,
+    9 => 0,
+    11 => 0,
   );
   /* Eremua: Nodoa: Argitaratze data */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -1249,13 +1374,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['created']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'zerrendak-argitaratze-data';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['created']['hide_empty'] = 0;
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['created']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y.m.d';
   /* Eremua: Nodoa: Izenburua */
@@ -1457,13 +1591,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_wrapper_class'] = 'zerrendak-herria';
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['tid']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid']['limit'] = 1;
   $handler->display->display_options['fields']['tid']['vids'] = array(
@@ -1471,6 +1614,14 @@ function albiste_sailak_views_default_views() {
     3 => 0,
     1 => 0,
     4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    10 => 0,
+    13 => 0,
+    8 => 0,
+    9 => 0,
+    11 => 0,
   );
   /* Eremua: Nodoa: Argitaratze data */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -1479,13 +1630,22 @@ function albiste_sailak_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['created']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'zerrendak-argitaratze-data';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['created']['hide_empty'] = 0;
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['created']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y.m.d';
   /* Eremua: Nodoa: Izenburua */

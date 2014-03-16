@@ -644,6 +644,12 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Erlazioa: Banderak: aktualitate_lerroan */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'aktualitate_lerroan';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Eremua: Edukia: Bideo (field_bideo) */
   $handler->display->display_options['fields']['field_bideo_embed']['id'] = 'field_bideo_embed';
   $handler->display->display_options['fields']['field_bideo_embed']['table'] = 'node_data_field_bideo';
@@ -748,6 +754,7 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'bideo' => 'bideo',
+    'bideoak' => 'bideoak',
   );
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
   /* Iragazkia: Nodoa: Argitaratua */
@@ -785,6 +792,30 @@ function aiaraldea_bideoak_views_default_views() {
   $handler->display->display_options['fields']['field_bideo_embed']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_bideo_embed']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_bideo_embed']['format'] = 'bideo_zerrenda_linked';
+  /* Eremua: Edukia: Lotura (field_bideoak_azalpena) */
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['id'] = 'field_bideoak_azalpena_embed';
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['table'] = 'node_data_field_bideoak_azalpena';
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['field'] = 'field_bideoak_azalpena_embed';
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['hide_empty'] = 1;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_bideoak_azalpena_embed']['format'] = 'bideo_zerrenda_linked';
   /* Eremua: Taxonomia: Termino guztiak */
   $handler->display->display_options['fields']['tid']['id'] = 'tid';
   $handler->display->display_options['fields']['tid']['table'] = 'term_node';
@@ -871,6 +902,7 @@ function aiaraldea_bideoak_views_default_views() {
     t('Elementuak orriak'),
     t('- Dena -'),
     t('Desplazamendua'),
+    t('flag'),
     t('Guztiak'),
     t('Bideoak: %1'),
     t('View panes'),

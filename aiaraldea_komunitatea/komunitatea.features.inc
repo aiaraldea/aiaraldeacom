@@ -97,7 +97,7 @@ function komunitatea_node_info() {
       'help' => '',
     ),
     'bideoak' => array(
-      'name' => t('Bideoak'),
+      'name' => t('Komunitateko bideoa'),
       'module' => 'features',
       'description' => '',
       'has_title' => '1',

@@ -34,17 +34,17 @@ function aiaraldea_albisteak_views_default_views() {
       ),
       'node' => array(
         'albiste' => 'albiste',
-        'artikulua' => 0,
+        'artikulua' => 'artikulua',
         'flickr_image_set' => 0,
         'argazkiak' => 0,
         'aiaraldea_banner' => 0,
         'bideo' => 0,
-        'bideoak' => 0,
         'deialdi' => 0,
         'egunkari_alea' => 0,
         'elkarrizketa_aurr' => 0,
         'hitzordua' => 0,
         'iritzi_gutuna' => 0,
+        'bideoak' => 0,
         'short_notice' => 0,
         'page' => 0,
         'panel' => 0,
@@ -79,6 +79,12 @@ function aiaraldea_albisteak_views_default_views() {
   );
   $handler->display->display_options['row_options']['hide_empty'] = 0;
   $handler->display->display_options['row_options']['default_field_elements'] = 1;
+  /* Erlazioa: Banderak: aktualitate_lerroan */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'aktualitate_lerroan';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Eremua: Erabiltzailea: Irudia */
   $handler->display->display_options['fields']['picture']['id'] = 'picture';
   $handler->display->display_options['fields']['picture']['table'] = 'users';
@@ -292,6 +298,7 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'albiste' => 'albiste',
+    'artikulua' => 'artikulua',
   );
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
   /* Iragazkia: Nodoa: Argitaratua */
@@ -435,20 +442,37 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_wrapper_class'] = 'zerrendak-herria';
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['tid']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid']['limit'] = 1;
   $handler->display->display_options['fields']['tid']['vids'] = array(
     2 => 2,
+    9 => 9,
     3 => 0,
     1 => 0,
     4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    10 => 0,
+    13 => 0,
+    8 => 0,
+    11 => 0,
   );
   /* Eremua: Nodoa: Argitaratze data */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -457,13 +481,22 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = '';
   $handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['created']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['created']['element_wrapper_class'] = 'zerrendak-argitaratze-data';
+  $handler->display->display_options['fields']['created']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['created']['hide_empty'] = 0;
   $handler->display->display_options['fields']['created']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['created']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y.m.d';
   /* Eremua: Nodoa: Izenburua */
@@ -507,8 +540,9 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_embeddedimages_fid_1']['element_wrapper_class'] = 'zerrendak-irudia';
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_embeddedimages_fid_1']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_embeddedimages_fid_1']['hide_empty'] = 1;
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['link_to_node'] = 0;
@@ -541,6 +575,55 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 0;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
+  /* Eremua: Edukia: Irudia (field_artikulua_img) */
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['id'] = 'field_artikulua_img_fid';
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['table'] = 'node_data_field_artikulua_img';
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['field'] = 'field_artikulua_img_fid';
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['element_wrapper_class'] = 'zerrendak-irudia';
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['hide_empty'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_artikulua_img_fid']['format'] = 'albisteak_zerrendak_linked';
+  /* Eremua: Edukia: Testua (field_artikulua_testua) */
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['id'] = 'field_artikulua_testua_value';
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['table'] = 'node_data_field_artikulua_testua';
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['field'] = 'field_artikulua_testua_value';
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['max_length'] = '460';
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['strip_tags'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['trim'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['hide_empty'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_artikulua_testua_value']['label_type'] = 'none';
   /* Eremua: Nodoa: Iruzkin kopurua */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
@@ -614,6 +697,7 @@ function aiaraldea_albisteak_views_default_views() {
     t('Elementuak orriak'),
     t('- Dena -'),
     t('Desplazamendua'),
+    t('flag'),
     t('Nid'),
     t('[comment_count] erantzun'),
     t('node/[nid]#comment-form'),
@@ -652,6 +736,7 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['cache']['results_lifespan'] = '21600';
   $handler->display->display_options['cache']['output_lifespan'] = '21600';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Garbitu';
@@ -675,7 +760,14 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['relationships']['vid']['id'] = 'vid';
   $handler->display->display_options['relationships']['vid']['table'] = 'term_node';
   $handler->display->display_options['relationships']['vid']['field'] = 'vid';
-  $handler->display->display_options['relationships']['vid']['required'] = 0;
+  $handler->display->display_options['relationships']['vid']['required'] = 1;
+  /* Erlazioa: Banderak: aktualitate_lerroan */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['relationship'] = 'vid';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'aktualitate_lerroan';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Eremua: Taxonomia: Termino */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'term_data';
@@ -786,6 +878,7 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['filters']['type']['relationship'] = 'vid';
   $handler->display->display_options['filters']['type']['value'] = array(
     'albiste' => 'albiste',
+    'artikulua' => 'artikulua',
   );
   /* Iragazkia: Taxonomia: Hiztegia */
   $handler->display->display_options['filters']['vid']['id'] = 'vid';
@@ -806,6 +899,7 @@ function aiaraldea_albisteak_views_default_views() {
     t('- Dena -'),
     t('Desplazamendua'),
     t('nodoa'),
+    t('flag'),
     t('albisteak/[name]'),
     t('([nid])'),
     t('Albisteen etiketak'),

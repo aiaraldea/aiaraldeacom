@@ -143,6 +143,7 @@ function aiaraldea_bideoak_content_default_fields() {
     'url' => 0,
     'title' => 'value',
     'title_value' => 'Deskargatu',
+    'title_value_visibility' => '',
     'enable_tokens' => 0,
     'validate_url' => 1,
     'widget' => array(
