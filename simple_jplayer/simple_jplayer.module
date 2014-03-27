@@ -1,0 +1,95 @@
+<?php
+/**
+* Implementation of hook_field_formatter_info().
+*/
+
+function simple_jplayer_field_formatter_info() {
+  $formatters = array();
+  $formatters['mini_downloadable'] = array(
+    'label' => t('Miniaudioplayer with download'),
+    'field types' => array('filefield'),
+    'description' => t('Displays a miniaudioplayer with download.'),
+  );
+  $formatters['mini'] = array(
+    'label' => t('Miniaudioplayer'),
+    'field types' => array('filefield'),
+    'description' => t('Displays a miniaudioplayer.'),
+  );
+  return $formatters;
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function simple_jplayer_theme() {
+  $themes = array();
+  $themes['simple_jplayer_formatter_mini'] = array(
+    'arguments' => array('element' => NULL),
+    'function' => 'theme_simple_jplayer_formatter_mini',
+  );
+  $themes['simple_jplayer_formatter_mini_downloadable'] = array(
+    'arguments' => array('element' => NULL),
+    'function' => 'theme_simple_jplayer_formatter_mini_downloadable',
+  );
+  return $themes;
+}
+
+function theme_simple_jplayer_formatter_mini_downloadable($element) {
+  return _theme_simple_jplayer_formatter_mini($element, true);
+}
+function theme_simple_jplayer_formatter_mini($element) {
+  return _theme_simple_jplayer_formatter_mini($element, false);
+}
+
+function _theme_simple_jplayer_formatter_mini($element, $downloadable = false) {
+  $output = '';
+  
+  $item = $element['#item'];
+  if($item['list'] == "0") {
+    // Isn't listed so bail now
+    return;
+  }
+  
+  if(variable_get('mp3player_description', 'description') == 'id3' && module_exists(getid3) && getid3_load() == TRUE) {
+    $info = getid3_analyze($item['filepath']);
+
+    $title = $info['tags']['id3v2']['title'][0];
+    $artist = $info['tags']['id3v2']['artist'][0];
+    $album = $info['tags']['id3v2']['album'][0];
+    $year = $info['tags']['id3v2']['year'][0];
+    $track = $info['tags']['id3v2']['track'][0];
+    $genre = $info['tags']['id3v2']['genre'][0];
+    
+    $description = theme('filefieldmp3playerwithdownload_description', $title, $artist, $album, $year, $track, $genre);
+  }
+  else if(isset($item['data']['description']) && is_array($item['data'])) {
+    //Data straight from node isn't serialized
+    $description = $item['data']['description'];
+  }
+  else if(isset($item['data']['description']) && is_array(unserialize($item['data']))){
+    //Data from a View is on the other hand
+    $bits = unserialize($item['data']);
+    $description = $bits['description'];
+  } else {
+    $description = $item['filename'];
+  }
+  if ($downloadable) {
+    $properties = "{width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea',downloadable:true}";
+  } else {
+    $properties = "{width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea'}";
+  }
+//   var_dump($element);
+$fid = $element['#item']['fid'];
+$delta = $element['#item']['#delta'];
+//   var_dump($fid);
+  $output .= "<a id=\"player_".$fid."_".$delta."\" class=\"audio-jp $properties\" href=\"".base_path().$item['filepath'] . "\">$description</a>";
+  $module_path = drupal_get_path('module', 'simple_jplayer');;
+  if ($path = libraries_get_path("jquery.mb.miniAudioPlayer")) {
+    drupal_add_js($path . '/inc/jquery.jplayer.min.js');
+    drupal_add_js($path . '/inc/jquery.mb.miniPlayer.js');
+    drupal_add_js($module_path . '/simple_player.js');
+    drupal_add_css($path . '/css/miniplayer.css');
+  }
+
+  return $output;
+}

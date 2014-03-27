@@ -5,13 +5,7 @@
  */
 function aiaraldea_proposamenak_ctools_plugin_api() {
   list($module, $api) = func_get_args();
-  if ($module == "mp3player" && $api == "default_mp3player_player") {
-    return array("version" => 1);
-  }
-  elseif ($module == "mp3player" && $api == "mp3players") {
-    return array("version" => 1);
-  }
-  elseif ($module == "page_manager" && $api == "pages_default") {
+  if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => 1);
   }
   elseif ($module == "panels_mini" && $api == "panels_default") {

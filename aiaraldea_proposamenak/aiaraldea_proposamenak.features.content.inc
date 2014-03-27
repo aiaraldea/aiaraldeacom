@@ -17,11 +17,11 @@ function aiaraldea_proposamenak_content_default_fields() {
         'format' => 'above',
       ),
       'teaser' => array(
-        'format' => 'mp3player_proposamenak_detail',
+        'format' => 'mini',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'mp3playerwithdownload_proposamenak_detail',
+        'format' => 'mini_downloadable',
         'exclude' => 0,
       ),
       '4' => array(

@@ -1,0 +1,7 @@
+; $Id$
+name = Jplayer cck formatter
+description = A formatter to use the latest jplayer
+core = 6.x
+project = "simple_jplayer"
+version = "6.x-1.0-beta1"
+ 
