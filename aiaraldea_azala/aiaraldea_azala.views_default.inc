@@ -3094,7 +3094,7 @@ function aiaraldea_azala_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
-  $handler->display->display_options['path'] = 'irratia';
+  $handler->display->display_options['path'] = 'irratia_feed';
   $translatables['irratia_feeds'] = array(
     t('Defaults'),
     t('Aiaraldea Irratia'),
@@ -3430,16 +3430,24 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_audio_fid']['field'] = 'field_audio_fid';
   $handler->display->display_options['fields']['field_audio_fid']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_audio_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_audio_fid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_audio_fid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_audio_fid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_audio_fid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_audio_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_audio_fid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_audio_fid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_audio_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_audio_fid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_audio_fid']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_audio_fid']['label_type'] = 'none';
-  $handler->display->display_options['fields']['field_audio_fid']['format'] = 'mp3player_proposamenak_az1_2';
+  $handler->display->display_options['fields']['field_audio_fid']['format'] = 'mini';
   /* Eremua: Edukia: Kolaboratzilea (field_kolaboratzaile) */
   $handler->display->display_options['fields']['field_kolaboratzaile_value']['id'] = 'field_kolaboratzaile_value';
   $handler->display->display_options['fields']['field_kolaboratzaile_value']['table'] = 'node_data_field_kolaboratzaile';
