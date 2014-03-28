@@ -88,7 +88,8 @@ function _theme_simple_jplayer_formatter_mini($element, $downloadable = false) {
 $fid = $element['#item']['fid'];
 $delta = $element['#item']['#delta'];
 //   var_dump($fid);
-  $output .= "<a id=\"player_".$fid."_".$delta."\" class=\"audio-jp $properties\" href=\"".base_path().$item['filepath'] . "\">$description</a>";
+$url = file_create_url($item['filepath']);
+  $output .= "<a id=\"player_".$fid."_".$delta."\" class=\"audio-jp $properties\" href=\"$url\">$description</a>";
   $module_path = drupal_get_path('module', 'simple_jplayer');;
   if ($path = libraries_get_path("jquery.mb.miniAudioPlayer")) {
     drupal_add_js($path . '/inc/jquery.jplayer.min.js');
