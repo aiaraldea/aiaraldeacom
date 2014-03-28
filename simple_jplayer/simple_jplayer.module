@@ -125,7 +125,7 @@ function _theme_simple_jplayer_formatter_link_mini($element, $downloadable = fal
   $url=$item['url'];
 //   var_dump($fid);
   $output .= "<a id=\"player_$fid"."_$delta\" class=\"audio-jp $properties\" href=\"$url\">$url</a>";
-  $module_path = drupal_get_path('module', 'simple_jplayer');;
+  $module_path = drupal_get_path('module', 'simple_jplayer');
   if ($path = libraries_get_path("jquery.mb.miniAudioPlayer")) {
     drupal_add_js($path . '/inc/jquery.jplayer.min.js');
     drupal_add_js($path . '/inc/jquery.mb.miniPlayer.js');
