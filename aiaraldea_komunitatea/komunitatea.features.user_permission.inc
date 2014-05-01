@@ -85,6 +85,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'delete any argazkiak content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -93,6 +94,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'delete any artikulua content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -101,6 +103,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'delete any bideoak content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -109,6 +112,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'delete any hitzordua content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 
@@ -125,6 +129,7 @@ function komunitatea_user_default_permissions() {
     'name' => 'delete any zutabea content',
     'roles' => array(
       '0' => 'administrator',
+      '1' => 'content admin',
     ),
   );
 

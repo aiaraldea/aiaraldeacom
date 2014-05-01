@@ -577,7 +577,7 @@ function komunitatea_default_page_manager_handlers() {
   $handler->conf = array(
     'title' => 'Kidea',
     'no_blocks' => 1,
-    'pipeline' => 'ipe',
+    'pipeline' => 'standard',
     'css_id' => 'kidea-control',
     'css' => '',
     'contexts' => array(
@@ -1530,15 +1530,15 @@ function komunitatea_default_page_manager_pages() {
       'settings' => array(
         'input_form' => 'term',
         'vids' => array(
+          2 => 2,
           7 => 7,
-          9 => 9,
-          2 => 0,
           3 => 0,
           1 => 0,
           4 => 0,
+          12 => 0,
           5 => 0,
-          6 => 0,
           8 => 0,
+          11 => 0,
         ),
         'breadcrumb' => 0,
       ),
@@ -1557,7 +1557,7 @@ function komunitatea_default_page_manager_pages() {
   $handler->conf = array(
     'title' => 'Panel',
     'no_blocks' => 1,
-    'pipeline' => 'ipe',
+    'pipeline' => 'standard',
     'css_id' => 'komunitatea',
     'css' => '',
     'contexts' => array(
@@ -1583,6 +1583,25 @@ function komunitatea_default_page_manager_pages() {
     'relationships' => array(),
     'access' => array(
       'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => '',
+            'php' => 'return($contexts["argument_term_1"]!=NULL);',
+          ),
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '0',
+            'paths' => 'komunitatea/*/*',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
     ),
   );
   $display = new panels_display;
