@@ -133,7 +133,7 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '12',
+      'items_per_page' => '16',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -190,25 +190,6 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-6';
     $pane->panel = 'aside_beta';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'irratia_azala-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '6',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-6'] = $pane;
-    $display->panels['aside_beta'][1] = 'new-6';
-    $pane = new stdClass;
-    $pane->pid = 'new-7';
-    $pane->panel = 'aside_beta';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -228,11 +209,68 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-6'] = $pane;
+    $display->panels['aside_beta'][1] = 'new-6';
+    $pane = new stdClass;
+    $pane->pid = 'new-7';
+    $pane->panel = 'aside_beta';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'azala_azken_iruzkinak_1_2-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '6',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 2;
     $display->content['new-7'] = $pane;
     $display->panels['aside_beta'][2] = 'new-7';
     $pane = new stdClass;
     $pane->pid = 'new-8';
+    $pane->panel = 'aside_beta';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'azala_iritzi_blokea-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '4',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $display->content['new-8'] = $pane;
+    $display->panels['aside_beta'][3] = 'new-8';
+    $pane = new stdClass;
+    $pane->pid = 'new-9';
+    $pane->panel = 'aside_beta';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'irratia_azala-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '6',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $display->content['new-9'] = $pane;
+    $display->panels['aside_beta'][4] = 'new-9';
+    $pane = new stdClass;
+    $pane->pid = 'new-10';
     $pane->panel = 'aside_beta';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -251,30 +289,11 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
-    $display->content['new-8'] = $pane;
-    $display->panels['aside_beta'][3] = 'new-8';
+    $pane->position = 5;
+    $display->content['new-10'] = $pane;
+    $display->panels['aside_beta'][5] = 'new-10';
     $pane = new stdClass;
-    $pane->pid = 'new-9';
-    $pane->panel = 'aside_beta';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'azala_iritzi_blokea-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '5',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $display->content['new-9'] = $pane;
-    $display->panels['aside_beta'][4] = 'new-9';
-    $pane = new stdClass;
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = 'aside_beta';
     $pane->type = 'views_panes';
     $pane->subtype = 'azala_iritzi_blokea-panel_pane_2';
@@ -287,11 +306,11 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
-    $display->content['new-10'] = $pane;
-    $display->panels['aside_beta'][5] = 'new-10';
+    $pane->position = 6;
+    $display->content['new-11'] = $pane;
+    $display->panels['aside_beta'][6] = 'new-11';
     $pane = new stdClass;
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-12';
     $pane->panel = 'aside_beta';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -310,11 +329,11 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
-    $display->content['new-11'] = $pane;
-    $display->panels['aside_beta'][6] = 'new-11';
+    $pane->position = 7;
+    $display->content['new-12'] = $pane;
+    $display->panels['aside_beta'][7] = 'new-12';
     $pane = new stdClass;
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-13';
     $pane->panel = 'aside_beta';
     $pane->type = 'block';
     $pane->subtype = 'adzerk-azk49793';
@@ -323,25 +342,6 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->configuration = array(
       'override_title' => 0,
       'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 7;
-    $display->content['new-12'] = $pane;
-    $display->panels['aside_beta'][7] = 'new-12';
-    $pane = new stdClass;
-    $pane->pid = 'new-13';
-    $pane->panel = 'aside_beta';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'azala_azken_iruzkinak_1_2-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '6',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -371,38 +371,6 @@ function aiaraldea_azala_default_page_manager_pages() {
     $display->panels['aside_beta'][9] = 'new-14';
     $pane = new stdClass;
     $pane->pid = 'new-15';
-    $pane->panel = 'header_alpha';
-    $pane->type = 'views';
-    $pane->subtype = 'short_notices';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '10',
-      'pager_id' => '',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-15'] = $pane;
-    $display->panels['header_alpha'][0] = 'new-15';
-    $pane = new stdClass;
-    $pane->pid = 'new-16';
     $pane->panel = 'header_beta';
     $pane->type = 'views_panes';
     $pane->subtype = 'albisteak_azala_1_1-estra_gunea_pane';
@@ -419,10 +387,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-16'] = $pane;
-    $display->panels['header_beta'][0] = 'new-16';
+    $display->content['new-15'] = $pane;
+    $display->panels['header_beta'][0] = 'new-15';
     $pane = new stdClass;
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-16';
     $pane->panel = 'main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -442,42 +410,10 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-17'] = $pane;
-    $display->panels['main'][0] = 'new-17';
+    $display->content['new-16'] = $pane;
+    $display->panels['main'][0] = 'new-16';
     $pane = new stdClass;
-    $pane->pid = 'new-18';
-    $pane->panel = 'main';
-    $pane->type = 'views';
-    $pane->subtype = 'albisteak_azala_1_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '1',
-      'pager_id' => '0',
-      'offset' => '1',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block_2',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-18'] = $pane;
-    $display->panels['main'][1] = 'new-18';
-    $pane = new stdClass;
-    $pane->pid = 'new-19';
+    $pane->pid = 'new-17';
     $pane->panel = 'main';
     $pane->type = 'views';
     $pane->subtype = 'albisteak_azala_1_1';
@@ -505,9 +441,58 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-17'] = $pane;
+    $display->panels['main'][1] = 'new-17';
+    $pane = new stdClass;
+    $pane->pid = 'new-18';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'bideoak_home-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 2;
+    $display->content['new-18'] = $pane;
+    $display->panels['main'][2] = 'new-18';
+    $pane = new stdClass;
+    $pane->pid = 'new-19';
+    $pane->panel = 'main';
+    $pane->type = 'views';
+    $pane->subtype = 'albisteak_azala_1_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '1',
+      'pager_id' => '0',
+      'offset' => '1',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block_2',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
     $display->content['new-19'] = $pane;
-    $display->panels['main'][2] = 'new-19';
+    $display->panels['main'][3] = 'new-19';
     $pane = new stdClass;
     $pane->pid = 'new-20';
     $pane->panel = 'main';
@@ -522,28 +507,11 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $display->content['new-20'] = $pane;
-    $display->panels['main'][3] = 'new-20';
+    $display->panels['main'][4] = 'new-20';
     $pane = new stdClass;
     $pane->pid = 'new-21';
-    $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'argazkiak_home-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $display->content['new-21'] = $pane;
-    $display->panels['main'][4] = 'new-21';
-    $pane = new stdClass;
-    $pane->pid = 'new-22';
     $pane->panel = 'main';
     $pane->type = 'views';
     $pane->subtype = 'albisteak_azala_1_1';
@@ -552,7 +520,7 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->configuration = array(
       'override_pager_settings' => 0,
       'use_pager' => 0,
-      'nodes_per_page' => '3',
+      'nodes_per_page' => '4',
       'pager_id' => '0',
       'offset' => '0',
       'more_link' => 0,
@@ -572,10 +540,44 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 5;
+    $display->content['new-21'] = $pane;
+    $display->panels['main'][5] = 'new-21';
+    $pane = new stdClass;
+    $pane->pid = 'new-22';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'argazkiak_home-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 6;
     $display->content['new-22'] = $pane;
-    $display->panels['main'][5] = 'new-22';
+    $display->panels['main'][6] = 'new-22';
     $pane = new stdClass;
     $pane->pid = 'new-23';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'argazkiak_home-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 7;
+    $display->content['new-23'] = $pane;
+    $display->panels['main'][7] = 'new-23';
+    $pane = new stdClass;
+    $pane->pid = 'new-24';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
     $pane->subtype = 'komunitatea_azala_aktualitatean-panel_pane_1';
@@ -588,26 +590,9 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
-    $display->content['new-23'] = $pane;
-    $display->panels['main'][6] = 'new-23';
-    $pane = new stdClass;
-    $pane->pid = 'new-24';
-    $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'bideoak_home-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 7;
+    $pane->position = 8;
     $display->content['new-24'] = $pane;
-    $display->panels['main'][7] = 'new-24';
+    $display->panels['main'][8] = 'new-24';
     $pane = new stdClass;
     $pane->pid = 'new-25';
     $pane->panel = 'main';
@@ -618,7 +603,7 @@ function aiaraldea_azala_default_page_manager_pages() {
     $pane->configuration = array(
       'override_pager_settings' => 0,
       'use_pager' => 0,
-      'nodes_per_page' => '3',
+      'nodes_per_page' => '4',
       'pager_id' => '0',
       'offset' => '0',
       'more_link' => 0,
@@ -637,14 +622,14 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 8;
+    $pane->position = 9;
     $display->content['new-25'] = $pane;
-    $display->panels['main'][8] = 'new-25';
+    $display->panels['main'][9] = 'new-25';
     $pane = new stdClass;
     $pane->pid = 'new-26';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
-    $pane->subtype = 'argazkiak_home-panel_pane_2';
+    $pane->subtype = 'komunitatea_azala_aktualitatean-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -654,9 +639,9 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
+    $pane->position = 10;
     $display->content['new-26'] = $pane;
-    $display->panels['main'][9] = 'new-26';
+    $display->panels['main'][10] = 'new-26';
     $pane = new stdClass;
     $pane->pid = 'new-27';
     $pane->panel = 'main';
@@ -671,11 +656,30 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 10;
+    $pane->position = 11;
     $display->content['new-27'] = $pane;
-    $display->panels['main'][10] = 'new-27';
+    $display->panels['main'][11] = 'new-27';
     $pane = new stdClass;
     $pane->pid = 'new-28';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'komunitatea_azala_aktualitatean-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 12;
+    $display->content['new-28'] = $pane;
+    $display->panels['main'][12] = 'new-28';
+    $pane = new stdClass;
+    $pane->pid = 'new-29';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
     $pane->subtype = 'argazkiak_home-panel_pane_3';
@@ -688,11 +692,11 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 11;
-    $display->content['new-28'] = $pane;
-    $display->panels['main'][11] = 'new-28';
+    $pane->position = 13;
+    $display->content['new-29'] = $pane;
+    $display->panels['main'][13] = 'new-29';
     $pane = new stdClass;
-    $pane->pid = 'new-29';
+    $pane->pid = 'new-30';
     $pane->panel = 'main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -717,45 +721,9 @@ function aiaraldea_azala_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 12;
-    $display->content['new-29'] = $pane;
-    $display->panels['main'][12] = 'new-29';
-    $pane = new stdClass;
-    $pane->pid = 'new-30';
-    $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'komunitatea_azala_aktualitatean-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 13;
-    $display->content['new-30'] = $pane;
-    $display->panels['main'][13] = 'new-30';
-    $pane = new stdClass;
-    $pane->pid = 'new-31';
-    $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'komunitatea_azala_aktualitatean-panel_pane_3';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '1',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
     $pane->position = 14;
-    $display->content['new-31'] = $pane;
-    $display->panels['main'][14] = 'new-31';
+    $display->content['new-30'] = $pane;
+    $display->panels['main'][14] = 'new-30';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

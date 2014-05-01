@@ -20,7 +20,7 @@ function aiaraldea_azala_views_default_views() {
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->display->display_options['title'] = 'Agenda deialdiak';
-  $handler->display->display_options['css_class'] = 'view-agenda';
+  $handler->display->display_options['css_class'] = 'view-agenda kutxa-nabarmendua';
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['access']['type'] = 'none';
@@ -298,16 +298,6 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
-  /* Display: Blokea */
-  $handler = $view->new_display('block', 'Blokea', 'block_1');
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['footer'] = FALSE;
-
   /* Display: Eduki panela */
   $handler = $view->new_display('panel_pane', 'Eduki panela', 'agenda_azala_pane');
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -339,7 +329,6 @@ function aiaraldea_azala_views_default_views() {
     t('Guztiak'),
     t('Agenda: %1'),
     t('%1'),
-    t('Blokea'),
     t('Eduki panela'),
     t('Agenda - Azala'),
     t('View panes'),
