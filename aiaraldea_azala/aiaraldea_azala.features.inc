@@ -5,10 +5,7 @@
  */
 function aiaraldea_azala_ctools_plugin_api() {
   list($module, $api) = func_get_args();
-  if ($module == "mp3player" && $api == "mp3players") {
-    return array("version" => 1);
-  }
-  elseif ($module == "page_manager" && $api == "pages_default") {
+  if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => 1);
   }
   elseif ($module == "panels" && $api == "layouts") {

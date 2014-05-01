@@ -6,15 +6,6 @@
 function aiaraldea_azala_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: administer front page
-  $permissions['administer front page'] = array(
-    'name' => 'administer front page',
-    'roles' => array(
-      '0' => 'administrator',
-      '1' => 'content admin',
-    ),
-  );
-
   // Exported permission: create elkarrizketa_aurr content
   $permissions['create elkarrizketa_aurr content'] = array(
     'name' => 'create elkarrizketa_aurr content',

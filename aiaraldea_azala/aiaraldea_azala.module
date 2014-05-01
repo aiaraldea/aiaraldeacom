@@ -4,12 +4,6 @@ include_once('aiaraldea_azala.features.inc');
 
 function aiaraldea_azala_theme($existing) {
   return array(
-      'views_view__azala_azken_iruzkinak_1_2' => array(
-          'arguments' => array('view' => NULL),
-          'template' => 'views-view--azala-azken-iruzkinak',
-          'original hook' => 'views_view',
-          'path' => drupal_get_path('module', 'aiaraldea_azala'),
-      ),
       'views_view__proposamenak_azala_1_1' => array(
           'arguments' => array('view' => NULL),
           'template' => 'views-view--proposamenak-azala-1-1',
@@ -29,10 +23,6 @@ function aiaraldea_azala_theme($existing) {
           'path' => drupal_get_path('module', 'aiaraldea_azala'),
       ),
   );
-}
-
-function aiaraldea_azala_preprocess_views_view__azala_azken_iruzkinak_1_2(&$vars) {
-  drupal_add_css(drupal_get_path('module', 'aiaraldea_azala') . '/css/azala_azken_iruzkinak.css');
 }
 
 function aiaraldea_azala_preprocess_views_view__proposamenak_azala_1_1(&$vars) {
