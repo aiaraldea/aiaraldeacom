@@ -21,7 +21,47 @@ function aiaraldea_irratia_views_default_views() {
   $handler = $view->new_display('default', 'Lehenespenak', 'default');
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '-1';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '518400';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '-1';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '518400';
+  $handler->display->display_options['cache']['keys'] = array(
+    'AND' => array(
+      'comment' => array(
+        'changed' => 0,
+      ),
+      'node' => array(
+        'irrati_emanaldia' => 'irrati_emanaldia',
+        'irratsaioa' => 'irratsaioa',
+        'albiste' => 0,
+        'artikulua' => 0,
+        'flickr_image_set' => 0,
+        'argazkiak' => 0,
+        'aiaraldea_banner' => 0,
+        'bideo' => 0,
+        'deialdi' => 0,
+        'egunkari_alea' => 0,
+        'elkarrizketa_aurr' => 0,
+        'hitzordua' => 0,
+        'iritzi_gutuna' => 0,
+        'bideoak' => 0,
+        'short_notice' => 0,
+        'page' => 0,
+        'panel' => 0,
+        'proposamena' => 0,
+        'zutabea' => 0,
+      ),
+      'node_only' => array(
+        'node_changed' => 0,
+      ),
+    ),
+    'OR' => array(
+      'nodequeue' => array(
+        1 => 0,
+      ),
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
@@ -178,6 +218,12 @@ function aiaraldea_irratia_views_default_views() {
   $handler->display->display_options['fields']['field_emanaldia_audio_lotura_url']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_emanaldia_audio_lotura_url']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_emanaldia_audio_lotura_url']['format'] = 'mini_for_link';
+  /* Ordenazio irizpidea: Nodoa: Argitaratze data */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['created']['granularity'] = 'minute';
   /* Argumentua: Edukia: Irratsaioa (field_emanaldia_irratsaioa) */
   $handler->display->display_options['arguments']['field_emanaldia_irratsaioa_nid']['id'] = 'field_emanaldia_irratsaioa_nid';
   $handler->display->display_options['arguments']['field_emanaldia_irratsaioa_nid']['table'] = 'node_data_field_emanaldia_irratsaioa';
@@ -248,7 +294,47 @@ function aiaraldea_irratia_views_default_views() {
   $handler->display->display_options['title'] = 'Irratsaioak';
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '-1';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '518400';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '-1';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '518400';
+  $handler->display->display_options['cache']['keys'] = array(
+    'AND' => array(
+      'comment' => array(
+        'changed' => 0,
+      ),
+      'node' => array(
+        'irratsaioa' => 'irratsaioa',
+        'albiste' => 0,
+        'artikulua' => 0,
+        'flickr_image_set' => 0,
+        'argazkiak' => 0,
+        'aiaraldea_banner' => 0,
+        'bideo' => 0,
+        'deialdi' => 0,
+        'egunkari_alea' => 0,
+        'elkarrizketa_aurr' => 0,
+        'hitzordua' => 0,
+        'iritzi_gutuna' => 0,
+        'irrati_emanaldia' => 0,
+        'bideoak' => 0,
+        'short_notice' => 0,
+        'page' => 0,
+        'panel' => 0,
+        'proposamena' => 0,
+        'zutabea' => 0,
+      ),
+      'node_only' => array(
+        'node_changed' => 0,
+      ),
+    ),
+    'OR' => array(
+      'nodequeue' => array(
+        1 => 0,
+      ),
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Ezarri';
@@ -258,6 +344,7 @@ function aiaraldea_irratia_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Dena -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'alboko-menuak';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Eremua: Nodoa: Izenburua */
   $handler->display->display_options['fields']['title']['id'] = 'title';
