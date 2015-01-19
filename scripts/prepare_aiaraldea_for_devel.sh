@@ -4,7 +4,8 @@ site_path="/var/www/drupal/aiaraldea"
 #sed -i "/^[ ]*\$db_url/s/${origin_dbname}';/${destination_dbname}';/g" ${destination_path}_new/sites/default/settings.php
 
 
-drush --yes dis securepages googleanalytics adzerk memcache xmlsitemap droptor mollom update cdn
+drush --yes dis securepages googleanalytics adzerk memcache xmlsitemap droptor mollom update cdn statcounter
+drush dl ftools
 drush --yes en features_tools 
 drush --yes vset cache 0
 drush --yes vset preprocess_css 0
