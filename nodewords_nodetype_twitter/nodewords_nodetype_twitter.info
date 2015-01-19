@@ -1,0 +1,13 @@
+name = Nodewords - node type meta tags for Twitter cards
+description = Twitter Card Meta Tags on a per content type basis. Tokens are allowed.
+dependencies[] = nodewords
+dependencies[] = nodewords_basic
+dependencies[] = nodewords_nodetype
+dependencies[] = nodewords_twitter
+dependencies[] = token
+core = 6.x
+package = Meta tags
+; Information added by drupal.org packaging script on 2012-01-03
+version = "6.x-1.0"
+project = "nodewords_nodetype_twitter"
+

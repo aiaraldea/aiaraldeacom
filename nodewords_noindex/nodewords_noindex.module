@@ -1,0 +1,15 @@
+<?php
+/**
+ * Implementation of hook_nodewords_tags_alter().
+ */
+function nodewords_noindex_nodewords_tags_alter(&$output_tags, $tag_options) {
+  $pageParam = $_GET["page"];
+  if(!empty($pageParam)) {
+    if (strpos($pageParam, ',') !== false || strpos($pageParam, '%2C') !== false) {
+      $output_tags['robots'] = 'noindex, nofollow';
+    } else {
+      $output_tags['robots'] = 'noindex, follow';
+    }
+  }
+}
+

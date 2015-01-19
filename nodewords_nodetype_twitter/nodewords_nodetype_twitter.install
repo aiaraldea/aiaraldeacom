@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implementation of hook_install()
+ */
+function nodewords_nodetype_twitter_install() {
+
+  // New module weights in core: put devel as the very last in the chain.
+  db_query("UPDATE {system} SET weight = 12 WHERE name = 'nodewords_nodetype_twitter'");
+} 
