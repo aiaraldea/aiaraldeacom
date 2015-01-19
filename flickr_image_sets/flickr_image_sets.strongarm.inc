@@ -91,7 +91,7 @@ function flickr_image_sets_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flickr_photos_per_page';
-  $strongarm->value = '50';
+  $strongarm->value = '200';
   $export['flickr_photos_per_page'] = $strongarm;
 
   $strongarm = new stdClass;

@@ -255,7 +255,10 @@ return FALSE;',
       'footer' => NULL,
     ),
   );
-  $display->cache = array();
+  $display->cache = array(
+    'method' => '0',
+    'settings' => array(),
+  );
   $display->title = 'Bideoak';
   $display->content = array();
   $display->panels = array();

@@ -205,7 +205,7 @@ function egunkaria_views_default_views() {
   $handler->display->display_options['filters']['created']['table'] = 'node';
   $handler->display->display_options['filters']['created']['field'] = 'created';
   $handler->display->display_options['filters']['created']['operator'] = '>';
-  $handler->display->display_options['filters']['created']['value']['value'] = '-5 days';
+  $handler->display->display_options['filters']['created']['value']['value'] = '-7 days';
   $handler->display->display_options['filters']['created']['value']['type'] = 'offset';
   $handler->display->display_options['filters']['created']['allow_null'] = 1;
   $handler->display->display_options['pane_title'] = 'Egunkaria - azkena';

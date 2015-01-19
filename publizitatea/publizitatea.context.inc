@@ -27,15 +27,15 @@ function publizitatea_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'adzerk-azk24056' => array(
-          'module' => 'adzerk',
-          'delta' => 'azk24056',
+        'openx-0' => array(
+          'module' => 'openx',
+          'delta' => 0,
           'region' => 'absolute_top',
           'weight' => 0,
         ),
-        'adzerk-azk22008' => array(
-          'module' => 'adzerk',
-          'delta' => 'azk22008',
+        'openx-1' => array(
+          'module' => 'openx',
+          'delta' => 1,
           'region' => 'absolute_top',
           'weight' => 1,
         ),

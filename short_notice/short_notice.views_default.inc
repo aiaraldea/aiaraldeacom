@@ -29,7 +29,7 @@ function short_notice_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Node: Body */
+  /* Eremua: Nodoa: Testua */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'node_revisions';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -44,19 +44,19 @@ function short_notice_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['html'] = 1;
   $handler->display->display_options['fields']['body']['hide_empty'] = 0;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
-  /* Sort criterion: Node: Post date */
+  /* Ordenazio irizpidea: Nodoa: Argitaratze data */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['sorts']['created']['granularity'] = 'minute';
-  /* Filter: Node: Published */
+  /* Iragazkia: Nodoa: Argitaratua */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter: Node: Type */
+  /* Iragazkia: Nodoa: Mota */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -64,6 +64,12 @@ function short_notice_views_default_views() {
     'short_notice' => 'short_notice',
   );
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+
+  /* Display: Ohar laburrak */
+  $handler = $view->new_display('panel_pane', 'Ohar laburrak', 'panel_ohar_laburrak');
+  $handler->display->display_options['pane_title'] = 'Ohar laburrak';
+  $handler->display->display_options['pane_category']['name'] = 'Orri nagusia';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $translatables['short_notices'] = array(
     t('Lehenespenak'),
     t('gehiago'),
@@ -72,6 +78,8 @@ function short_notice_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Ohar laburrak'),
+    t('Orri nagusia'),
   );
 
   $views[$view->name] = $view;

@@ -254,7 +254,10 @@ function aiaraldea_agenda_default_page_manager_pages() {
       'right' => NULL,
     ),
   );
-  $display->cache = array();
+  $display->cache = array(
+    'method' => '0',
+    'settings' => array(),
+  );
   $display->title = 'Agenda';
   $display->content = array();
   $display->panels = array();
