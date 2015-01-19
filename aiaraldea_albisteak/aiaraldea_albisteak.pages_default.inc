@@ -48,7 +48,7 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display;
-  $display->layout = 'threecol_33_34_33';
+  $display->layout = 'akl_column_two';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style' => 'default',
@@ -57,6 +57,16 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'left' => NULL,
       'middle' => NULL,
       'right' => NULL,
+      'header_alpha' => NULL,
+      'header_beta' => NULL,
+      'main' => NULL,
+      'aside_alpha' => NULL,
+      'aside_beta' => NULL,
+      'footer_alpha' => NULL,
+      'footer_beta' => NULL,
+      'header' => NULL,
+      'aside' => NULL,
+      'footer' => NULL,
     ),
   );
   $display->cache = array();
@@ -65,171 +75,7 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass;
     $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'content_field';
-    $pane->subtype = 'field_embeddedimages';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'normal',
-      'formatter' => 'imagefield__lightbox2__albistearen_argazkiak__original',
-      'context' => 'argument_nid_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
-    $pane = new stdClass;
-    $pane->pid = 'new-2';
-    $pane->panel = 'left';
-    $pane->type = 'content_field';
-    $pane->subtype = 'field_bideo_erlazionatuak';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'normal',
-      'formatter' => 'views',
-      'context' => 'argument_nid_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
-    $pane = new stdClass;
-    $pane->pid = 'new-3';
-    $pane->panel = 'left';
-    $pane->type = 'content_field';
-    $pane->subtype = 'field_erantsi';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'normal',
-      'formatter' => 'default',
-      'context' => 'argument_nid_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-3'] = $pane;
-    $display->panels['left'][2] = 'new-3';
-    $pane = new stdClass;
-    $pane->pid = 'new-4';
-    $pane->panel = 'middle';
-    $pane->type = 'node_content';
-    $pane->subtype = 'node_content';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'links' => 0,
-      'page' => 1,
-      'no_extras' => 1,
-      'override_title' => 1,
-      'override_title_text' => '',
-      'teaser' => 0,
-      'identifier' => '',
-      'link' => 0,
-      'leave_node_title' => 0,
-      'context' => 'argument_nid_1',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-4'] = $pane;
-    $display->panels['middle'][0] = 'new-4';
-    $pane = new stdClass;
-    $pane->pid = 'new-5';
-    $pane->panel = 'middle';
-    $pane->type = 'etiketak';
-    $pane->subtype = 'etiketak';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'url_base' => 'albisteak/',
-      'context' => 'argument_nid_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-5'] = $pane;
-    $display->panels['middle'][1] = 'new-5';
-    $pane = new stdClass;
-    $pane->pid = 'new-6';
-    $pane->panel = 'middle';
-    $pane->type = 'node_comments';
-    $pane->subtype = 'node_comments';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'mode' => '2',
-      'order' => '1',
-      'comments_per_page' => '50',
-      'context' => 'argument_nid_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-6'] = $pane;
-    $display->panels['middle'][2] = 'new-6';
-    $pane = new stdClass;
-    $pane->pid = 'new-7';
-    $pane->panel = 'middle';
-    $pane->type = 'node_comment_form';
-    $pane->subtype = 'node_comment_form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_nid_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $display->content['new-7'] = $pane;
-    $display->panels['middle'][3] = 'new-7';
-    $pane = new stdClass;
-    $pane->pid = 'new-8';
-    $pane->panel = 'right';
+    $pane->panel = 'aside';
     $pane->type = 'content_field';
     $pane->subtype = 'field_erlazionatuak';
     $pane->shown = TRUE;
@@ -248,11 +94,11 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-8'] = $pane;
-    $display->panels['right'][0] = 'new-8';
+    $display->content['new-1'] = $pane;
+    $display->panels['aside'][0] = 'new-1';
     $pane = new stdClass;
-    $pane->pid = 'new-9';
-    $pane->panel = 'right';
+    $pane->pid = 'new-2';
+    $pane->panel = 'aside';
     $pane->type = 'views';
     $pane->subtype = 'albisteak';
     $pane->shown = TRUE;
@@ -283,10 +129,83 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-9'] = $pane;
-    $display->panels['right'][1] = 'new-9';
+    $display->content['new-2'] = $pane;
+    $display->panels['aside'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'main';
+    $pane->type = 'node_content';
+    $pane->subtype = 'node_content';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'links' => 0,
+      'page' => 1,
+      'no_extras' => 0,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'identifier' => '',
+      'link' => 0,
+      'leave_node_title' => 0,
+      'context' => 'argument_nid_1',
+      'build_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-3'] = $pane;
+    $display->panels['main'][0] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
+    $pane->panel = 'main';
+    $pane->type = 'node_comments';
+    $pane->subtype = 'node_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'mode' => '2',
+      'order' => '1',
+      'comments_per_page' => '50',
+      'context' => 'argument_nid_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-4'] = $pane;
+    $display->panels['main'][1] = 'new-4';
+    $pane = new stdClass;
+    $pane->pid = 'new-5';
+    $pane->panel = 'main';
+    $pane->type = 'node_comment_form';
+    $pane->subtype = 'node_comment_form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_nid_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-5'] = $pane;
+    $display->panels['main'][2] = 'new-5';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-4';
+  $display->title_pane = 'new-3';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_a'] = $handler;
 

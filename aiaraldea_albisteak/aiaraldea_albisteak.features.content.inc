@@ -78,6 +78,78 @@ function aiaraldea_albisteak_content_default_fields() {
     ),
   );
 
+  // Exported field: field_eguneratze_data
+  $fields['albiste-field_eguneratze_data'] = array(
+    'field_name' => 'field_eguneratze_data',
+    'type_name' => 'albiste',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'datestamp',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'date',
+    'active' => '1',
+    'granularity' => array(
+      'year' => 'year',
+      'month' => 'month',
+      'day' => 'day',
+      'hour' => 'hour',
+      'minute' => 'minute',
+    ),
+    'timezone_db' => 'UTC',
+    'tz_handling' => 'site',
+    'todate' => '',
+    'repeat' => 0,
+    'repeat_collapsed' => '',
+    'default_format' => 'medium',
+    'widget' => array(
+      'default_value' => 'blank',
+      'default_value_code' => '',
+      'default_value2' => 'same',
+      'default_value_code2' => '',
+      'input_format' => 'Y-m-d H:i:s',
+      'input_format_custom' => '',
+      'increment' => 1,
+      'text_parts' => array(),
+      'year_range' => '-3:+3',
+      'label_position' => 'above',
+      'label' => 'Eguneratze data',
+      'weight' => '101',
+      'description' => '',
+      'type' => 'date_text',
+      'module' => 'date',
+    ),
+  );
+
   // Exported field: field_embeddedimages
   $fields['albiste-field_embeddedimages'] = array(
     'field_name' => 'field_embeddedimages',
@@ -309,6 +381,7 @@ function aiaraldea_albisteak_content_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Bideo erlazionatuak');
+  t('Eguneratze data');
   t('Erantsiak');
   t('Erlazionatuak');
   t('Irudiak');
