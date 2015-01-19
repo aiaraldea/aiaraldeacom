@@ -79,17 +79,15 @@ function _theme_simple_jplayer_formatter_mini($element, $downloadable = false) {
   } else {
     $description = $item['filename'];
   }
+  $fid = $element['#item']['fid'];
+  $delta = $element['#item']['#delta'];
+  $url = file_create_url($item['filepath']);
   if ($downloadable) {
-    $properties = "{width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea',downloadable:true}";
+    $properties = "{mp3:'$url',width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea',downloadable:true,swfPath:'/sites/all/libraries/jquery.mb.miniAudioPlayer/inc/'}";
   } else {
-    $properties = "{width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea'}";
+    $properties = "{mp3:'$url',width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea',swfPath:'/sites/all/libraries/jquery.mb.miniAudioPlayer/inc/'}";
   }
-//   var_dump($element);
-$fid = $element['#item']['fid'];
-$delta = $element['#item']['#delta'];
-//   var_dump($fid);
-$url = file_create_url($item['filepath']);
-  $output .= "<a id=\"player_".$fid."_".$delta."\" class=\"audio-jp $properties\" href=\"$url\">$description</a>";
+  $output .= "<a id=\"player_".$fid."_".$delta."\" class=\"audio-jp $properties\" href=\"\">$description</a>";
   $module_path = drupal_get_path('module', 'simple_jplayer');;
   if ($path = libraries_get_path("jquery.mb.miniAudioPlayer")) {
     drupal_add_js($path . '/inc/jquery.jplayer.min.js');
@@ -116,16 +114,15 @@ function _theme_simple_jplayer_formatter_link_mini($element, $downloadable = fal
     // Isn't listed so bail now
     return;
   }
-  if ($downloadable) {
-    $properties = "{width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea',downloadable:true}";
-  } else {
-    $properties = "{width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea'}";
-  }
   $fid = $element['#node']->nid;
   $delta = $element['#item']['#delta'];
   $url=$item['url'];
-//   var_dump($fid);
-  $output .= "<a id=\"player_$fid"."_$delta\" class=\"audio-jp $properties\" href=\"$url\">$url</a>";
+  if ($downloadable) {
+    $properties = "{mp3:'$url',width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea',downloadable:true,swfPath:'/sites/all/libraries/jquery.mb.miniAudioPlayer/inc/'}";
+  } else {
+    $properties = "{mp3:'$url',width:'100%',volume:10,showVolumeLevel:false,showRew:false,skin:'aiaraldea',swfPath:'/sites/all/libraries/jquery.mb.miniAudioPlayer/inc/'}";
+  }
+  $output .= "<a id=\"player_$fid"."_$delta\" class=\"audio-jp $properties\" href=\"\">$url</a>";
   $module_path = drupal_get_path('module', 'simple_jplayer');
   if ($path = libraries_get_path("jquery.mb.miniAudioPlayer")) {
     drupal_add_js($path . '/inc/jquery.jplayer.min.js');

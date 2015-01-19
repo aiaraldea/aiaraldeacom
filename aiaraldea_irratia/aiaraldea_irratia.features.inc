@@ -14,6 +14,30 @@ function aiaraldea_irratia_ctools_plugin_api() {
 }
 
 /**
+ * Implementation of hook_imagecache_default_presets().
+ */
+function aiaraldea_irratia_imagecache_default_presets() {
+  $items = array(
+    'zabalera_osoa' => array(
+      'presetname' => 'zabalera_osoa',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '620',
+            'height' => '',
+            'upscale' => 1,
+          ),
+        ),
+      ),
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implementation of hook_node_info().
  */
 function aiaraldea_irratia_node_info() {

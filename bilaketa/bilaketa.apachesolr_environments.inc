@@ -26,9 +26,11 @@ function bilaketa_apachesolr_environments() {
       5 => 'egunkari_alea',
       6 => 'flickr_image_set',
       7 => 'iritzi_gutuna',
-      8 => 'page',
-      9 => 'proposamena',
-      10 => 'zutabea',
+      8 => 'irrati_emanaldia',
+      9 => 'irratsaioa',
+      10 => 'page',
+      11 => 'proposamena',
+      12 => 'zutabea',
     ),
   );
   $export['solr'] = $environment;

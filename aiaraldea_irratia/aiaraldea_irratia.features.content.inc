@@ -11,10 +11,10 @@ function aiaraldea_irratia_content_default_fields() {
     'field_name' => 'field_emanaldia_audio_lotura',
     'type_name' => 'irrati_emanaldia',
     'display_settings' => array(
-      'weight' => '-3',
+      'weight' => '-2',
       'parent' => '',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'mini_for_link',
@@ -71,7 +71,7 @@ function aiaraldea_irratia_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Audio fitxategia',
-      'weight' => '-3',
+      'weight' => '-2',
       'description' => 'Audio fitxategiaren URLa',
       'type' => 'link',
       'module' => 'link',
@@ -94,7 +94,7 @@ function aiaraldea_irratia_content_default_fields() {
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -164,17 +164,17 @@ function aiaraldea_irratia_content_default_fields() {
     'field_name' => 'field_emanaldia_irudia',
     'type_name' => 'irrati_emanaldia',
     'display_settings' => array(
-      'weight' => '-2',
+      'weight' => '-3',
       'parent' => '',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'image_plain',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'image_plain',
+        'format' => 'zabalera_osoa_default',
         'exclude' => 0,
       ),
       '4' => array(
@@ -229,7 +229,7 @@ function aiaraldea_irratia_content_default_fields() {
       'filefield_source_attach_mode' => 'move',
       'filefield_source_autocomplete' => '0',
       'label' => 'Irudia',
-      'weight' => '-2',
+      'weight' => '-3',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',

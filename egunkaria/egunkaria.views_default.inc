@@ -154,6 +154,7 @@ function egunkaria_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Dena -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
+  $handler->display->display_options['pane_title'] = 'Egunkaria - guztiak';
 
   /* Display: Azkena */
   $handler = $view->new_display('panel_pane', 'Azkena', 'panel_pane_azkena');
@@ -207,6 +208,7 @@ function egunkaria_views_default_views() {
   $handler->display->display_options['filters']['created']['value']['value'] = '-5 days';
   $handler->display->display_options['filters']['created']['value']['type'] = 'offset';
   $handler->display->display_options['filters']['created']['allow_null'] = 1;
+  $handler->display->display_options['pane_title'] = 'Egunkaria - azkena';
   $translatables['egunkaria'] = array(
     t('Defaults'),
     t('gehiago'),
@@ -219,9 +221,11 @@ function egunkaria_views_default_views() {
     t('Elementuak orriak'),
     t('- Dena -'),
     t('Desplazamendua'),
+    t('Egunkaria - guztiak'),
     t('View panes'),
     t('Azkena'),
     t('Egunkaria'),
+    t('Egunkaria - azkena'),
   );
 
   $views[$view->name] = $view;

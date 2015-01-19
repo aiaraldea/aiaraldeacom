@@ -148,10 +148,31 @@ function aiaraldea_agenda_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Agenda';
   $page->admin_description = '';
-  $page->path = 'agenda/';
+  $page->path = 'agenda/!term';
   $page->access = array();
   $page->menu = array();
-  $page->arguments = array();
+  $page->arguments = array(
+    'term' => array(
+      'id' => 1,
+      'identifier' => 'Taxonomy term: ID',
+      'name' => 'term',
+      'settings' => array(
+        'input_form' => 'term',
+        'vids' => array(
+          2 => 2,
+          3 => 3,
+          1 => 0,
+          4 => 0,
+          12 => 0,
+          5 => 0,
+          7 => 0,
+          8 => 0,
+          11 => 0,
+        ),
+        'breadcrumb' => 1,
+      ),
+    ),
+  );
   $page->conf = array();
   $page->default_handlers = array();
   $handler = new stdClass;
@@ -167,7 +188,26 @@ function aiaraldea_agenda_default_page_manager_pages() {
     'no_blocks' => 0,
     'css_id' => 'panels_pages_agenda',
     'css' => '',
-    'contexts' => array(),
+    'contexts' => array(
+      0 => array(
+        'name' => 'vocabulary',
+        'id' => 1,
+        'identifier' => 'Taxonomia hiztegia herria',
+        'keyword' => 'vocabulary herria',
+        'context_settings' => array(
+          'vid' => '2',
+        ),
+      ),
+      1 => array(
+        'name' => 'vocabulary',
+        'id' => 2,
+        'identifier' => 'Taxonomia hiztegia deialdi mota',
+        'keyword' => 'vocabulary deialdi mota',
+        'context_settings' => array(
+          'vid' => '3',
+        ),
+      ),
+    ),
     'relationships' => array(),
     'access' => array(
       'plugins' => array(
@@ -178,6 +218,25 @@ function aiaraldea_agenda_default_page_manager_pages() {
             'paths' => 'agenda/data/*',
           ),
           'context' => 'empty',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'vids' => array(
+              2 => 2,
+              3 => 3,
+            ),
+          ),
+          'context' => 'context_vocabulary_1',
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => '',
+            'php' => 'return($contexts["argument_term_1"]!=NULL);',
+          ),
           'not' => FALSE,
         ),
       ),

@@ -19,7 +19,6 @@ function aiaraldea_banner_views_default_views() {
 
   /* Display: Lehenespenak */
   $handler = $view->new_display('default', 'Lehenespenak', 'default');
-  $handler->display->display_options['title'] = 'Banner queue';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'gehiago';
   $handler->display->display_options['access']['type'] = 'none';
@@ -34,7 +33,7 @@ function aiaraldea_banner_views_default_views() {
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Desplazamendua';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Nodequeue: Queue (qid) */
+  /* Erlazioa: Nodequeue: Queue (qid) */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -43,7 +42,7 @@ function aiaraldea_banner_views_default_views() {
   $handler->display->display_options['relationships']['nodequeue_rel']['qids'] = array(
     1 => '1',
   );
-  /* Field: Content: Banner link (field_banner_link) */
+  /* Eremua: Edukia: Banner link (field_banner_link) */
   $handler->display->display_options['fields']['field_banner_link_url']['id'] = 'field_banner_link_url';
   $handler->display->display_options['fields']['field_banner_link_url']['table'] = 'node_data_field_banner_link';
   $handler->display->display_options['fields']['field_banner_link_url']['field'] = 'field_banner_link_url';
@@ -59,7 +58,7 @@ function aiaraldea_banner_views_default_views() {
   $handler->display->display_options['fields']['field_banner_link_url']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_banner_link_url']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_banner_link_url']['link_to_node'] = 0;
-  /* Field: Content: Banner image (field_banner_image) */
+  /* Eremua: Edukia: Banner image (field_banner_image) */
   $handler->display->display_options['fields']['field_banner_image_fid']['id'] = 'field_banner_image_fid';
   $handler->display->display_options['fields']['field_banner_image_fid']['table'] = 'node_data_field_banner_image';
   $handler->display->display_options['fields']['field_banner_image_fid']['field'] = 'field_banner_image_fid';
@@ -76,12 +75,12 @@ function aiaraldea_banner_views_default_views() {
   $handler->display->display_options['fields']['field_banner_image_fid']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_banner_image_fid']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_banner_image_fid']['format'] = 'image_plain';
-  /* Sort criterion: Nodequeue: Position */
+  /* Ordenazio irizpidea: Nodequeue: Kokapena */
   $handler->display->display_options['sorts']['position']['id'] = 'position';
   $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['sorts']['position']['field'] = 'position';
   $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
-  /* Argument: Nodequeue: Queue ID */
+  /* Argumentua: Nodequeue: Queue ID */
   $handler->display->display_options['arguments']['qid']['id'] = 'qid';
   $handler->display->display_options['arguments']['qid']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['arguments']['qid']['field'] = 'qid';
@@ -90,12 +89,17 @@ function aiaraldea_banner_views_default_views() {
   $handler->display->display_options['arguments']['qid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['qid']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['qid']['not'] = 0;
-  /* Filter: Node: Published or admin */
+  /* Iragazkia: Nodoa: Published or admin */
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['table'] = 'node';
   $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['group'] = 0;
   $handler->display->display_options['filters']['status_extra']['expose']['operator'] = FALSE;
+
+  /* Display: Bannerrak panela */
+  $handler = $view->new_display('panel_pane', 'Bannerrak panela', 'panel_pane_1');
+  $handler->display->display_options['pane_title'] = 'Bannerrak';
+  $handler->display->display_options['pane_description'] = 'Ilaran dauden banerrak';
 
   /* Display: Blokea */
   $handler = $view->new_display('block', 'Blokea', 'block');
@@ -108,7 +112,6 @@ function aiaraldea_banner_views_default_views() {
   $handler->display->display_options['block_description'] = 'Banner queue';
   $translatables['aiaraldea_banner_nodequeue_1'] = array(
     t('Lehenespenak'),
-    t('Banner queue'),
     t('gehiago'),
     t('Ezarri'),
     t('Garbitu'),
@@ -118,12 +121,16 @@ function aiaraldea_banner_views_default_views() {
     t('Elementuak orriak'),
     t('- Dena -'),
     t('Desplazamendua'),
-    t('queue'),
+    t('ilara'),
     t('Banner link'),
     t('[field_banner_link_url]'),
-    t('All'),
+    t('Guztiak'),
+    t('Bannerrak panela'),
+    t('Bannerrak'),
+    t('Ilaran dauden banerrak'),
+    t('View panes'),
     t('Blokea'),
-    t('more'),
+    t('Banner queue'),
   );
 
   $views[$view->name] = $view;
