@@ -9,6 +9,7 @@ function menu_usuario_block($op = 'list', $delta = 0, $edit = array()) {
   switch($op){
     case'list':
       $blocks[0]['info'] = t("Erabiltzaile menua");
+      $blocks[0]['cache'] = BLOCK_CACHE_PER_USER;
       return $blocks;
     case'view':
       $block['subject'] = t('Erabiltzaile manua');

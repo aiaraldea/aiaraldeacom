@@ -12,13 +12,13 @@
 <?php endif; ?>
 
 <?php if (!empty($content['header_alpha'])): ?>
-  <div class="page-header-alpha grid_12 alpha omega">
+  <div class="page-header-alpha grid_12">
     <?php print $content['header_alpha']; ?>
   </div>
 <?php endif; ?>
 
 <?php if (!empty($content['header_beta']) || !empty($content['main']) || !empty($content['aside_alpha']) || !empty($content['footer_alpha']) || !empty($content['footer_beta'])): ?>
-  <div class="page-main-wrapper grid_8 alpha">
+  <div class="page-main-wrapper grid_8">
 <?php endif; ?>
 
   <?php if (!empty($content['header_beta'])): ?>
@@ -50,13 +50,13 @@
 <?php endif; ?>
 
 <?php if (!empty($content['aside_beta'])): ?>
-  <div class="page-aside-beta grid_4 omega">
+  <div class="page-aside-beta grid_4">
     <?php print $content['aside_beta']; ?>
   </div>
 <?php endif; ?>
 
 <?php if (!empty($content['footer_beta'])): ?>
-  <div class="page-footer-beta grid_12 alpha omega">
+  <div class="page-footer-beta grid_12">
     <?php print $content['footer_beta']; ?>
   </div>
 <?php endif; ?>
