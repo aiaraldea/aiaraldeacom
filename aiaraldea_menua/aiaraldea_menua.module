@@ -1,3 +1,28 @@
 <?php
 
 include_once('aiaraldea_menua.features.inc');
+
+function aiaraldea_menua_block($op='list', $delta='mobile-menu-button', $edit = array()) {
+  // set up an empty array which will contain the block contents
+  $block = array();
+
+  switch ($op) {
+    case "list":
+      // Generate listing of blocks from this module, for the admin/block page
+      $block['mobile-menu-button']["info"] = t('Pantaila txikietako menu botoia');
+      break;
+
+    case "view":
+      $block['content'] = 'Menu';
+      break;
+
+    case "save":
+      break;
+
+    case "configure":
+      break;
+  }
+
+  // return the built content
+  return $block;
+}
