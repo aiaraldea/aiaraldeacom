@@ -25,12 +25,23 @@ function aiaraldea_bideoak_imagecache_default_presets() {
       'presetname' => 'bideo_azala',
       'actions' => array(
         '0' => array(
-          'weight' => '0',
+          'weight' => '-10',
           'module' => 'imagecache',
           'action' => 'imagecache_scale_and_crop',
           'data' => array(
-            'width' => '100',
-            'height' => '75',
+            'width' => '380',
+            'height' => '220',
+          ),
+        ),
+        '1' => array(
+          'weight' => '-9',
+          'module' => 'imagecache_canvasactions',
+          'action' => 'canvasactions_file2canvas',
+          'data' => array(
+            'xpos' => 'center',
+            'ypos' => 'center',
+            'alpha' => '80',
+            'path' => 'sites/all/modules/custom/aiaraldeacom/aiaraldea_azala/play_irudia2.png',
           ),
         ),
       ),

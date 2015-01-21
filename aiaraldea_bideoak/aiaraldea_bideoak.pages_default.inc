@@ -63,6 +63,42 @@ function aiaraldea_bideoak_default_page_manager_handlers() {
     $pane = new stdClass;
     $pane->pid = 'new-1';
     $pane->panel = 'aside';
+    $pane->type = 'block';
+    $pane->subtype = 'openx-2';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 1,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'orrilapurra',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-1'] = $pane;
+    $display->panels['aside'][0] = 'new-1';
+    $pane = new stdClass;
+    $pane->pid = 'new-2';
+    $pane->panel = 'aside';
     $pane->type = 'views';
     $pane->subtype = 'bideo_ikusienak';
     $pane->shown = TRUE;
@@ -98,31 +134,9 @@ function aiaraldea_bideoak_default_page_manager_handlers() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-1'] = $pane;
-    $display->panels['aside'][0] = 'new-1';
-    $pane = new stdClass;
-    $pane->pid = 'new-2';
-    $pane->panel = 'header';
-    $pane->type = 'etiketak';
-    $pane->subtype = 'etiketak';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'url_base' => 'bideoak/',
-      'context' => 'argument_nid_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $display->content['new-2'] = $pane;
-    $display->panels['header'][0] = 'new-2';
+    $display->panels['aside'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
     $pane->panel = 'main';
@@ -313,9 +327,22 @@ return FALSE;',
     $pane->pid = 'new-2';
     $pane->panel = 'aside';
     $pane->type = 'block';
-    $pane->subtype = 'adzerk-azk49793';
+    $pane->subtype = 'openx-2';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 1,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_title' => 0,
       'override_title_text' => '',
@@ -324,7 +351,10 @@ return FALSE;',
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'orrilapurra',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $display->content['new-2'] = $pane;
