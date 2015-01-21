@@ -13,7 +13,7 @@ function aiaraldea_menua_block($op='list', $delta='mobile-menu-button', $edit = 
       break;
 
     case "view":
-      $block['content'] = 'Menu';
+      $block['content'] = 'Menua';
       break;
 
     case "save":
