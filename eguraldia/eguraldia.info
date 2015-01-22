@@ -1,0 +1,5 @@
+name = "Eguraldia"
+description = "Eguraldia"
+core = "6.x"
+package = "Aiaraldea"
+dependencies[] = "jqmulti"

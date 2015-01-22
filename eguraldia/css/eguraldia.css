@@ -1,0 +1,122 @@
+.aemet-widget {
+    font-family: sans-serif;
+    margin: 0;
+    width: 300px;
+}
+.aemet-widget.full {
+    font-family: sans-serif;
+    margin: 0;
+    width: 960px;
+}
+.aemet-widget > .town-chooser {
+    float: right;
+}
+
+.aemet-eguraldia {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.aemet-eguraldia .aemet-day {
+    margin: .2%;
+    width: 32.6%;
+    text-align:center;
+    float:left;
+}
+.aemet-eguraldia.full .aemet-day {
+    width: auto;
+}
+.aemet-eguraldia .eguna {
+    color: white;
+    font-weight: bold;
+    background-color: #2D3C01;
+}
+.aemet-eguraldia .ordua {
+    color: white;
+    font-weight: bold;
+    background-color: #CCCC00;
+    margin: 0 .8%;
+}
+.aemet-eguraldia i.wi {
+    padding: .4em 0;
+    font-size: 220%;
+    color: #2D3C01;
+}
+.aemet-eguraldia .aemet-period {
+    width:50%; float:left;
+}
+.aemet-eguraldia .aemet-day.periods-4 .aemet-period {
+    width:25%; float:left;
+}
+.aemet-eguraldia .aemet-day.periods-1 .aemet-period {
+    width:100%; float:left;
+}
+.aemet-eguraldia .full .aemet-period {
+    width:100%; float:left;
+}
+.aemet-eguraldia .min{
+    color:blue;
+}
+.aemet-eguraldia .max {
+    color: red;
+}
+.aemet-eguraldia .temp {
+    font-size: 140%;
+    font-weight: bold;
+    clear: both;
+}
+.aemet-eguraldia .wind{
+    min-width: 40px;
+}
+.aemet-eguraldia .wind,
+.aemet-eguraldia .wind .wi {
+    color: #CCCC00;
+    padding-top: 0;
+}
+.aemet-copy {
+    clear: both;
+    text-align: right;    
+}
+.aemet-copy a {
+    color: gray;
+    font-size: 70%;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+.town-chooser-selector {
+    /*font-size: 70%;*/   
+    color: #2D3C01;
+    padding: 3px;
+    cursor: pointer;
+    background-color: #CCCC00;
+    width: 60%;
+    margin-top: -1.4em;
+}
+ul.town-chooser-list {
+    font-size: 14px;  
+    width: 300px;
+    position:absolute; 
+    top:0; 
+    left:0;
+    display: none;
+    background-color: white;
+    opacity: .9;
+    margin: 0;
+    padding: 0;
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    list-style-type: none;
+}
+ul.town-chooser-list li{
+    padding: 3px;
+    margin: 1px 5px 5px 5px;
+    cursor: pointer;
+    background-color: #CCCC00;
+    color: #2D3C01;
+}
+
+.aemet-eguraldia-aiaraldea {
+    min-height: 174px;
+    position: relative;
+}

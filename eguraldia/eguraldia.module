@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implementation of hook_block().
+ */
+function eguraldia_block($op = 'list', $delta = 0, $edit = array()) {
+  if ($op == 'list') {
+    $blocks[0] = array(
+      'info'    => t('Eguraldi blokea'),
+      'weight'  => 0,
+      'enabled' => 0,
+      'region'  => 'left',
+      'cache'   => BLOCK_NO_CACHE
+    );
+    return $blocks;
+  }
+  elseif ($op == 'view') {
+    $block = array(
+      'subject' => t('Eguraldia'),
+      'content' => eguraldia_invoke($delta)
+    );
+    return $block;
+  }
+}
+
+function eguraldia_invoke($index_or_key) {
+
+  drupal_add_css(drupal_get_path('module', 'eguraldia') . '/css/eguraldia.css');
+  drupal_add_css(drupal_get_path('module', 'eguraldia') . '/css/weather-icons-aemet.css');
+  drupal_add_js(drupal_get_path('module', 'eguraldia') . '/js/widget.js');
+  drupal_add_js(drupal_get_path('module', 'eguraldia') . '/js/townchooser.js');
+
+  return '<div class="aemet-eguraldia-aiaraldea" style="width: 300px;"></div>';
+}
+
