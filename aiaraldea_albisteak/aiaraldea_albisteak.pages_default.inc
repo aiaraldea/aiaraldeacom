@@ -137,7 +137,20 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $pane->type = 'block';
     $pane->subtype = 'publizitatea-2';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 1,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_title' => 0,
       'override_title_text' => '',
@@ -146,7 +159,10 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'orrilapurra',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $display->content['new-3'] = $pane;
