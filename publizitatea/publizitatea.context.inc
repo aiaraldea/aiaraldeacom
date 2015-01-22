@@ -27,14 +27,14 @@ function publizitatea_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'openx-0' => array(
-          'module' => 'openx',
+        'publizitatea-0' => array(
+          'module' => 'publizitatea',
           'delta' => 0,
           'region' => 'absolute_top',
           'weight' => 0,
         ),
-        'openx-1' => array(
-          'module' => 'openx',
+        'publizitatea-1' => array(
+          'module' => 'publizitatea',
           'delta' => 1,
           'region' => 'absolute_top',
           'weight' => 1,

@@ -1,3 +1,60 @@
 <?php
 
 include_once('publizitatea.features.inc');
+
+/**
+ * Implementation of hook_block().
+ */
+function publizitatea_block($op = 'list', $delta = 0, $edit = array()) {
+  if ($op == 'list') {
+    $zones = variable_get('openx_zones', array());
+    foreach ($zones as $index => $zone) {
+      if ($zone['id']) {
+        $blocks[$index] = array(
+          'info'    => t('Publizitatea Zone !id (!name)', array('!id' => $zone['id'], '!name' => (empty($zone['name']) ? t('untitled') : $zone['name']))),
+          'weight'  => 0,
+          'enabled' => 0,
+          'region'  => 'left',
+          'cache'   => BLOCK_NO_CACHE
+        );
+      }
+    }
+    return $blocks;
+  }
+  elseif ($op == 'view') {
+    $block = array(
+      'content' => publizitatea_invoke($delta)
+    );
+    return $block;
+  }
+}
+/**
+ * Builds the call to OpenX
+ *
+ * @param $index_or_key
+ *   Number or String. The zone ID number or the it's 'nickname'
+ * @return
+ *   HTML. The area where the banner will be displayed
+ */
+function publizitatea_invoke($index_or_key) {
+  module_load_include('inc', 'openx');
+  if (!$zone = _openx_get_zone($index_or_key)) {
+    return '';
+  }
+  static $publizitate_js_added = false;
+  if (!$publizitate_js_added) {
+    drupal_add_js("
+        var publizitatea = {
+            delivery: 'http://" . variable_get('openx_delivery_url', 'd.openx.org') . "',
+            deliverySSL: 'https://" . variable_get('openx_delivery_url_https', 'd.openx.org') . "'  
+        };
+    ", 'inline');
+    $publizitate_js_added = true;
+  }
+
+  drupal_add_js(drupal_get_path('module', 'publizitatea') . '/js/jquery.openxtag.js');
+  drupal_add_js(drupal_get_path('module', 'publizitatea') . '/js/publizitatea.js');
+
+  return "<div class='openx-ad' data-openx-zone-id='".$zone['id']."'></div>";
+}
+
