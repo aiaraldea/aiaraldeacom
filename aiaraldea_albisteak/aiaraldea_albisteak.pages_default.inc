@@ -133,6 +133,42 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $display->panels['aside'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
+    $pane->panel = 'aside';
+    $pane->type = 'block';
+    $pane->subtype = 'openx-2';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 1,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'orrilapurra',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['aside'][2] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
     $pane->panel = 'main';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
@@ -146,7 +182,7 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
       'override_title_text' => '',
       'identifier' => '',
       'link' => 0,
-      'leave_node_title' => 0,
+      'leave_node_title' => 1,
       'context' => 'argument_nid_1',
       'build_mode' => 'full',
     );
@@ -157,10 +193,10 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $display->content['new-3'] = $pane;
-    $display->panels['main'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['main'][0] = 'new-4';
     $pane = new stdClass;
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'main';
     $pane->type = 'node_comments';
     $pane->subtype = 'node_comments';
@@ -181,10 +217,10 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $display->content['new-4'] = $pane;
-    $display->panels['main'][1] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['main'][1] = 'new-5';
     $pane = new stdClass;
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'main';
     $pane->type = 'node_comment_form';
     $pane->subtype = 'node_comment_form';
@@ -202,10 +238,10 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
-    $display->content['new-5'] = $pane;
-    $display->panels['main'][2] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['main'][2] = 'new-6';
   $display->hide_title = PANELS_TITLE_PANE;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-4';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_a'] = $handler;
 
@@ -375,9 +411,22 @@ return FALSE;',
     $pane->pid = 'new-2';
     $pane->panel = 'aside';
     $pane->type = 'block';
-    $pane->subtype = 'adzerk-azk49793';
+    $pane->subtype = 'publizitatea-2';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 1,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_title' => 0,
       'override_title_text' => '',
@@ -386,7 +435,10 @@ return FALSE;',
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'orrilapurra',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $display->content['new-2'] = $pane;

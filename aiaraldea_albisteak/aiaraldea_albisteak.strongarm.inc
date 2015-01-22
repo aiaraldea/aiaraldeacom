@@ -74,21 +74,14 @@ function aiaraldea_albisteak_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_albiste';
   $strongarm->value = array(
-    'apachesolr' => '100',
     'title' => '-5',
     'body_field' => '-2',
     'revision_information' => '3',
-    'author' => '20',
-    'options' => '25',
     'comment_settings' => '5',
     'menu' => '-3',
     'taxonomy' => '-4',
     'path' => '4',
-    'custom_breadcrumbs' => '30',
-    'flag' => '0',
-    'path_redirect' => '30',
     'scheduler_settings' => '6',
-    'nodewords' => '10',
   );
   $export['content_extra_weights_albiste'] = $strongarm;
 
