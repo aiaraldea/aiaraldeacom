@@ -84,21 +84,6 @@ function aiaraldea_albisteak_imagecache_default_presets() {
         ),
       ),
     ),
-    'albistearen_argazkiak' => array(
-      'presetname' => 'albistearen_argazkiak',
-      'actions' => array(
-        '0' => array(
-          'weight' => '0',
-          'module' => 'imagecache',
-          'action' => 'imagecache_scale',
-          'data' => array(
-            'width' => '274',
-            'height' => '600',
-            'upscale' => 0,
-          ),
-        ),
-      ),
-    ),
     'bideoa_albistean' => array(
       'presetname' => 'bideoa_albistean',
       'actions' => array(

@@ -13,30 +13,34 @@ function aiaraldea_albisteak_content_default_fields() {
     'display_settings' => array(
       'weight' => 0,
       'parent' => '',
+      'full' => array(
+        'format' => 'views',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'sticky' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'label' => array(
         'format' => 'above',
       ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'views',
-        'exclude' => 0,
-      ),
       '2' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -83,15 +87,17 @@ function aiaraldea_albisteak_content_default_fields() {
     'field_name' => 'field_eguneratze_data',
     'type_name' => 'albiste',
     'display_settings' => array(
-      'label' => array(
-        'format' => 'above',
+      'weight' => '101',
+      'parent' => '',
+      'full' => array(
+        'format' => 'default',
         'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
-      'full' => array(
+      'sticky' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -99,15 +105,18 @@ function aiaraldea_albisteak_content_default_fields() {
         'format' => 'default',
         'exclude' => 0,
       ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'label' => array(
+        'format' => 'above',
+      ),
       '2' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -157,30 +166,34 @@ function aiaraldea_albisteak_content_default_fields() {
     'display_settings' => array(
       'weight' => '-1',
       'parent' => '',
+      'full' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+      'sticky' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       '4' => array(
-        'format' => 'albistearen_argazkiak_default',
+        'format' => 'image_plain',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'image_plain',
         'exclude' => 0,
       ),
       'label' => array(
         'format' => 'above',
-      ),
-      'teaser' => array(
-        'format' => 'albisteak_zerrendak_default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'imagefield__lightbox2__albistearen_argazkiak__original',
-        'exclude' => 0,
       ),
       '2' => array(
         'format' => 'image_plain',
         'exclude' => 0,
       ),
       '3' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
-      ),
-      'token' => array(
         'format' => 'image_plain',
         'exclude' => 0,
       ),
@@ -250,30 +263,34 @@ function aiaraldea_albisteak_content_default_fields() {
     'display_settings' => array(
       'weight' => '2',
       'parent' => '',
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'sticky' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'label' => array(
         'format' => 'above',
       ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
       '2' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -313,30 +330,34 @@ function aiaraldea_albisteak_content_default_fields() {
     'display_settings' => array(
       'weight' => '1',
       'parent' => '',
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'sticky' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       'label' => array(
         'format' => 'above',
       ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 1,
-      ),
       '2' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
       '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
