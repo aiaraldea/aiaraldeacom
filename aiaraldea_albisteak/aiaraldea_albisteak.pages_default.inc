@@ -240,7 +240,7 @@ function aiaraldea_albisteak_default_page_manager_handlers() {
     $pane->position = 2;
     $display->content['new-6'] = $pane;
     $display->panels['main'][2] = 'new-6';
-  $display->hide_title = PANELS_TITLE_PANE;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-4';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_a'] = $handler;
