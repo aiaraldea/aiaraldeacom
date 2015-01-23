@@ -547,7 +547,7 @@ function aiaraldea_albisteak_views_default_views() {
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['label_type'] = 'none';
-  $handler->display->display_options['fields']['field_embeddedimages_fid_1']['format'] = 'albisteak_zerrendak_imagelink';
+  $handler->display->display_options['fields']['field_embeddedimages_fid_1']['format'] = 'albisteak_zerrendak_linked';
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['multiple']['group'] = 1;
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['multiple']['multiple_number'] = '1';
   $handler->display->display_options['fields']['field_embeddedimages_fid_1']['multiple']['multiple_from'] = '0';
