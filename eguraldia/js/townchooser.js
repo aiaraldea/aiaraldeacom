@@ -56,9 +56,7 @@ aemetProxy.townChooser = (function ($, aemetProxy) {
       }
       aemetProxy.reload(eguraldiaContainer, herria.code);
       container.append(selector);
-      console.log(container);
       container.append(chooser);
-
 
       aemetProxy.reload(eguraldiaContainer, herria.code);
       container.find('.town-chooser-selected').text(herria.name);
