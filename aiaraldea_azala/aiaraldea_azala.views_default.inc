@@ -26,9 +26,9 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'views_content_cache';
   $handler->display->display_options['cache']['results_min_lifespan'] = '-1';
-  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_min_lifespan'] = '-1';
-  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '3600';
   $handler->display->display_options['cache']['keys'] = array(
     'AND' => array(
       'comment' => array(
@@ -42,11 +42,13 @@ function aiaraldea_azala_views_default_views() {
         'argazkiak' => 0,
         'aiaraldea_banner' => 0,
         'bideo' => 0,
-        'bideoak' => 0,
         'egunkari_alea' => 0,
         'elkarrizketa_aurr' => 0,
         'hitzordua' => 0,
         'iritzi_gutuna' => 0,
+        'irrati_emanaldia' => 0,
+        'irratsaioa' => 0,
+        'bideoak' => 0,
         'short_notice' => 0,
         'page' => 0,
         'panel' => 0,
@@ -95,13 +97,22 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['tid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid']['element_type'] = '0';
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['tid']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid']['limit'] = 1;
   $handler->display->display_options['fields']['tid']['vids'] = array(
@@ -109,6 +120,11 @@ function aiaraldea_azala_views_default_views() {
     3 => 0,
     1 => 0,
     4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    8 => 0,
+    11 => 0,
   );
   /* Eremua: Taxonomia: Termino guztiak */
   $handler->display->display_options['fields']['tid_1']['id'] = 'tid_1';
@@ -117,20 +133,34 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['tid_1']['label'] = '';
   $handler->display->display_options['fields']['tid_1']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['tid_1']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['tid_1']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['tid_1']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['tid_1']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['tid_1']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['tid_1']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['tid_1']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['tid_1']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['tid_1']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid_1']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid_1']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['tid_1']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['tid_1']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid_1']['hide_empty'] = 0;
   $handler->display->display_options['fields']['tid_1']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['tid_1']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['tid_1']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid_1']['limit'] = 1;
   $handler->display->display_options['fields']['tid_1']['vids'] = array(
     3 => 3,
-    1 => 0,
     2 => 0,
+    1 => 0,
     4 => 0,
+    12 => 0,
+    5 => 0,
+    7 => 0,
+    8 => 0,
+    11 => 0,
   );
   /* Eremua: Nodoa: Izenburua */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -139,13 +169,22 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
   /* Eremua: Imagen bloque */
   $handler->display->display_options['fields']['field_embeddedimages_fid']['id'] = 'field_embeddedimages_fid';
@@ -165,6 +204,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_embeddedimages_fid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_embeddedimages_fid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_embeddedimages_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_embeddedimages_fid']['element_type'] = '0';
   $handler->display->display_options['fields']['field_embeddedimages_fid']['element_label_colon'] = 1;
   $handler->display->display_options['fields']['field_embeddedimages_fid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_embeddedimages_fid']['hide_empty'] = 0;
@@ -194,12 +234,13 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['tid_2']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['tid_2']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['tid_2']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['tid_2']['element_type'] = '0';
   $handler->display->display_options['fields']['tid_2']['element_label_colon'] = 1;
   $handler->display->display_options['fields']['tid_2']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['tid_2']['hide_empty'] = 1;
   $handler->display->display_options['fields']['tid_2']['empty_zero'] = 0;
   $handler->display->display_options['fields']['tid_2']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['tid_2']['link_to_taxonomy'] = 1;
+  $handler->display->display_options['fields']['tid_2']['link_to_taxonomy'] = 0;
   $handler->display->display_options['fields']['tid_2']['limit'] = 1;
   $handler->display->display_options['fields']['tid_2']['vids'] = array(
     12 => 12,
@@ -218,13 +259,22 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_lekua_value']['field'] = 'field_lekua_value';
   $handler->display->display_options['fields']['field_lekua_value']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_lekua_value']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_lekua_value']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_lekua_value']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_lekua_value']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_lekua_value']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_lekua_value']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_lekua_value']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_lekua_value']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_lekua_value']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_lekua_value']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_lekua_value']['hide_empty'] = 1;
   $handler->display->display_options['fields']['field_lekua_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_lekua_value']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_lekua_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_lekua_value']['label_type'] = 'none';
   /* Eremua: Edukia: Noiz (field_noiz) */
@@ -233,13 +283,22 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_noiz_value']['field'] = 'field_noiz_value';
   $handler->display->display_options['fields']['field_noiz_value']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_noiz_value']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_noiz_value']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_noiz_value']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_noiz_value']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_noiz_value']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_noiz_value']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['field_noiz_value']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_noiz_value']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_noiz_value']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_noiz_value']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_noiz_value']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_noiz_value']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_noiz_value']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_noiz_value']['label_type'] = 'none';
   $handler->display->display_options['fields']['field_noiz_value']['format'] = 'short';
@@ -685,7 +744,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '300';
   $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 1;
   $handler->display->display_options['fields']['body']['alter']['trim'] = 1;
   $handler->display->display_options['fields']['body']['alter']['html'] = 0;
   $handler->display->display_options['fields']['body']['element_label_colon'] = 1;
@@ -693,6 +752,9 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 1;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
+  $handler->display->display_options['pane_title'] = 'Argazkiak 1';
+  $handler->display->display_options['pane_category']['name'] = 'Orri nagusia';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'name' => array(
       'type' => 'wildcard',
@@ -930,7 +992,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '300';
   $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 1;
   $handler->display->display_options['fields']['body']['alter']['trim'] = 1;
   $handler->display->display_options['fields']['body']['alter']['html'] = 0;
   $handler->display->display_options['fields']['body']['element_label_colon'] = 1;
@@ -938,6 +1000,9 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 1;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
+  $handler->display->display_options['pane_title'] = 'Argazkiak 2';
+  $handler->display->display_options['pane_category']['name'] = 'Orri nagusia';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'name' => array(
       'type' => 'wildcard',
@@ -953,7 +1018,7 @@ function aiaraldea_azala_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Argazkiak offset 2', 'panel_pane_3');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '2';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -1175,7 +1240,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '300';
   $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 1;
   $handler->display->display_options['fields']['body']['alter']['trim'] = 1;
   $handler->display->display_options['fields']['body']['alter']['html'] = 0;
   $handler->display->display_options['fields']['body']['element_label_colon'] = 1;
@@ -1183,6 +1248,19 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 1;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
+  $handler->display->display_options['pane_title'] = 'Argazkiak 3';
+  $handler->display->display_options['pane_description'] = '3. bildumatik aurrera nahibeste bilduma';
+  $handler->display->display_options['pane_category']['name'] = 'Orri nagusia';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'name' => array(
       'type' => 'wildcard',
@@ -1202,9 +1280,13 @@ function aiaraldea_azala_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Argazkiak home'),
-    t('View panes'),
+    t('Argazkiak 1'),
+    t('Orri nagusia'),
     t('Argazkiak offset 1'),
+    t('Argazkiak 2'),
     t('Argazkiak offset 2'),
+    t('Argazkiak 3'),
+    t('3. bildumatik aurrera nahibeste bilduma'),
   );
 
   $views[$view->name] = $view;
@@ -1325,13 +1407,22 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['alter_text'] = 1;
   $handler->display->display_options['fields']['name']['alter']['text'] = '[name] :';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['name']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['name']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['name']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['name']['element_type'] = '0';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['name']['hide_empty'] = 0;
   $handler->display->display_options['fields']['name']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['name']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['name']['link_to_user'] = 0;
   /* Eremua: Iruzkina: Testua */
   $handler->display->display_options['fields']['comment']['id'] = 'comment';
@@ -1341,14 +1432,23 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['comment']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['comment']['alter']['text'] = '[comment]';
   $handler->display->display_options['fields']['comment']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['comment']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['comment']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['comment']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['comment']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['comment']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['comment']['alter']['max_length'] = '120';
   $handler->display->display_options['fields']['comment']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['comment']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['comment']['alter']['strip_tags'] = 1;
   $handler->display->display_options['fields']['comment']['alter']['trim'] = 1;
   $handler->display->display_options['fields']['comment']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['comment']['element_type'] = '0';
+  $handler->display->display_options['fields']['comment']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['comment']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['comment']['hide_empty'] = 0;
   $handler->display->display_options['fields']['comment']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['comment']['hide_alter_empty'] = 1;
   /* Eremua: Iruzkina: IDa */
   $handler->display->display_options['fields']['cid']['id'] = 'cid';
   $handler->display->display_options['fields']['cid']['table'] = 'comments';
@@ -1357,13 +1457,22 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['cid']['alter']['alter_text'] = 1;
   $handler->display->display_options['fields']['cid']['alter']['text'] = '[comment]';
   $handler->display->display_options['fields']['cid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['cid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['cid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['cid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['cid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['cid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['cid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['cid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['cid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['cid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['cid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['cid']['element_type'] = '0';
+  $handler->display->display_options['fields']['cid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['cid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['cid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['cid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['cid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['cid']['link_to_comment'] = 1;
   /* Eremua: Nodoa: Izenburua */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -1374,14 +1483,23 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = 1;
   $handler->display->display_options['fields']['title']['alter']['text'] = '([title])';
   $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '60';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['title']['alter']['trim'] = 1;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_type'] = '0';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['title']['link_to_node'] = 0;
   /* Ordenazio irizpidea: Iruzkina: Argitaratze data */
   $handler->display->display_options['sorts']['timestamp']['id'] = 'timestamp';
@@ -1845,7 +1963,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_bideo_embed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_bideo_embed']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_bideo_embed']['label_type'] = 'none';
-  $handler->display->display_options['fields']['field_bideo_embed']['format'] = 'video_preview';
+  $handler->display->display_options['fields']['field_bideo_embed']['format'] = 'bideo_azala_linked';
   /* Eremua: Nodoa: Testua */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'node_revisions';
@@ -1869,6 +1987,9 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 1;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
+  $handler->display->display_options['pane_title'] = 'Bideoak 1';
+  $handler->display->display_options['pane_category']['name'] = 'Orri nagusia';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'name' => array(
       'type' => 'wildcard',
@@ -2079,7 +2200,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_bideo_embed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_bideo_embed']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_bideo_embed']['label_type'] = 'none';
-  $handler->display->display_options['fields']['field_bideo_embed']['format'] = 'video_preview';
+  $handler->display->display_options['fields']['field_bideo_embed']['format'] = 'bideo_azala_linked';
   /* Eremua: Nodoa: Testua */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'node_revisions';
@@ -2103,6 +2224,9 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 1;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
+  $handler->display->display_options['pane_title'] = 'Bideoak 2';
+  $handler->display->display_options['pane_category']['name'] = 'Orri nagusia';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'name' => array(
       'type' => 'wildcard',
@@ -2313,7 +2437,7 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['field_bideo_embed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_bideo_embed']['link_to_node'] = 0;
   $handler->display->display_options['fields']['field_bideo_embed']['label_type'] = 'none';
-  $handler->display->display_options['fields']['field_bideo_embed']['format'] = 'video_preview';
+  $handler->display->display_options['fields']['field_bideo_embed']['format'] = 'bideo_azala_linked';
   /* Eremua: Nodoa: Testua */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'node_revisions';
@@ -2337,6 +2461,18 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['fields']['body']['hide_empty'] = 1;
   $handler->display->display_options['fields']['body']['empty_zero'] = 0;
   $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
+  $handler->display->display_options['pane_title'] = 'Bideoak 3';
+  $handler->display->display_options['pane_category']['name'] = 'Orri nagusia';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'name' => array(
       'type' => 'wildcard',
@@ -2357,9 +2493,12 @@ function aiaraldea_azala_views_default_views() {
     t('Desc'),
     t('Bideoak home'),
     t('Bideoa'),
-    t('View panes'),
+    t('Bideoak 1'),
+    t('Orri nagusia'),
     t('Bideoak offset 1'),
+    t('Bideoak 2'),
     t('Bideoak offset 2'),
+    t('Bideoak 3'),
   );
 
   $views[$view->name] = $view;
@@ -3250,6 +3389,21 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
   $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+  /* Iragazkia: Data: Data (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['allow_null'] = 1;
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'comments.timestamp' => 'comments.timestamp',
+  );
+  $handler->display->display_options['filters']['date_filter']['date_method'] = 'OR';
+  $handler->display->display_options['filters']['date_filter']['granularity'] = 'day';
+  $handler->display->display_options['filters']['date_filter']['form_type'] = 'date_select';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now -90 days';
+  $handler->display->display_options['filters']['date_filter']['default_to_date'] = '';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-3:+3';
 
   /* Display: Blokea Agenda */
   $handler = $view->new_display('block', 'Blokea Agenda', 'block_1');
@@ -3282,6 +3436,21 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
   $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+  /* Iragazkia: Data: Data (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['allow_null'] = 1;
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'comments.timestamp' => 'comments.timestamp',
+  );
+  $handler->display->display_options['filters']['date_filter']['date_method'] = 'OR';
+  $handler->display->display_options['filters']['date_filter']['granularity'] = 'day';
+  $handler->display->display_options['filters']['date_filter']['form_type'] = 'date_select';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now -90 days';
+  $handler->display->display_options['filters']['date_filter']['default_to_date'] = '';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-3:+3';
 
   /* Display: Blokea Musika */
   $handler = $view->new_display('block', 'Blokea Musika', 'block_2');
@@ -3314,6 +3483,21 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
   $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+  /* Iragazkia: Data: Data (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['allow_null'] = 1;
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'node.created' => 'node.created',
+  );
+  $handler->display->display_options['filters']['date_filter']['date_method'] = 'OR';
+  $handler->display->display_options['filters']['date_filter']['granularity'] = 'day';
+  $handler->display->display_options['filters']['date_filter']['form_type'] = 'date_select';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now -90 days';
+  $handler->display->display_options['filters']['date_filter']['default_to_date'] = '';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-3:+3';
 
   /* Display: Blokea Literatura */
   $handler = $view->new_display('block', 'Blokea Literatura', 'block_3');
@@ -3346,6 +3530,21 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
   $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+  /* Iragazkia: Data: Data (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['allow_null'] = 1;
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'node.created' => 'node.created',
+  );
+  $handler->display->display_options['filters']['date_filter']['date_method'] = 'OR';
+  $handler->display->display_options['filters']['date_filter']['granularity'] = 'day';
+  $handler->display->display_options['filters']['date_filter']['form_type'] = 'date_select';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now -90 days';
+  $handler->display->display_options['filters']['date_filter']['default_to_date'] = '';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-3:+3';
 
   /* Display: Blokea Zinema */
   $handler = $view->new_display('block', 'Blokea Zinema', 'block_4');
@@ -3378,6 +3577,21 @@ function aiaraldea_azala_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '4';
   $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+  /* Iragazkia: Data: Data (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['allow_null'] = 1;
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'node.created' => 'node.created',
+  );
+  $handler->display->display_options['filters']['date_filter']['date_method'] = 'OR';
+  $handler->display->display_options['filters']['date_filter']['granularity'] = 'day';
+  $handler->display->display_options['filters']['date_filter']['form_type'] = 'date_select';
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now -90 days';
+  $handler->display->display_options['filters']['date_filter']['default_to_date'] = '';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-3:+3';
   $translatables['proposamenak_azala_1_1'] = array(
     t('Defaults'),
     t('gehiago'),
